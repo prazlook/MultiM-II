@@ -1,8 +1,3 @@
-AVANT TOUT : {Ne téléchargez pas le code source !!!
-Cliquez simplement sur "communiqués de presse"
-(à côté de "Balises" tout en bas de la page).
-Ensuite, extrayez le fichier zip.}
-
 MultiM II est un logiciel supposé tourner
 sur tous les OS à partir de Windows 7.
 Il s'agit d'un logiciel qui aura, dans sa
