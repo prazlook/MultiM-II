@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SZProject ToolsVersion="4.0" Name="Projet1">
+  <Type value="0" />
+  <ShutMode value="0" />
+  <FormStart value="Ecran_de_démarrage1.szw" />
+  <SplashScreen value="SplashScreen.szw" />
+  <StyleXP value="True" />
+  <Instance value="False" />
+  <MySettings value="True" />
+  <Assembly.Title value="MultiM II" />
+  <Assembly.Description value="MultiM,le logiciel de création de serveur Minitel,CONTINUED!!!!!!!!" />
+  <Assembly.Socity value="Prazbid3Enterprise" />
+  <Assembly.Product value="MultiM II" />
+  <Assembly.Copyright value="Copyright © Prazbid3Enterprise" />
+  <Assembly.FileVersion value="1.0.0.0" />
+  <Assembly.AssemblyVersion value="1.0.0.0" />
+  <Assembly.Mark value="MultiM™" />
+  <Assembly.Guid value="2f0b6322-8366-4d0a-a787-c790d61f2fc1" />
+  <Assembly.PublisherID value="" />
+  <Assembly.IdentityName value="" />
+  <Increment_Build value="False" />
+  <GenerateDirectory value="Bin" />
+  <Optimize value="True" />
+  <Cpu value="2" />
+  <ObfuscationLevel value="1" />
+  <ShouldCompile value="True" />
+  <Open name="Arbo_Edit.szw" />
+  <Open name="Compistart.szw" />
+  <Variable name="barre_progression_accueil_1" array="False" description="" group="Défaut" null="False" />
+  <Variable name="barre_progression_accueil_1_1" array="False" description="" group="Défaut" null="False" />
+  <Variable name="barre_progression_génération_code" array="False" description="" group="Défaut" null="False" />
+  <Variable name="confirmation_existence_compte" array="False" description="La confirmation de la connexion du compte.Pour savoir s'il existe...Oh et puis merde,je vais pas me tuer à expliquer à la fin!Vous voulez bidouiller,vous bidouillez!" group="Défaut" null="False" />
+  <Variable name="couleur_page" array="False" description="" group="Défaut" null="False" />
+  <Variable name="création_de_compte_valide_ou_pas" array="False" description="" group="Défaut" null="False" />
+  <Variable name="email_création_compte" array="False" description="" group="Défaut" null="False" />
+  <Variable name="Fenêtre5" array="False" description="" group="Défaut" null="False" />
+  <Variable name="Format_image_vdtpics" array="False" description="" group="Défaut" null="False" />
+  <Variable name="mdp_compte_en_creation" array="False" description="" group="Défaut" null="False" />
+  <Variable name="mdp_connexion" array="False" description="" group="Défaut" null="False" />
+  <Variable name="noeud_a_suppr_quand_on_appuie_sur_suppr_dans_vdt_edit" array="False" description="" group="Défaut" null="False" />
+  <Variable name="NoeudSelectionne" array="False" description="" group="Défaut" null="True" />
+  <Variable name="NomNoeud" array="False" description="Le nom du noeud qui va être créé dans ArboEdit." group="Défaut" null="False" />
+  <Variable name="num_compte" array="False" description="" group="Défaut" null="False" />
+  <Variable name="prix_admin" array="False" description="" group="Défaut" null="False" />
+  <Variable name="pseudo_compte_en_creation" array="False" description="" group="Défaut" null="False" />
+  <Variable name="pseudo_connexion" array="False" description="" group="Défaut" null="False" />
+  <Variable name="recuperation_compte" array="True" description="Au moment de la connexion cette variable s'active grâce au prtocole ftp." group="Défaut" null="False" />
+  <Variable name="Résultat" array="False" description="Est égale au résultat du message" group="Textes" null="False" />
+  <Variable name="test" array="False" description="C'est la poubelle." group="Défaut" null="False" />
+  <Variable name="valeur_compte_actif" array="False" description="Le compte actif." group="Défaut" null="False" />
+  <Variable name="Valeur_retourné" array="False" description="Est égale à la valeur retrouné par la fonction &quot;Afficher_Message&quot;" group="Textes" null="False" />
+  <Variable name="variabe_case_oui_cochée_compistart" array="False" description="" group="Défaut" null="False" />
+  <Variable name="variable_vérification_code" array="False" description="" group="Défaut" null="False" />
+  <Reference isproject="False" value="ComponentFactory.Krypton.Toolkit.dll" name="ComponentFactory.Krypton.Toolkit" copy="True" version="4.4.0.0" />
+  <Reference isproject="False" value="Interop.ADOX.dll" name="Interop.ADOX" copy="True" version="2.8.0.0" />
+  <Reference isproject="False" value="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="mscorlib" copy="False" version="4.0.0.0" />
+  <Reference isproject="False" value="mysql.data.dll" name="MySql.Data" copy="True" version="6.3.7.0" />
+  <Reference isproject="False" value="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="System" copy="False" version="4.0.0.0" />
+  <Reference isproject="False" value="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="System.Core" copy="False" version="4.0.0.0" />
+  <Reference isproject="False" value="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="System.Data" copy="False" version="4.0.0.0" />
+  <Reference isproject="False" value="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" name="System.Drawing" copy="False" version="4.0.0.0" />
+  <Reference isproject="False" value="System.Speech, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" name="System.Speech" copy="False" version="4.0.0.0" />
+  <Reference isproject="False" value="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="System.Windows.Forms" copy="False" version="4.0.0.0" />
+  <Reference isproject="False" value="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="System.Xml" copy="False" version="4.0.0.0" />
+  <Reference isproject="False" value="VelerSoftware.FTPLib.dll" name="VelerSoftware.FTPLib" copy="True" version="1.0.0.0" />
+  <Reference isproject="False" value="VelerSoftware.VistaMessageBoxLib.dll" name="VelerSoftware.VistaMessageBoxLib" copy="True" version="1.0.0.1" />
+  <Reference isproject="False" value="VelerSoftware.VoiceRecognitionLib.dll" name="VelerSoftware.VoiceRecognitionLib" copy="True" version="1.0.0.0" />
+</SZProject>
