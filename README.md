@@ -1,4 +1,4 @@
-**Mise à jour!**
+***Mise à jour!***
 Le code source est maintenant fourni et exécutable avec SoftwareZator 2014 (SoftwareZator 4).
 Comme SoftwareZator n'est plus installable,vous trouverez une VM avec le logiciel stable dessus dans mes autres dépôts.
 Pour télécharger la version compilée du logiciel, allez dans les versions (Releases).
