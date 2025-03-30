@@ -2,7 +2,7 @@
 <SZProject ToolsVersion="4.0" Name="Projet1">
   <Type value="0" />
   <ShutMode value="0" />
-  <FormStart value="Ecran_de_démarrage1.szw" />
+  <FormStart value="GestionnaireApp.szw" />
   <SplashScreen value="SplashScreen.szw" />
   <StyleXP value="True" />
   <Instance value="False" />
@@ -23,11 +23,14 @@
   <Optimize value="True" />
   <Cpu value="2" />
   <ObfuscationLevel value="1" />
-  <ShouldCompile value="True" />
-  <Open name="Arbo_Edit.szw" />
+  <ShouldCompile value="False" />
+  <Open name="PARAMETREDUPROJET" />
+  <Open name="Accueil.szw" />
   <Open name="Compistart.szw" />
+  <Open name="SplashScreen.szw" />
   <Variable name="barre_progression_accueil_1" array="False" description="" group="Défaut" null="False" />
   <Variable name="barre_progression_accueil_1_1" array="False" description="" group="Défaut" null="False" />
+  <Variable name="barre_progression_compistart" array="False" description="" group="Défaut" null="False" />
   <Variable name="barre_progression_génération_code" array="False" description="" group="Défaut" null="False" />
   <Variable name="confirmation_existence_compte" array="False" description="La confirmation de la connexion du compte.Pour savoir s'il existe...Oh et puis merde,je vais pas me tuer à expliquer à la fin!Vous voulez bidouiller,vous bidouillez!" group="Défaut" null="False" />
   <Variable name="couleur_page" array="False" description="" group="Défaut" null="False" />
