@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SZProject ToolsVersion="4.0" Name="Projet1">
+<SZProject ToolsVersion="4.0" Name="MultiM_II">
   <Type value="0" />
   <ShutMode value="0" />
   <FormStart value="GestionnaireApp.szw" />
   <SplashScreen value="SplashScreen.szw" />
-  <StyleXP value="True" />
+  <StyleXP value="False" />
   <Instance value="False" />
   <MySettings value="True" />
   <Assembly.Title value="MultiM II" />
@@ -23,19 +23,26 @@
   <Optimize value="True" />
   <Cpu value="2" />
   <ObfuscationLevel value="1" />
-  <ShouldCompile value="False" />
+  <ShouldCompile value="True" />
+  <Setting name="Release" array="False" description="" />
+  <Setting name="ConnectedUser" array="False" description="" />
   <Open name="PARAMETREDUPROJET" />
   <Open name="Accueil.szw" />
-  <Open name="Compistart.szw" />
-  <Open name="SplashScreen.szw" />
+  <Open name="Arbo_Edit.szw" />
+  <Open name="Connexion_de_compte.szw" />
   <Variable name="barre_progression_accueil_1" array="False" description="" group="Défaut" null="False" />
   <Variable name="barre_progression_accueil_1_1" array="False" description="" group="Défaut" null="False" />
   <Variable name="barre_progression_compistart" array="False" description="" group="Défaut" null="False" />
   <Variable name="barre_progression_génération_code" array="False" description="" group="Défaut" null="False" />
+  <Variable name="Compilation" array="False" description="" group="Défaut" null="False" />
   <Variable name="confirmation_existence_compte" array="False" description="La confirmation de la connexion du compte.Pour savoir s'il existe...Oh et puis merde,je vais pas me tuer à expliquer à la fin!Vous voulez bidouiller,vous bidouillez!" group="Défaut" null="False" />
+  <Variable name="ConnectedUser" array="False" description="" group="Défaut" null="False" />
   <Variable name="couleur_page" array="False" description="" group="Défaut" null="False" />
   <Variable name="création_de_compte_valide_ou_pas" array="False" description="" group="Défaut" null="False" />
+  <Variable name="Ecran_de_démarrage1" array="False" description="" group="Défaut" null="False" />
   <Variable name="email_création_compte" array="False" description="" group="Défaut" null="False" />
+  <Variable name="Fenêtre2" array="False" description="" group="Défaut" null="False" />
+  <Variable name="Fenêtre3" array="False" description="" group="Défaut" null="False" />
   <Variable name="Fenêtre5" array="False" description="" group="Défaut" null="False" />
   <Variable name="Format_image_vdtpics" array="False" description="" group="Défaut" null="False" />
   <Variable name="mdp_compte_en_creation" array="False" description="" group="Défaut" null="False" />
@@ -54,6 +61,7 @@
   <Variable name="Valeur_retourné" array="False" description="Est égale à la valeur retrouné par la fonction &quot;Afficher_Message&quot;" group="Textes" null="False" />
   <Variable name="variabe_case_oui_cochée_compistart" array="False" description="" group="Défaut" null="False" />
   <Variable name="variable_vérification_code" array="False" description="" group="Défaut" null="False" />
+  <Resource name="son_demarrage" type="2" value="Ressources\demarrage.wav" />
   <Reference isproject="False" value="ComponentFactory.Krypton.Toolkit.dll" name="ComponentFactory.Krypton.Toolkit" copy="True" version="4.4.0.0" />
   <Reference isproject="False" value="Interop.ADOX.dll" name="Interop.ADOX" copy="True" version="2.8.0.0" />
   <Reference isproject="False" value="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="mscorlib" copy="False" version="4.0.0.0" />
