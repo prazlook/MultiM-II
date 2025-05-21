@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<SZSolution ToolsVersion="4.0" Name="Solution 1" MainProject="Projet1">
-  <Project Name="Projet1" File="Projet1.szproj" />
-  <GenerationOrder Name="Projet1" />
-  <Subversion_SaveLogin Value="False" />
-  <Subversion_RepositoryUrl Value="" />
-</SZSolution>

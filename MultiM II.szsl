@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<SZSolution ToolsVersion="4.0" Name="Solution 1" MainProject="MultiM_II">
-  <Project Name="MultiM_II" File="Projet1.szproj" />
-  <GenerationOrder Name="MultiM_II" />
-  <Subversion_SaveLogin Value="False" />
-  <Subversion_RepositoryUrl Value="" />
-</SZSolution>
