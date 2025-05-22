@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <AppDesignerFolder>My Project</AppDesignerFolder>
+    <ProjectGuid>{2F0B6322-8366-4D0A-A787-C790D61F2FC1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MultiM_II.Gestionnaire</StartupObject>
+    <StartupObject>MultiM_II.SplashScreen</StartupObject>
+    <RootNamespace>MultiM_II</RootNamespace>
+    <AssemblyName>MultiM_II</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MultiM_II.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MultiM_II.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Design, Version=4.5.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Components.Suite.4.5.9\lib\net20\ComponentFactory.Krypton.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Docking, Version=4.5.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Components.Suite.4.5.9\lib\net20\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.5.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Components.Suite.4.5.9\lib\net20\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.5.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Components.Suite.4.5.9\lib\net20\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.5.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Components.Suite.4.5.9\lib\net20\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.5.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Components.Suite.4.5.9\lib\net20\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ADOX">
+      <HintPath>Include\Interop.ADOX.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton.Toolkit, Version=95.25.4.111, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Toolkit.95.25.4.111\lib\net48\Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>Include\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="ProgressBar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ProgressBar.1.0.10\lib\ProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VelerSoftware.FTPLib">
+      <HintPath>Include\VelerSoftware.FTPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="VelerSoftware.VistaMessageBoxLib">
+      <HintPath>Include\VelerSoftware.VistaMessageBoxLib.dll</HintPath>
+    </Reference>
+    <Reference Include="VelerSoftware.VoiceRecognitionLib">
+      <HintPath>Include\VelerSoftware.VoiceRecognitionLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.IO" />
+    <Import Include="System.Media" />
+    <Import Include="System.Threading" />
+    <Import Include="System.Threading.Tasks" />
+    <Import Include="System.Timers" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Windows.Forms.Automation" />
+    <Import Include="System.Windows.Forms.ComponentModel.Com2Interop" />
+    <Import Include="System.Windows.Forms.Design" />
+    <Import Include="System.Windows.Forms.Layout" />
+    <Import Include="System.Windows.Forms.PropertyGridInternal" />
+    <Import Include="System.Windows.Forms.VisualStyles" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\son_demarrage.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accueil.Designer.vb">
+      <DependentUpon>Accueil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accueil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accès_forum.Designer.vb">
+      <DependentUpon>Accès_forum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accès_forum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aide_compistart.Designer.vb">
+      <DependentUpon>aide_compistart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aide_compistart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aide_drcs.Designer.vb">
+      <DependentUpon>aide_drcs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aide_drcs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aide_gestionnaire.Designer.vb">
+      <DependentUpon>aide_gestionnaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aide_gestionnaire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aide_vdtedit.Designer.vb">
+      <DependentUpon>aide_vdtedit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aide_vdtedit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Arbo_Edit.Designer.vb">
+      <DependentUpon>Arbo_Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Arbo_Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boîte_de_dialogue1.Designer.vb">
+      <DependentUpon>Boîte_de_dialogue1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Boîte_de_dialogue1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boîte_de_dialogue2.Designer.vb">
+      <DependentUpon>Boîte_de_dialogue2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Boîte_de_dialogue2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boîte_de_dialogue3.Designer.vb">
+      <DependentUpon>Boîte_de_dialogue3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Boîte_de_dialogue3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boîte_de_dialogueBarre.Designer.vb">
+      <DependentUpon>Boîte_de_dialogueBarre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Boîte_de_dialogueBarre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Centre_dAccès.Designer.vb">
+      <DependentUpon>Centre_dAccès.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Centre_dAccès.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classe1.vb" />
+    <Compile Include="Compistart.Designer.vb">
+      <DependentUpon>Compistart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compistart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="comptegmail.Designer.vb">
+      <DependentUpon>comptegmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="comptegmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compte_inexistant.Designer.vb">
+      <DependentUpon>compte_inexistant.vb</DependentUpon>
+    </Compile>
+    <Compile Include="compte_inexistant.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenêtre.Designer.vb">
+      <DependentUpon>Fenêtre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenêtre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionnaireApp.Designer.vb">
+      <DependentUpon>GestionnaireApp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GestionnaireApp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LECAMSettings.Designer.vb">
+      <DependentUpon>LECAMSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LECAMSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LSettingsWarning.Designer.vb">
+      <DependentUpon>LSettingsWarning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LSettingsWarning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paramètres.Designer.vb">
+      <DependentUpon>Paramètres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Paramètres.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Réalisation_Serveur.Designer.vb">
+      <DependentUpon>Réalisation_Serveur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Réalisation_Serveur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BootVDTEdit.Designer.vb">
+      <DependentUpon>BootVDTEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BootVDTEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="succes_connexion.Designer.vb">
+      <DependentUpon>succes_connexion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="succes_connexion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sélecteur de touche.Designer.vb">
+      <DependentUpon>Sélecteur de touche.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sélecteur de touche.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Variables_Module.vb" />
+    <Compile Include="VDT Edit.Designer.vb">
+      <DependentUpon>VDT Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VDT Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VDTPics.Designer.vb">
+      <DependentUpon>VDTPics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VDTPics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Include\VelerSoftware.VistaMessageBoxLib.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Accueil.resx">
+      <DependentUpon>Accueil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accès_forum.resx">
+      <DependentUpon>Accès_forum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aide_compistart.resx">
+      <DependentUpon>aide_compistart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aide_drcs.resx">
+      <DependentUpon>aide_drcs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aide_gestionnaire.resx">
+      <DependentUpon>aide_gestionnaire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aide_vdtedit.resx">
+      <DependentUpon>aide_vdtedit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Arbo_Edit.resx">
+      <DependentUpon>Arbo_Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boîte_de_dialogue1.resx">
+      <DependentUpon>Boîte_de_dialogue1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boîte_de_dialogue2.resx">
+      <DependentUpon>Boîte_de_dialogue2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boîte_de_dialogue3.resx">
+      <DependentUpon>Boîte_de_dialogue3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boîte_de_dialogueBarre.resx">
+      <DependentUpon>Boîte_de_dialogueBarre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Centre_dAccès.resx">
+      <DependentUpon>Centre_dAccès.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compistart.resx">
+      <DependentUpon>Compistart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="comptegmail.resx">
+      <DependentUpon>comptegmail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="compte_inexistant.resx">
+      <DependentUpon>compte_inexistant.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenêtre.resx">
+      <DependentUpon>Fenêtre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionnaireApp.resx">
+      <DependentUpon>GestionnaireApp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LECAMSettings.resx">
+      <DependentUpon>LECAMSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LSettingsWarning.resx">
+      <DependentUpon>LSettingsWarning.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paramètres.resx">
+      <DependentUpon>Paramètres.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Réalisation_Serveur.resx">
+      <DependentUpon>Réalisation_Serveur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BootVDTEdit.resx">
+      <DependentUpon>BootVDTEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="succes_connexion.resx">
+      <DependentUpon>succes_connexion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sélecteur de touche.resx">
+      <DependentUpon>Sélecteur de touche.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VDT Edit.resx">
+      <DependentUpon>VDT Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VDTPics.resx">
+      <DependentUpon>VDTPics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <SubType>Designers</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My</CustomToolNamespace>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\son_demarrage.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yt1z.net-Short-Intro-Background-Music-for-Video-15-sec-_192-KBps_.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\space-intro-no-copyright-music-124261.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startup-sound-variation-6-316850-_2_.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
