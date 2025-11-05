@@ -117,11 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Minitel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minitel.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="son_demarrage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\startup-sound-variation-6-316850-_2_.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Vous avez maintenant la plupart des bases pour utiliser le logiciel.
+Vous allez être introduit.e à l'utilisation du premier outil de cette suite : VDT Edit. 
+VDT Edit, comme son nom l'indique, est un éditeur qui permet de créer ce qu'on appelle des page Vidéotex.
+Une page Vidéotex , Vidéotext, Vidéotexte ou plus simplement VDT,l'appellation qui sera utilisée dans ce logiciel, est un fichier qui peut être affiché sur le Minitel via transmission téléphonique.
+Une page VDT peut contenir les données suivantes : 
+-Texte
+-Effacement d'écran
+-Graphique basse résolution et pour certains Minitels,haute résolution (DRCS)
+-Données de couleur
+-Déplacement de curseur
+-Définition de clignotement
+-Émission de bip par le Minitel distant (dans le cas d'une notification par exemple).
+
+VDT Edit étant un logiciel complexe, la version Lite va être utilisée pour ce chapitre.
+La version Lite inclut aussi une fenêtre d'aide. Il vous suffit de survoler une commande de la fenêtre pour connaître son utilité.
+Pour commencer, vous allez pouvoir modifier les différentes parties d'une page Vidéotex pré-rédigée. Puis, vous exporterez cette page au format VDT.
+Ensuite, vous serez projeté dans VDT Edit Lite avec les commandes déverrouillées et pourrez commencer à éditer.
+Si vous êtes prêt.e, on peut y aller.</value>
   </data>
 </root>

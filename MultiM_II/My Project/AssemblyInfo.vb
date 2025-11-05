@@ -20,4 +20,4 @@ Option Explicit On
  Assembly: System.Reflection.AssemblyTrademarkAttribute("MultiM™"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("MultiM II"),  _
  Assembly: System.Reflection.AssemblyCompanyAttribute("Prazbid3Enterprise"),  _
- Assembly: System.Runtime.InteropServices.ComVisibleAttribute(true)> 
+ Assembly: System.Runtime.InteropServices.ComVisibleAttribute(true)>

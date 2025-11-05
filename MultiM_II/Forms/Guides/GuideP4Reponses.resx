@@ -117,11 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Minitel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minitel.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Votre réponse n'est pas tout à fait exacte. Je ne vais pas vous harceler avec, mais si vous souhaitez avoir les connaissances de base, il faudrait peut-être réviser un peu. La bonne réponse était : MODulateur DÉModulateur.</value>
   </data>
-  <data name="son_demarrage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\startup-sound-variation-6-316850-_2_.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Votre réponse n'est pas tout à fait exacte. Vous ne savez pas comment se fait l'échange de données serveur-Minitel/Minitel-serveur, et c'est dommage car c'est le principal objectif de base de ce logiciel. Je vous conseille de revoir ce point.</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>Votre réponse n'est pas tout à fait exacte. Vous avez exploré l'interface de Compistart, mais il est essentiel de connaître le débit de transmission d'un Minitel, c'est-à-dire 1200 bps, pour pouvoir créer votre serveur correctement. Je vous invite fortement à réviser.</value>
+  </data>
+  <data name="Label22.Text" xml:space="preserve">
+    <value>Votre réponse n'est pas tout à fait exacte. Inutilse de s'attarder sur ce point peu important, mais je vous suggère de repasser en revue les idées principales pour comprendre le concept. La répose exacte était : Médium Interactif par Numérisation d'Information Téléphonique.</value>
   </data>
 </root>

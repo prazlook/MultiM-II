@@ -117,11 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Minitel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minitel.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="son_demarrage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\startup-sound-variation-6-316850-_2_.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Un Minitel, ou Médium Interactif par Numérisation d'Information TÉLéphonique, se présente sous la forme d'un boîtier avec un écran et un clavier. À première vue, çà ressemble à un ordinateur.
+Mais ce n'est pas un ordinateur. C'est juste l'écran et le clavier.
+Les données du clavier et de l'écran sont envoyées par des sons émis sur la ligne téléphonique qui sont ensuites décodés pas un modem pour MOdulateur-DÉModulateur.
+Les données étaient transférées par 1200bps, ce qui faisait du Minitel un outil très lent mais suffisant pour l'usage que les gens en avaient à l'époque. /!\AJOUTER VIDÉO STP!
+
+
+
+
+
+
+
+
+
+
+Le réseau 3615 Télétel a été lancé par le gouvernement pour permettre aux gens d'accéder à des services informatiques sans avoir à acheter un ordinateur hors de prix.
+Un Minitel fonctionnait avec des SERVEURS auxquels il devait se connecter pour fonctionner.
+Le but de ce logiciel est de pouvoir créer un SERVEUR. (Bon, au 21ième siècle, le but est surtout à des fins éducatives et démonstratives, mais c'est une excellente occasion d'apprendre la rétrotechnique.)
+Plutôt que de vous balancer dans un univers avec des milliARDS de boutons, on va vous guider pour arriver à la fin à vous servir seul.e de ce logiciel.
+Si vous avez bien compris tout ça, vous pouvez cliquer sur SUIVANT.</value>
   </data>
 </root>

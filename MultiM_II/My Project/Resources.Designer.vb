@@ -61,11 +61,12 @@ Namespace My
         End Property
         
         '''<summary>
-        '''  Recherche une ressource localisée de type System.IO.UnmanagedMemoryStream semblable à System.IO.MemoryStream.
+        '''  Recherche une ressource localisée de type System.Byte[].
         '''</summary>
-        Friend ReadOnly Property son_chargement() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Minitel() As Byte()
             Get
-                Return ResourceManager.GetStream("son_chargement", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Minitel", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
         

@@ -117,11 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Minitel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minitel.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="son_demarrage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\startup-sound-variation-6-316850-_2_.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Cette fonctionnalité est encore en développement.
+
+Elle permettra à l'avenir de tester l'expérience Minitel en utilisant l'émulateur du logiciel ou en connectant un Minitel via la prise DIN.
+
+Bien sûr, vous pouvez déjà expériementer les autres fonctionnalités en cliquant sur Suivant.</value>
   </data>
 </root>
