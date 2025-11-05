@@ -2,6 +2,18 @@
 
 Public Class Accueil
 
+    ' Stocker le SoundPlayer globalement
+    Public player As System.Media.SoundPlayer
+
+    Public Async Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button1.Click
+        centre_acces.player.Stop()
+        ' 3. Ouvrir BootVDTEdit
+        Dim splash As New BootVDTEdit
+        splash.Show()
+
+        Await Task.Delay(10000)
+    End Sub
+
     'Fonction Accueil_Load
     Public Sub Accueil_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
     End Sub
@@ -10,12 +22,7 @@ Public Class Accueil
         centre_acces.Show()
     End Sub
 
-    'Fonction button1_Click
-    Public Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button1.Click
-        BootVDTEdit.Show()
-        SplashScreen.player.Stop()
 
-    End Sub
 
     'Fonction button2_Click
     Public Sub button2_Click(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -27,10 +34,17 @@ Public Class Accueil
         ArboEdit.Show()
     End Sub
 
-    'Fonction button4_Click
-    Public Sub button4_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-        Compistart.Show()
+
+    Private Async Sub button4_Click(sender As Object, e As EventArgs) Handles button4.Click
+        centre_acces.player.Stop()
+
+        ' 3. Ouvrir BootVDTEdit
+        Dim splash As New BootCompistart
+        splash.Show()
+
+        Await Task.Delay(10000)
     End Sub
+
 
     'Fonction button5_Click
     Public Sub button5_Click(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -62,8 +76,8 @@ Public Class Accueil
     End Sub
 
     Public Sub button14_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-        If SplashScreen IsNot Nothing Then
-            SplashScreen.Close()
+        If centre_acces IsNot Nothing Then
+            centre_acces.Close()
         End If
     End Sub
 
@@ -86,12 +100,6 @@ Public Class Accueil
         centre_acces.Show()
     End Sub
 
-    'Fonction button13_Click
-    Public Sub button13_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-        Me.DialogResult = System.Windows.Forms.DialogResult.None : Me.Close()
-        Ecran_de_démarrage1.Show
-    End Sub
-
     'Fonction Button17_Click
     Public Sub Button17_Click(ByVal sender As Object, ByVal e As System.EventArgs)
         Me.button19.Enabled = True
@@ -109,7 +117,25 @@ Public Class Accueil
         Me.button19.Visible = False
     End Sub
 
-    Private Sub button4_Click_1(sender As Object, e As EventArgs) Handles button4.Click
+    Private Sub button13_Click_1(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub button9_Click_1(sender As Object, e As EventArgs) Handles button9.Click
+
+    End Sub
+
+    Private Sub button12_Click_1(sender As Object, e As EventArgs) Handles button12.Click
+        Database.Show()
+    End Sub
+
+    Private Sub button14_Click_1(sender As Object, e As EventArgs) Handles button14.Click
+        centre_acces.Close()
+    End Sub
+
+    Private Sub Accueil_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        centre_acces.Show()
+        centre_acces.BringToFront()
+    End Sub
+
 End Class

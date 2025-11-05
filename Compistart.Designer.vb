@@ -98,31 +98,25 @@ Partial Public Class Compistart
 
     Public groupBox14 As System.Windows.Forms.GroupBox
 
-    Public panel3 As System.Windows.Forms.Panel
+    Public selectedLineLabel As System.Windows.Forms.Label
 
-    Public label22 As System.Windows.Forms.Label
+    Public infoline8 As System.Windows.Forms.Label
 
-    Public label41 As System.Windows.Forms.Label
+    Public infoline1 As System.Windows.Forms.Label
 
-    Public label26 As System.Windows.Forms.Label
+    Public infoline7 As System.Windows.Forms.Label
 
-    Public label40 As System.Windows.Forms.Label
+    Public infoline2 As System.Windows.Forms.Label
 
-    Public label27 As System.Windows.Forms.Label
+    Public infoline3 As System.Windows.Forms.Label
 
-    Public label28 As System.Windows.Forms.Label
+    Public infoline4 As System.Windows.Forms.Label
 
-    Public label29 As System.Windows.Forms.Label
-
-    Public label30 As System.Windows.Forms.Label
-
-    Public label38 As System.Windows.Forms.Label
+    Public infoline6 As System.Windows.Forms.Label
 
     Public TextBoxConsole As System.Windows.Forms.RichTextBox
 
     Public groupBox10 As System.Windows.Forms.GroupBox
-
-    Public WithEvents button50 As System.Windows.Forms.Button
 
     Public label31 As System.Windows.Forms.Label
 
@@ -192,7 +186,7 @@ Partial Public Class Compistart
 
     Public importerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
-    Public arbToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Public WithEvents arbToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
     Public serveurToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
@@ -264,15 +258,15 @@ Partial Public Class Compistart
 
     Public WithEvents button31 As System.Windows.Forms.Button
 
-    Public WithEvents radiobutton7 As System.Windows.Forms.RadioButton
+    Public WithEvents Ouvert As System.Windows.Forms.RadioButton
 
-    Public WithEvents radiobutton8 As System.Windows.Forms.RadioButton
+    Public WithEvents OuvertFermé As System.Windows.Forms.RadioButton
 
-    Public WithEvents radiobutton9 As System.Windows.Forms.RadioButton
+    Public WithEvents Fermé As System.Windows.Forms.RadioButton
 
     Public tabPage2 As System.Windows.Forms.TabPage
 
-    Public numericUpDown7 As System.Windows.Forms.NumericUpDown
+    Public WithEvents numericUpDown7 As System.Windows.Forms.NumericUpDown
 
     Public label9 As System.Windows.Forms.Label
 
@@ -302,7 +296,7 @@ Partial Public Class Compistart
 
     Public WithEvents button19 As System.Windows.Forms.Button
 
-    Public numericUpDown6 As System.Windows.Forms.NumericUpDown
+    Public WithEvents numericUpDown6 As System.Windows.Forms.NumericUpDown
 
     Public WithEvents checkbox3 As System.Windows.Forms.CheckBox
 
@@ -346,7 +340,7 @@ Partial Public Class Compistart
 
     Public groupBox19 As System.Windows.Forms.GroupBox
 
-    Public WithEvents radiobutton5 As System.Windows.Forms.RadioButton
+    Public WithEvents COM2 As System.Windows.Forms.RadioButton
 
     Public groupBox1 As System.Windows.Forms.GroupBox
 
@@ -354,33 +348,33 @@ Partial Public Class Compistart
 
     Public WithEvents checkbox1 As System.Windows.Forms.CheckBox
 
-    Public numericUpDown1 As System.Windows.Forms.NumericUpDown
+    Public WithEvents numericUpDown1 As System.Windows.Forms.NumericUpDown
 
     Public label1 As System.Windows.Forms.Label
 
     Public groupBox2 As System.Windows.Forms.GroupBox
 
-    Public WithEvents radiobutton6 As System.Windows.Forms.RadioButton
+    Public WithEvents COM1 As System.Windows.Forms.RadioButton
 
-    Public WithEvents radiobutton4 As System.Windows.Forms.RadioButton
+    Public WithEvents COM3 As System.Windows.Forms.RadioButton
 
-    Public WithEvents radiobutton1 As System.Windows.Forms.RadioButton
+    Public WithEvents Automatic As System.Windows.Forms.RadioButton
 
-    Public WithEvents radiobutton3 As System.Windows.Forms.RadioButton
+    Public WithEvents COM4 As System.Windows.Forms.RadioButton
 
-    Public WithEvents radiobutton2 As System.Windows.Forms.RadioButton
+    Public WithEvents Other As System.Windows.Forms.RadioButton
 
     Public label3 As System.Windows.Forms.Label
 
-    Public numericUpDown2 As System.Windows.Forms.NumericUpDown
+    Public WithEvents numericUpDown2 As System.Windows.Forms.NumericUpDown
 
     Public label2 As System.Windows.Forms.Label
 
-    Public numericUpDown3 As System.Windows.Forms.NumericUpDown
+    Public WithEvents numericUpDown3 As System.Windows.Forms.NumericUpDown
 
     Public label4 As System.Windows.Forms.Label
 
-    Public numericUpDown4 As System.Windows.Forms.NumericUpDown
+    Public WithEvents numericUpDown4 As System.Windows.Forms.NumericUpDown
 
     Public label5 As System.Windows.Forms.Label
 
@@ -392,11 +386,11 @@ Partial Public Class Compistart
 
     Public WithEvents checkbox6 As System.Windows.Forms.CheckBox
 
-    Public WithEvents radiobutton10 As System.Windows.Forms.RadioButton
+    Public WithEvents telMsg As System.Windows.Forms.RadioButton
 
-    Public WithEvents radiobutton11 As System.Windows.Forms.RadioButton
+    Public WithEvents minitelPage As System.Windows.Forms.RadioButton
 
-    Public WithEvents radiobutton12 As System.Windows.Forms.RadioButton
+    Public WithEvents raccrocher As System.Windows.Forms.RadioButton
 
     Public label17 As System.Windows.Forms.Label
 
@@ -410,19 +404,17 @@ Partial Public Class Compistart
 
     Public progressBar2 As System.Windows.Forms.ProgressBar
 
-    Public WithEvents button43 As System.Windows.Forms.Button
-
-    Public textBox1 As System.Windows.Forms.TextBox
+    Public WithEvents textBox1 As System.Windows.Forms.TextBox
 
     Public label13 As System.Windows.Forms.Label
 
-    Public comboBox2 As System.Windows.Forms.ComboBox
+    Public WithEvents comboBox2 As System.Windows.Forms.ComboBox
 
     Public groupBox6 As System.Windows.Forms.GroupBox
 
     Public label11 As System.Windows.Forms.Label
 
-    Public comboBox1 As System.Windows.Forms.ComboBox
+    Public WithEvents comboBox1 As System.Windows.Forms.ComboBox
 
     Public label12 As System.Windows.Forms.Label
 
@@ -476,10 +468,6 @@ Partial Public Class Compistart
 
     Public pageVisitéeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
-    Public pageQuittéeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
-    Public pageCrééeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
     Public serveurToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
     Public commsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -532,7 +520,7 @@ Partial Public Class Compistart
 
     Public exporterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
-    Public exporterLeServeurToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Public WithEvents exporterLeServeurToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
     Public panel2 As System.Windows.Forms.Panel
 
@@ -616,16 +604,16 @@ Partial Public Class Compistart
         Me.toolStripMenuItem40 = New System.Windows.Forms.ToolStripMenuItem()
         Me.tabPage8 = New System.Windows.Forms.TabPage()
         Me.groupBox14 = New System.Windows.Forms.GroupBox()
-        Me.label22 = New System.Windows.Forms.Label()
-        Me.label41 = New System.Windows.Forms.Label()
-        Me.label26 = New System.Windows.Forms.Label()
-        Me.label40 = New System.Windows.Forms.Label()
-        Me.label27 = New System.Windows.Forms.Label()
-        Me.label28 = New System.Windows.Forms.Label()
-        Me.label29 = New System.Windows.Forms.Label()
-        Me.label30 = New System.Windows.Forms.Label()
-        Me.label38 = New System.Windows.Forms.Label()
-        Me.panel3 = New System.Windows.Forms.Panel()
+        Me.Button64 = New System.Windows.Forms.Button()
+        Me.selectedLineLabel = New System.Windows.Forms.Label()
+        Me.infoline8 = New System.Windows.Forms.Label()
+        Me.infoline1 = New System.Windows.Forms.Label()
+        Me.infoline7 = New System.Windows.Forms.Label()
+        Me.infoline2 = New System.Windows.Forms.Label()
+        Me.infoline3 = New System.Windows.Forms.Label()
+        Me.infoline4 = New System.Windows.Forms.Label()
+        Me.infoline5 = New System.Windows.Forms.Label()
+        Me.infoline6 = New System.Windows.Forms.Label()
         Me.TextBoxConsole = New System.Windows.Forms.RichTextBox()
         Me.groupBox10 = New System.Windows.Forms.GroupBox()
         Me.button50 = New System.Windows.Forms.Button()
@@ -643,7 +631,7 @@ Partial Public Class Compistart
         Me.checkbox8 = New System.Windows.Forms.CheckBox()
         Me.button48 = New System.Windows.Forms.Button()
         Me.groupBox13 = New System.Windows.Forms.GroupBox()
-        Me.progressbar6 = New Krypton.Toolkit.KryptonProgressBar()
+        Me.ProgressBar6 = New System.Windows.Forms.ProgressBar()
         Me.label24 = New System.Windows.Forms.Label()
         Me.label23 = New System.Windows.Forms.Label()
         Me.button52 = New System.Windows.Forms.Button()
@@ -665,12 +653,59 @@ Partial Public Class Compistart
         Me.combinaisonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.messagerieToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.messageReçuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AuteurToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UtilisateurToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NDeTéléphoneToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DestinataireToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UtilisateurToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NDeTéléphoneToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContenuToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NDeTéléphoneToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UtilisateurToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CorpsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.messageEnvoyéToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AuteurToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UtilisateurToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NDeTéléphoneToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DestinataireToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UtilisateurToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NDeTéléphoneToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TitreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ObjetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CorpsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.brouillonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnRédactionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UtilisateurSpécifiqueToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NimporteLequelToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnregistréToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UtilisateurSpécifiqueToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NimporteLequelToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RouvertEtEnvoyéToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UtilisateurSpécifiqueToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NimporteLequelToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.pagesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem48 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem49 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem50 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem51 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem52 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem53 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem54 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem41 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem42 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem43 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem44 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem45 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem46 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem47 = New System.Windows.Forms.ToolStripMenuItem()
         Me.pageVisitéeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.pageQuittéeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.pageCrééeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SpécifiqueToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NimporteLaquelleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UtilisateurToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SpécifiqueToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NimporteLequelToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.serveurToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.commsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.minitelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -688,6 +723,8 @@ Partial Public Class Compistart
         Me.appelToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.appelLongToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.appelCourtToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LECAMToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NoneToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.utilisateurToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.crééToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.suppriméToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -709,6 +746,7 @@ Partial Public Class Compistart
         Me.outilsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.aideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.réglagesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsoleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.statusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.toolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
         Me.toolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
@@ -734,13 +772,12 @@ Partial Public Class Compistart
         Me.button30 = New System.Windows.Forms.Button()
         Me.button32 = New System.Windows.Forms.Button()
         Me.button33 = New System.Windows.Forms.Button()
-        Me.tabControl1 = New System.Windows.Forms.TabControl()
         Me.tabPage1 = New System.Windows.Forms.TabPage()
         Me.groupBox3 = New System.Windows.Forms.GroupBox()
         Me.button31 = New System.Windows.Forms.Button()
-        Me.radiobutton7 = New System.Windows.Forms.RadioButton()
-        Me.radiobutton8 = New System.Windows.Forms.RadioButton()
-        Me.radiobutton9 = New System.Windows.Forms.RadioButton()
+        Me.Ouvert = New System.Windows.Forms.RadioButton()
+        Me.OuvertFermé = New System.Windows.Forms.RadioButton()
+        Me.Fermé = New System.Windows.Forms.RadioButton()
         Me.tabPage2 = New System.Windows.Forms.TabPage()
         Me.numericUpDown7 = New System.Windows.Forms.NumericUpDown()
         Me.label9 = New System.Windows.Forms.Label()
@@ -773,6 +810,20 @@ Partial Public Class Compistart
         Me.checkbox18 = New System.Windows.Forms.CheckBox()
         Me.button58 = New System.Windows.Forms.Button()
         Me.button63 = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.NumericUpDown8 = New System.Windows.Forms.NumericUpDown()
+        Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.RedefInc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.dftitem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TSTB = New System.Windows.Forms.ToolStripTextBox()
+        Me.NumericUpDown9 = New System.Windows.Forms.NumericUpDown()
+        Me.TabPage9 = New System.Windows.Forms.TabPage()
+        Me.CheckBox19 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox20 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox21 = New System.Windows.Forms.CheckBox()
+        Me.tabControl1 = New System.Windows.Forms.TabControl()
         Me.ROUGE = New System.Windows.Forms.ToolTip(Me.components)
         Me.groupBox18 = New System.Windows.Forms.GroupBox()
         Me.treeView1 = New System.Windows.Forms.TreeView()
@@ -780,7 +831,10 @@ Partial Public Class Compistart
         Me.button60 = New System.Windows.Forms.Button()
         Me.button59 = New System.Windows.Forms.Button()
         Me.groupBox19 = New System.Windows.Forms.GroupBox()
-        Me.radiobutton5 = New System.Windows.Forms.RadioButton()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.COM2 = New System.Windows.Forms.RadioButton()
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
         Me.button1 = New ComponentFactory.Krypton.Toolkit.KryptonButton()
         Me.kryptonPalette1 = New ComponentFactory.Krypton.Toolkit.KryptonPalette(Me.components)
@@ -789,11 +843,11 @@ Partial Public Class Compistart
         Me.numericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.label1 = New System.Windows.Forms.Label()
         Me.groupBox2 = New System.Windows.Forms.GroupBox()
-        Me.radiobutton6 = New System.Windows.Forms.RadioButton()
-        Me.radiobutton4 = New System.Windows.Forms.RadioButton()
-        Me.radiobutton1 = New System.Windows.Forms.RadioButton()
-        Me.radiobutton3 = New System.Windows.Forms.RadioButton()
-        Me.radiobutton2 = New System.Windows.Forms.RadioButton()
+        Me.COM1 = New System.Windows.Forms.RadioButton()
+        Me.COM3 = New System.Windows.Forms.RadioButton()
+        Me.Automatic = New System.Windows.Forms.RadioButton()
+        Me.COM4 = New System.Windows.Forms.RadioButton()
+        Me.Other = New System.Windows.Forms.RadioButton()
         Me.label3 = New System.Windows.Forms.Label()
         Me.numericUpDown2 = New System.Windows.Forms.NumericUpDown()
         Me.label2 = New System.Windows.Forms.Label()
@@ -807,13 +861,21 @@ Partial Public Class Compistart
         Me.kryptonButton3 = New ComponentFactory.Krypton.Toolkit.KryptonButton()
         Me.label16 = New System.Windows.Forms.Label()
         Me.groupBox8 = New System.Windows.Forms.GroupBox()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.MenuStrip4 = New System.Windows.Forms.MenuStrip()
+        Me.NumérosBloquésToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.XxxxxxxxxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DébloquerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DéfinirUneRéponseSpécifiqueToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AppelerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AfficherLaListeComplèteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.button45 = New ComponentFactory.Krypton.Toolkit.KryptonButton()
         Me.groupBox9 = New System.Windows.Forms.GroupBox()
         Me.checkbox6 = New System.Windows.Forms.CheckBox()
         Me.button46 = New System.Windows.Forms.Button()
-        Me.radiobutton10 = New System.Windows.Forms.RadioButton()
-        Me.radiobutton11 = New System.Windows.Forms.RadioButton()
-        Me.radiobutton12 = New System.Windows.Forms.RadioButton()
+        Me.telMsg = New System.Windows.Forms.RadioButton()
+        Me.minitelPage = New System.Windows.Forms.RadioButton()
+        Me.raccrocher = New System.Windows.Forms.RadioButton()
         Me.label17 = New System.Windows.Forms.Label()
         Me.button44 = New ComponentFactory.Krypton.Toolkit.KryptonButton()
         Me.progressBar1 = New System.Windows.Forms.ProgressBar()
@@ -822,11 +884,15 @@ Partial Public Class Compistart
         Me.label15 = New System.Windows.Forms.Label()
         Me.label14 = New System.Windows.Forms.Label()
         Me.progressBar2 = New System.Windows.Forms.ProgressBar()
-        Me.button43 = New System.Windows.Forms.Button()
         Me.textBox1 = New System.Windows.Forms.TextBox()
         Me.label13 = New System.Windows.Forms.Label()
         Me.comboBox2 = New System.Windows.Forms.ComboBox()
         Me.groupBox6 = New System.Windows.Forms.GroupBox()
+        Me.TrackBar2 = New System.Windows.Forms.TrackBar()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
         Me.label11 = New System.Windows.Forms.Label()
         Me.comboBox1 = New System.Windows.Forms.ComboBox()
         Me.label12 = New System.Windows.Forms.Label()
@@ -849,6 +915,13 @@ Partial Public Class Compistart
         Me.panel2 = New System.Windows.Forms.Panel()
         Me.button62 = New ComponentFactory.Krypton.Toolkit.KryptonButton()
         Me.label33 = New System.Windows.Forms.Label()
+        Me.GroupBox20 = New System.Windows.Forms.GroupBox()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.MenuStrip5 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripMenuItem55 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.modemPort = New System.IO.Ports.SerialPort(Me.components)
+        Me.refreshTimer = New System.Windows.Forms.Timer(Me.components)
         Me.groupBox17.SuspendLayout()
         Me.tabControl3.SuspendLayout()
         Me.tabPage7.SuspendLayout()
@@ -866,7 +939,6 @@ Partial Public Class Compistart
         Me.panel1.SuspendLayout()
         Me.menuStrip3.SuspendLayout()
         Me.statusStrip1.SuspendLayout()
-        Me.tabControl1.SuspendLayout()
         Me.tabPage1.SuspendLayout()
         Me.groupBox3.SuspendLayout()
         Me.tabPage2.SuspendLayout()
@@ -875,6 +947,11 @@ Partial Public Class Compistart
         CType(Me.numericUpDown6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabPage3.SuspendLayout()
         Me.tabPage4.SuspendLayout()
+        CType(Me.NumericUpDown8, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip2.SuspendLayout()
+        CType(Me.NumericUpDown9, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage9.SuspendLayout()
+        Me.tabControl1.SuspendLayout()
         Me.groupBox18.SuspendLayout()
         Me.groupBox19.SuspendLayout()
         Me.groupBox1.SuspendLayout()
@@ -884,13 +961,19 @@ Partial Public Class Compistart
         CType(Me.numericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numericUpDown4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.groupBox8.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.MenuStrip4.SuspendLayout()
         Me.groupBox9.SuspendLayout()
         Me.groupBox7.SuspendLayout()
         Me.groupBox6.SuspendLayout()
+        CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.groupBox4.SuspendLayout()
         Me.groupBox5.SuspendLayout()
         CType(Me.trackbar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panel2.SuspendLayout()
+        Me.GroupBox20.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.MenuStrip5.SuspendLayout()
         Me.SuspendLayout()
         '
         'tabPage6
@@ -1238,124 +1321,128 @@ Partial Public Class Compistart
         '
         'groupBox14
         '
-        Me.groupBox14.Controls.Add(Me.label22)
-        Me.groupBox14.Controls.Add(Me.label41)
-        Me.groupBox14.Controls.Add(Me.label26)
-        Me.groupBox14.Controls.Add(Me.label40)
-        Me.groupBox14.Controls.Add(Me.label27)
-        Me.groupBox14.Controls.Add(Me.label28)
-        Me.groupBox14.Controls.Add(Me.label29)
-        Me.groupBox14.Controls.Add(Me.label30)
-        Me.groupBox14.Controls.Add(Me.label38)
+        Me.groupBox14.Controls.Add(Me.Button64)
+        Me.groupBox14.Controls.Add(Me.selectedLineLabel)
+        Me.groupBox14.Controls.Add(Me.infoline8)
+        Me.groupBox14.Controls.Add(Me.infoline1)
+        Me.groupBox14.Controls.Add(Me.infoline7)
+        Me.groupBox14.Controls.Add(Me.infoline2)
+        Me.groupBox14.Controls.Add(Me.infoline3)
+        Me.groupBox14.Controls.Add(Me.infoline4)
+        Me.groupBox14.Controls.Add(Me.infoline5)
+        Me.groupBox14.Controls.Add(Me.infoline6)
         Me.groupBox14.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox14.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.groupBox14.Location = New System.Drawing.Point(258, 13)
         Me.groupBox14.Name = "groupBox14"
-        Me.groupBox14.Size = New System.Drawing.Size(157, 207)
+        Me.groupBox14.Size = New System.Drawing.Size(157, 211)
         Me.groupBox14.TabIndex = 8
         Me.groupBox14.TabStop = False
         Me.groupBox14.Text = "Informations"
         '
-        'label22
+        'Button64
         '
-        Me.label22.Cursor = System.Windows.Forms.Cursors.Default
-        Me.label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.label22.Location = New System.Drawing.Point(7, 20)
-        Me.label22.Name = "label22"
-        Me.label22.Size = New System.Drawing.Size(133, 19)
-        Me.label22.TabIndex = 0
-        Me.label22.Text = "Ligne 3"
+        Me.Button64.Location = New System.Drawing.Point(7, 183)
+        Me.Button64.Name = "Button64"
+        Me.Button64.Size = New System.Drawing.Size(75, 23)
+        Me.Button64.TabIndex = 15
+        Me.Button64.Text = "Paramètres"
+        Me.Button64.UseVisualStyleBackColor = True
         '
-        'label41
+        'selectedLineLabel
         '
-        Me.label41.Cursor = System.Windows.Forms.Cursors.Default
-        Me.label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.label41.Location = New System.Drawing.Point(6, 166)
-        Me.label41.Name = "label41"
-        Me.label41.Size = New System.Drawing.Size(100, 13)
-        Me.label41.TabIndex = 14
-        Me.label41.Text = "ROM : N/D"
+        Me.selectedLineLabel.Cursor = System.Windows.Forms.Cursors.Default
+        Me.selectedLineLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.selectedLineLabel.Location = New System.Drawing.Point(7, 20)
+        Me.selectedLineLabel.Name = "selectedLineLabel"
+        Me.selectedLineLabel.Size = New System.Drawing.Size(133, 19)
+        Me.selectedLineLabel.TabIndex = 0
+        Me.selectedLineLabel.Text = "Aucune ligne sélectionnée"
+        Me.toolTip1.SetToolTip(Me.selectedLineLabel, "Numéro de ligne")
         '
-        'label26
+        'infoline8
         '
-        Me.label26.Cursor = System.Windows.Forms.Cursors.Default
-        Me.label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.label26.Location = New System.Drawing.Point(7, 39)
-        Me.label26.Name = "label26"
-        Me.label26.Size = New System.Drawing.Size(133, 19)
-        Me.label26.TabIndex = 1
-        Me.label26.Text = "Utilisateur : PRAZBID3"
+        Me.infoline8.Cursor = System.Windows.Forms.Cursors.Default
+        Me.infoline8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.infoline8.Location = New System.Drawing.Point(6, 166)
+        Me.infoline8.Name = "infoline8"
+        Me.infoline8.Size = New System.Drawing.Size(100, 13)
+        Me.infoline8.TabIndex = 14
+        Me.infoline8.Text = "- -"
         '
-        'label40
+        'infoline1
         '
-        Me.label40.Cursor = System.Windows.Forms.Cursors.Default
-        Me.label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.label40.Location = New System.Drawing.Point(6, 149)
-        Me.label40.Name = "label40"
-        Me.label40.Size = New System.Drawing.Size(100, 15)
-        Me.label40.TabIndex = 13
-        Me.label40.Text = "Minitel : M12"
+        Me.infoline1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.infoline1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.infoline1.Location = New System.Drawing.Point(7, 39)
+        Me.infoline1.Name = "infoline1"
+        Me.infoline1.Size = New System.Drawing.Size(133, 19)
+        Me.infoline1.TabIndex = 1
+        Me.infoline1.Text = "- -"
+        Me.toolTip1.SetToolTip(Me.infoline1, "Nom d'utilisateur (Invité = utilisateur non inscrit)")
         '
-        'label27
+        'infoline7
         '
-        Me.label27.Cursor = System.Windows.Forms.Cursors.Default
-        Me.label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.label27.Location = New System.Drawing.Point(7, 56)
-        Me.label27.Name = "label27"
-        Me.label27.Size = New System.Drawing.Size(133, 19)
-        Me.label27.TabIndex = 2
-        Me.label27.Text = "Numéro : 0546897598"
+        Me.infoline7.Cursor = System.Windows.Forms.Cursors.Default
+        Me.infoline7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.infoline7.Location = New System.Drawing.Point(6, 149)
+        Me.infoline7.Name = "infoline7"
+        Me.infoline7.Size = New System.Drawing.Size(100, 15)
+        Me.infoline7.TabIndex = 13
+        Me.infoline7.Text = "- -"
         '
-        'label28
+        'infoline2
         '
-        Me.label28.Cursor = System.Windows.Forms.Cursors.Default
-        Me.label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.label28.Location = New System.Drawing.Point(7, 75)
-        Me.label28.Name = "label28"
-        Me.label28.Size = New System.Drawing.Size(133, 19)
-        Me.label28.TabIndex = 3
-        Me.label28.Text = "Débit maximal : 1200 bps"
+        Me.infoline2.Cursor = System.Windows.Forms.Cursors.Default
+        Me.infoline2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.infoline2.Location = New System.Drawing.Point(7, 56)
+        Me.infoline2.Name = "infoline2"
+        Me.infoline2.Size = New System.Drawing.Size(133, 19)
+        Me.infoline2.TabIndex = 2
+        Me.infoline2.Text = "- -"
+        Me.toolTip1.SetToolTip(Me.infoline2, "Numéro de l'utilisateur")
         '
-        'label29
+        'infoline3
         '
-        Me.label29.Cursor = System.Windows.Forms.Cursors.Default
-        Me.label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.label29.Location = New System.Drawing.Point(7, 93)
-        Me.label29.Name = "label29"
-        Me.label29.Size = New System.Drawing.Size(133, 19)
-        Me.label29.TabIndex = 4
-        Me.label29.Text = "Compatible messagerie"
+        Me.infoline3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.infoline3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.infoline3.Location = New System.Drawing.Point(7, 75)
+        Me.infoline3.Name = "infoline3"
+        Me.infoline3.Size = New System.Drawing.Size(133, 19)
+        Me.infoline3.TabIndex = 3
+        Me.infoline3.Text = "- -"
+        Me.toolTip1.SetToolTip(Me.infoline3, "Débit maximal de transmission-réception supporté par le ligne")
         '
-        'label30
+        'infoline4
         '
-        Me.label30.Cursor = System.Windows.Forms.Cursors.Default
-        Me.label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.label30.Location = New System.Drawing.Point(7, 111)
-        Me.label30.Name = "label30"
-        Me.label30.Size = New System.Drawing.Size(133, 19)
-        Me.label30.TabIndex = 5
-        Me.label30.Text = "Compatible annuaire"
+        Me.infoline4.Cursor = System.Windows.Forms.Cursors.Default
+        Me.infoline4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.infoline4.Location = New System.Drawing.Point(7, 93)
+        Me.infoline4.Name = "infoline4"
+        Me.infoline4.Size = New System.Drawing.Size(133, 19)
+        Me.infoline4.TabIndex = 4
+        Me.infoline4.Text = "- -"
         '
-        'label38
+        'infoline5
         '
-        Me.label38.Cursor = System.Windows.Forms.Cursors.Default
-        Me.label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.label38.Location = New System.Drawing.Point(6, 130)
-        Me.label38.Name = "label38"
-        Me.label38.Size = New System.Drawing.Size(133, 20)
-        Me.label38.TabIndex = 11
-        Me.label38.Text = "Signal : Excellent"
+        Me.infoline5.Cursor = System.Windows.Forms.Cursors.Default
+        Me.infoline5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.infoline5.Location = New System.Drawing.Point(7, 111)
+        Me.infoline5.Name = "infoline5"
+        Me.infoline5.Size = New System.Drawing.Size(133, 19)
+        Me.infoline5.TabIndex = 5
+        Me.infoline5.Text = "- -"
         '
-        'panel3
+        'infoline6
         '
-        Me.panel3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.panel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.panel3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.panel3.Location = New System.Drawing.Point(6, 179)
-        Me.panel3.Name = "panel3"
-        Me.panel3.Size = New System.Drawing.Size(129, 70)
-        Me.panel3.TabIndex = 15
+        Me.infoline6.Cursor = System.Windows.Forms.Cursors.Default
+        Me.infoline6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.infoline6.Location = New System.Drawing.Point(6, 130)
+        Me.infoline6.Name = "infoline6"
+        Me.infoline6.Size = New System.Drawing.Size(133, 20)
+        Me.infoline6.TabIndex = 11
+        Me.infoline6.Text = "- -"
         '
         'TextBoxConsole
         '
@@ -1374,7 +1461,6 @@ Partial Public Class Compistart
         '
         'groupBox10
         '
-        Me.groupBox10.Controls.Add(Me.panel3)
         Me.groupBox10.Controls.Add(Me.button50)
         Me.groupBox10.Controls.Add(Me.label31)
         Me.groupBox10.Controls.Add(Me.label25)
@@ -1418,7 +1504,7 @@ Partial Public Class Compistart
         Me.label31.Name = "label31"
         Me.label31.Size = New System.Drawing.Size(128, 23)
         Me.label31.TabIndex = 10
-        Me.label31.Text = "PRAZBID3, regdrgrt"
+        Me.label31.Text = "- -"
         '
         'label25
         '
@@ -1428,7 +1514,7 @@ Partial Public Class Compistart
         Me.label25.Name = "label25"
         Me.label25.Size = New System.Drawing.Size(128, 17)
         Me.label25.TabIndex = 9
-        Me.label25.Text = "Utilisateurs connectés:2"
+        Me.label25.Text = "Utilisateurs connectés:0"
         '
         'button47
         '
@@ -1559,7 +1645,7 @@ Partial Public Class Compistart
         '
         'groupBox13
         '
-        Me.groupBox13.Controls.Add(Me.progressbar6)
+        Me.groupBox13.Controls.Add(Me.ProgressBar6)
         Me.groupBox13.Controls.Add(Me.label24)
         Me.groupBox13.Controls.Add(Me.label23)
         Me.groupBox13.Cursor = System.Windows.Forms.Cursors.Default
@@ -1572,17 +1658,17 @@ Partial Public Class Compistart
         Me.groupBox13.TabStop = False
         Me.groupBox13.Text = "Ligne 3"
         '
-        'progressbar6
+        'ProgressBar6
         '
-        Me.progressbar6.Location = New System.Drawing.Point(57, 14)
-        Me.progressbar6.Name = "progressbar6"
-        Me.progressbar6.Size = New System.Drawing.Size(51, 11)
-        Me.progressbar6.StateCommon.Back.Color1 = System.Drawing.Color.Green
-        Me.progressbar6.StateDisabled.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.OneNote
-        Me.progressbar6.StateNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.OneNote
-        Me.progressbar6.TabIndex = 29
-        Me.progressbar6.Value = 50
-        Me.progressbar6.Values.Text = ""
+        Me.ProgressBar6.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ProgressBar6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.ProgressBar6.ForeColor = System.Drawing.Color.Lime
+        Me.ProgressBar6.Location = New System.Drawing.Point(57, 16)
+        Me.ProgressBar6.Name = "ProgressBar6"
+        Me.ProgressBar6.Size = New System.Drawing.Size(52, 11)
+        Me.ProgressBar6.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.ProgressBar6.TabIndex = 5
+        Me.ProgressBar6.Value = 100
         '
         'label24
         '
@@ -1657,7 +1743,7 @@ Partial Public Class Compistart
         Me.groupBox15.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox15.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.groupBox15.Location = New System.Drawing.Point(328, 458)
+        Me.groupBox15.Location = New System.Drawing.Point(12, 693)
         Me.groupBox15.Name = "groupBox15"
         Me.groupBox15.Size = New System.Drawing.Size(283, 140)
         Me.groupBox15.TabIndex = 24
@@ -1781,46 +1867,349 @@ Partial Public Class Compistart
         '
         'messageReçuToolStripMenuItem
         '
+        Me.messageReçuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AuteurToolStripMenuItem1, Me.DestinataireToolStripMenuItem1, Me.ContenuToolStripMenuItem1})
         Me.messageReçuToolStripMenuItem.Name = "messageReçuToolStripMenuItem"
         Me.messageReçuToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.messageReçuToolStripMenuItem.Text = "Message reçu"
         '
+        'AuteurToolStripMenuItem1
+        '
+        Me.AuteurToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UtilisateurToolStripMenuItem5, Me.NDeTéléphoneToolStripMenuItem4})
+        Me.AuteurToolStripMenuItem1.Name = "AuteurToolStripMenuItem1"
+        Me.AuteurToolStripMenuItem1.Size = New System.Drawing.Size(136, 22)
+        Me.AuteurToolStripMenuItem1.Text = "Auteur"
+        '
+        'UtilisateurToolStripMenuItem5
+        '
+        Me.UtilisateurToolStripMenuItem5.Name = "UtilisateurToolStripMenuItem5"
+        Me.UtilisateurToolStripMenuItem5.Size = New System.Drawing.Size(160, 22)
+        Me.UtilisateurToolStripMenuItem5.Text = "Utilisateur"
+        '
+        'NDeTéléphoneToolStripMenuItem4
+        '
+        Me.NDeTéléphoneToolStripMenuItem4.Name = "NDeTéléphoneToolStripMenuItem4"
+        Me.NDeTéléphoneToolStripMenuItem4.Size = New System.Drawing.Size(160, 22)
+        Me.NDeTéléphoneToolStripMenuItem4.Text = "N° de téléphone"
+        '
+        'DestinataireToolStripMenuItem1
+        '
+        Me.DestinataireToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UtilisateurToolStripMenuItem2, Me.NDeTéléphoneToolStripMenuItem2})
+        Me.DestinataireToolStripMenuItem1.Name = "DestinataireToolStripMenuItem1"
+        Me.DestinataireToolStripMenuItem1.Size = New System.Drawing.Size(136, 22)
+        Me.DestinataireToolStripMenuItem1.Text = "Destinataire"
+        '
+        'UtilisateurToolStripMenuItem2
+        '
+        Me.UtilisateurToolStripMenuItem2.Name = "UtilisateurToolStripMenuItem2"
+        Me.UtilisateurToolStripMenuItem2.Size = New System.Drawing.Size(160, 22)
+        Me.UtilisateurToolStripMenuItem2.Text = "Utilisateur"
+        '
+        'NDeTéléphoneToolStripMenuItem2
+        '
+        Me.NDeTéléphoneToolStripMenuItem2.Name = "NDeTéléphoneToolStripMenuItem2"
+        Me.NDeTéléphoneToolStripMenuItem2.Size = New System.Drawing.Size(160, 22)
+        Me.NDeTéléphoneToolStripMenuItem2.Text = "N° de téléphone"
+        '
+        'ContenuToolStripMenuItem1
+        '
+        Me.ContenuToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NDeTéléphoneToolStripMenuItem1, Me.UtilisateurToolStripMenuItem4, Me.CorpsToolStripMenuItem1})
+        Me.ContenuToolStripMenuItem1.Name = "ContenuToolStripMenuItem1"
+        Me.ContenuToolStripMenuItem1.Size = New System.Drawing.Size(136, 22)
+        Me.ContenuToolStripMenuItem1.Text = "Contenu"
+        '
+        'NDeTéléphoneToolStripMenuItem1
+        '
+        Me.NDeTéléphoneToolStripMenuItem1.Name = "NDeTéléphoneToolStripMenuItem1"
+        Me.NDeTéléphoneToolStripMenuItem1.Size = New System.Drawing.Size(105, 22)
+        Me.NDeTéléphoneToolStripMenuItem1.Text = "Titre"
+        '
+        'UtilisateurToolStripMenuItem4
+        '
+        Me.UtilisateurToolStripMenuItem4.Name = "UtilisateurToolStripMenuItem4"
+        Me.UtilisateurToolStripMenuItem4.Size = New System.Drawing.Size(105, 22)
+        Me.UtilisateurToolStripMenuItem4.Text = "Objet"
+        '
+        'CorpsToolStripMenuItem1
+        '
+        Me.CorpsToolStripMenuItem1.Name = "CorpsToolStripMenuItem1"
+        Me.CorpsToolStripMenuItem1.Size = New System.Drawing.Size(105, 22)
+        Me.CorpsToolStripMenuItem1.Text = "Corps"
+        '
         'messageEnvoyéToolStripMenuItem
         '
+        Me.messageEnvoyéToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AuteurToolStripMenuItem, Me.DestinataireToolStripMenuItem, Me.ContenuToolStripMenuItem})
         Me.messageEnvoyéToolStripMenuItem.Name = "messageEnvoyéToolStripMenuItem"
         Me.messageEnvoyéToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.messageEnvoyéToolStripMenuItem.Text = "Message envoyé"
         '
+        'AuteurToolStripMenuItem
+        '
+        Me.AuteurToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UtilisateurToolStripMenuItem1, Me.NDeTéléphoneToolStripMenuItem})
+        Me.AuteurToolStripMenuItem.Name = "AuteurToolStripMenuItem"
+        Me.AuteurToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.AuteurToolStripMenuItem.Text = "Auteur"
+        '
+        'UtilisateurToolStripMenuItem1
+        '
+        Me.UtilisateurToolStripMenuItem1.Name = "UtilisateurToolStripMenuItem1"
+        Me.UtilisateurToolStripMenuItem1.Size = New System.Drawing.Size(160, 22)
+        Me.UtilisateurToolStripMenuItem1.Text = "Utilisateur"
+        '
+        'NDeTéléphoneToolStripMenuItem
+        '
+        Me.NDeTéléphoneToolStripMenuItem.Name = "NDeTéléphoneToolStripMenuItem"
+        Me.NDeTéléphoneToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.NDeTéléphoneToolStripMenuItem.Text = "N° de téléphone"
+        '
+        'DestinataireToolStripMenuItem
+        '
+        Me.DestinataireToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UtilisateurToolStripMenuItem3, Me.NDeTéléphoneToolStripMenuItem3})
+        Me.DestinataireToolStripMenuItem.Name = "DestinataireToolStripMenuItem"
+        Me.DestinataireToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.DestinataireToolStripMenuItem.Text = "Destinataire"
+        '
+        'UtilisateurToolStripMenuItem3
+        '
+        Me.UtilisateurToolStripMenuItem3.Name = "UtilisateurToolStripMenuItem3"
+        Me.UtilisateurToolStripMenuItem3.Size = New System.Drawing.Size(160, 22)
+        Me.UtilisateurToolStripMenuItem3.Text = "Utilisateur"
+        '
+        'NDeTéléphoneToolStripMenuItem3
+        '
+        Me.NDeTéléphoneToolStripMenuItem3.Name = "NDeTéléphoneToolStripMenuItem3"
+        Me.NDeTéléphoneToolStripMenuItem3.Size = New System.Drawing.Size(160, 22)
+        Me.NDeTéléphoneToolStripMenuItem3.Text = "N° de téléphone"
+        '
+        'ContenuToolStripMenuItem
+        '
+        Me.ContenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TitreToolStripMenuItem, Me.ObjetToolStripMenuItem, Me.CorpsToolStripMenuItem})
+        Me.ContenuToolStripMenuItem.Name = "ContenuToolStripMenuItem"
+        Me.ContenuToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.ContenuToolStripMenuItem.Text = "Contenu"
+        '
+        'TitreToolStripMenuItem
+        '
+        Me.TitreToolStripMenuItem.Name = "TitreToolStripMenuItem"
+        Me.TitreToolStripMenuItem.Size = New System.Drawing.Size(105, 22)
+        Me.TitreToolStripMenuItem.Text = "Titre"
+        '
+        'ObjetToolStripMenuItem
+        '
+        Me.ObjetToolStripMenuItem.Name = "ObjetToolStripMenuItem"
+        Me.ObjetToolStripMenuItem.Size = New System.Drawing.Size(105, 22)
+        Me.ObjetToolStripMenuItem.Text = "Objet"
+        '
+        'CorpsToolStripMenuItem
+        '
+        Me.CorpsToolStripMenuItem.Name = "CorpsToolStripMenuItem"
+        Me.CorpsToolStripMenuItem.Size = New System.Drawing.Size(105, 22)
+        Me.CorpsToolStripMenuItem.Text = "Corps"
+        '
         'brouillonToolStripMenuItem
         '
+        Me.brouillonToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnRédactionToolStripMenuItem, Me.EnregistréToolStripMenuItem, Me.RouvertEtEnvoyéToolStripMenuItem})
         Me.brouillonToolStripMenuItem.Name = "brouillonToolStripMenuItem"
         Me.brouillonToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.brouillonToolStripMenuItem.Text = "Brouillon"
         '
+        'EnRédactionToolStripMenuItem
+        '
+        Me.EnRédactionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UtilisateurSpécifiqueToolStripMenuItem, Me.NimporteLequelToolStripMenuItem1})
+        Me.EnRédactionToolStripMenuItem.Name = "EnRédactionToolStripMenuItem"
+        Me.EnRédactionToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.EnRédactionToolStripMenuItem.Text = "En rédaction"
+        '
+        'UtilisateurSpécifiqueToolStripMenuItem
+        '
+        Me.UtilisateurSpécifiqueToolStripMenuItem.Name = "UtilisateurSpécifiqueToolStripMenuItem"
+        Me.UtilisateurSpécifiqueToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.UtilisateurSpécifiqueToolStripMenuItem.Text = "Utilisateur spécifique"
+        '
+        'NimporteLequelToolStripMenuItem1
+        '
+        Me.NimporteLequelToolStripMenuItem1.Name = "NimporteLequelToolStripMenuItem1"
+        Me.NimporteLequelToolStripMenuItem1.Size = New System.Drawing.Size(184, 22)
+        Me.NimporteLequelToolStripMenuItem1.Text = "N'importe lequel"
+        '
+        'EnregistréToolStripMenuItem
+        '
+        Me.EnregistréToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UtilisateurSpécifiqueToolStripMenuItem1, Me.NimporteLequelToolStripMenuItem2})
+        Me.EnregistréToolStripMenuItem.Name = "EnregistréToolStripMenuItem"
+        Me.EnregistréToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.EnregistréToolStripMenuItem.Text = "Enregistré"
+        '
+        'UtilisateurSpécifiqueToolStripMenuItem1
+        '
+        Me.UtilisateurSpécifiqueToolStripMenuItem1.Name = "UtilisateurSpécifiqueToolStripMenuItem1"
+        Me.UtilisateurSpécifiqueToolStripMenuItem1.Size = New System.Drawing.Size(184, 22)
+        Me.UtilisateurSpécifiqueToolStripMenuItem1.Text = "Utilisateur spécifique"
+        '
+        'NimporteLequelToolStripMenuItem2
+        '
+        Me.NimporteLequelToolStripMenuItem2.Name = "NimporteLequelToolStripMenuItem2"
+        Me.NimporteLequelToolStripMenuItem2.Size = New System.Drawing.Size(184, 22)
+        Me.NimporteLequelToolStripMenuItem2.Text = "N'importe lequel"
+        '
+        'RouvertEtEnvoyéToolStripMenuItem
+        '
+        Me.RouvertEtEnvoyéToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UtilisateurSpécifiqueToolStripMenuItem2, Me.NimporteLequelToolStripMenuItem3})
+        Me.RouvertEtEnvoyéToolStripMenuItem.Name = "RouvertEtEnvoyéToolStripMenuItem"
+        Me.RouvertEtEnvoyéToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.RouvertEtEnvoyéToolStripMenuItem.Text = "Rouvert et envoyé"
+        '
+        'UtilisateurSpécifiqueToolStripMenuItem2
+        '
+        Me.UtilisateurSpécifiqueToolStripMenuItem2.Name = "UtilisateurSpécifiqueToolStripMenuItem2"
+        Me.UtilisateurSpécifiqueToolStripMenuItem2.Size = New System.Drawing.Size(184, 22)
+        Me.UtilisateurSpécifiqueToolStripMenuItem2.Text = "Utilisateur spécifique"
+        '
+        'NimporteLequelToolStripMenuItem3
+        '
+        Me.NimporteLequelToolStripMenuItem3.Name = "NimporteLequelToolStripMenuItem3"
+        Me.NimporteLequelToolStripMenuItem3.Size = New System.Drawing.Size(184, 22)
+        Me.NimporteLequelToolStripMenuItem3.Text = "N'importe lequel"
+        '
         'pagesToolStripMenuItem
         '
-        Me.pagesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.pageVisitéeToolStripMenuItem, Me.pageQuittéeToolStripMenuItem, Me.pageCrééeToolStripMenuItem})
+        Me.pagesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem48, Me.ToolStripMenuItem41, Me.pageVisitéeToolStripMenuItem})
         Me.pagesToolStripMenuItem.Name = "pagesToolStripMenuItem"
         Me.pagesToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.pagesToolStripMenuItem.Text = "Pages"
         '
+        'ToolStripMenuItem48
+        '
+        Me.ToolStripMenuItem48.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem49, Me.ToolStripMenuItem52})
+        Me.ToolStripMenuItem48.Name = "ToolStripMenuItem48"
+        Me.ToolStripMenuItem48.Size = New System.Drawing.Size(140, 22)
+        Me.ToolStripMenuItem48.Text = "Page visitée"
+        '
+        'ToolStripMenuItem49
+        '
+        Me.ToolStripMenuItem49.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem50, Me.ToolStripMenuItem51})
+        Me.ToolStripMenuItem49.Name = "ToolStripMenuItem49"
+        Me.ToolStripMenuItem49.Size = New System.Drawing.Size(127, 22)
+        Me.ToolStripMenuItem49.Text = "Page"
+        '
+        'ToolStripMenuItem50
+        '
+        Me.ToolStripMenuItem50.Name = "ToolStripMenuItem50"
+        Me.ToolStripMenuItem50.Size = New System.Drawing.Size(172, 22)
+        Me.ToolStripMenuItem50.Text = "Spécifique"
+        '
+        'ToolStripMenuItem51
+        '
+        Me.ToolStripMenuItem51.Name = "ToolStripMenuItem51"
+        Me.ToolStripMenuItem51.Size = New System.Drawing.Size(172, 22)
+        Me.ToolStripMenuItem51.Text = "N'importe laquelle"
+        '
+        'ToolStripMenuItem52
+        '
+        Me.ToolStripMenuItem52.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem53, Me.ToolStripMenuItem54})
+        Me.ToolStripMenuItem52.Name = "ToolStripMenuItem52"
+        Me.ToolStripMenuItem52.Size = New System.Drawing.Size(127, 22)
+        Me.ToolStripMenuItem52.Text = "Utilisateur"
+        '
+        'ToolStripMenuItem53
+        '
+        Me.ToolStripMenuItem53.Name = "ToolStripMenuItem53"
+        Me.ToolStripMenuItem53.Size = New System.Drawing.Size(163, 22)
+        Me.ToolStripMenuItem53.Text = "Spécifique"
+        '
+        'ToolStripMenuItem54
+        '
+        Me.ToolStripMenuItem54.Name = "ToolStripMenuItem54"
+        Me.ToolStripMenuItem54.Size = New System.Drawing.Size(163, 22)
+        Me.ToolStripMenuItem54.Text = "N'importe lequel"
+        '
+        'ToolStripMenuItem41
+        '
+        Me.ToolStripMenuItem41.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem42, Me.ToolStripMenuItem45})
+        Me.ToolStripMenuItem41.Name = "ToolStripMenuItem41"
+        Me.ToolStripMenuItem41.Size = New System.Drawing.Size(140, 22)
+        Me.ToolStripMenuItem41.Text = "Page quittée"
+        '
+        'ToolStripMenuItem42
+        '
+        Me.ToolStripMenuItem42.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem43, Me.ToolStripMenuItem44})
+        Me.ToolStripMenuItem42.Name = "ToolStripMenuItem42"
+        Me.ToolStripMenuItem42.Size = New System.Drawing.Size(127, 22)
+        Me.ToolStripMenuItem42.Text = "Page"
+        '
+        'ToolStripMenuItem43
+        '
+        Me.ToolStripMenuItem43.Name = "ToolStripMenuItem43"
+        Me.ToolStripMenuItem43.Size = New System.Drawing.Size(172, 22)
+        Me.ToolStripMenuItem43.Text = "Spécifique"
+        '
+        'ToolStripMenuItem44
+        '
+        Me.ToolStripMenuItem44.Name = "ToolStripMenuItem44"
+        Me.ToolStripMenuItem44.Size = New System.Drawing.Size(172, 22)
+        Me.ToolStripMenuItem44.Text = "N'importe laquelle"
+        '
+        'ToolStripMenuItem45
+        '
+        Me.ToolStripMenuItem45.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem46, Me.ToolStripMenuItem47})
+        Me.ToolStripMenuItem45.Name = "ToolStripMenuItem45"
+        Me.ToolStripMenuItem45.Size = New System.Drawing.Size(127, 22)
+        Me.ToolStripMenuItem45.Text = "Utilisateur"
+        '
+        'ToolStripMenuItem46
+        '
+        Me.ToolStripMenuItem46.Name = "ToolStripMenuItem46"
+        Me.ToolStripMenuItem46.Size = New System.Drawing.Size(163, 22)
+        Me.ToolStripMenuItem46.Text = "Spécifique"
+        '
+        'ToolStripMenuItem47
+        '
+        Me.ToolStripMenuItem47.Name = "ToolStripMenuItem47"
+        Me.ToolStripMenuItem47.Size = New System.Drawing.Size(163, 22)
+        Me.ToolStripMenuItem47.Text = "N'importe lequel"
+        '
         'pageVisitéeToolStripMenuItem
         '
+        Me.pageVisitéeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageToolStripMenuItem, Me.UtilisateurToolStripMenuItem6})
         Me.pageVisitéeToolStripMenuItem.Name = "pageVisitéeToolStripMenuItem"
         Me.pageVisitéeToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
-        Me.pageVisitéeToolStripMenuItem.Text = "Page visitée"
+        Me.pageVisitéeToolStripMenuItem.Text = "Page créée"
         '
-        'pageQuittéeToolStripMenuItem
+        'PageToolStripMenuItem
         '
-        Me.pageQuittéeToolStripMenuItem.Name = "pageQuittéeToolStripMenuItem"
-        Me.pageQuittéeToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
-        Me.pageQuittéeToolStripMenuItem.Text = "Page quittée"
+        Me.PageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpécifiqueToolStripMenuItem, Me.NimporteLaquelleToolStripMenuItem})
+        Me.PageToolStripMenuItem.Name = "PageToolStripMenuItem"
+        Me.PageToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.PageToolStripMenuItem.Text = "Page"
         '
-        'pageCrééeToolStripMenuItem
+        'SpécifiqueToolStripMenuItem
         '
-        Me.pageCrééeToolStripMenuItem.Name = "pageCrééeToolStripMenuItem"
-        Me.pageCrééeToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
-        Me.pageCrééeToolStripMenuItem.Text = "Page créée"
+        Me.SpécifiqueToolStripMenuItem.Name = "SpécifiqueToolStripMenuItem"
+        Me.SpécifiqueToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.SpécifiqueToolStripMenuItem.Text = "Spécifique"
+        '
+        'NimporteLaquelleToolStripMenuItem
+        '
+        Me.NimporteLaquelleToolStripMenuItem.Name = "NimporteLaquelleToolStripMenuItem"
+        Me.NimporteLaquelleToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.NimporteLaquelleToolStripMenuItem.Text = "N'importe laquelle"
+        '
+        'UtilisateurToolStripMenuItem6
+        '
+        Me.UtilisateurToolStripMenuItem6.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpécifiqueToolStripMenuItem1, Me.NimporteLequelToolStripMenuItem4})
+        Me.UtilisateurToolStripMenuItem6.Name = "UtilisateurToolStripMenuItem6"
+        Me.UtilisateurToolStripMenuItem6.Size = New System.Drawing.Size(127, 22)
+        Me.UtilisateurToolStripMenuItem6.Text = "Utilisateur"
+        '
+        'SpécifiqueToolStripMenuItem1
+        '
+        Me.SpécifiqueToolStripMenuItem1.Name = "SpécifiqueToolStripMenuItem1"
+        Me.SpécifiqueToolStripMenuItem1.Size = New System.Drawing.Size(163, 22)
+        Me.SpécifiqueToolStripMenuItem1.Text = "Spécifique"
+        '
+        'NimporteLequelToolStripMenuItem4
+        '
+        Me.NimporteLequelToolStripMenuItem4.Name = "NimporteLequelToolStripMenuItem4"
+        Me.NimporteLequelToolStripMenuItem4.Size = New System.Drawing.Size(163, 22)
+        Me.NimporteLequelToolStripMenuItem4.Text = "N'importe lequel"
         '
         'serveurToolStripMenuItem1
         '
@@ -1831,7 +2220,7 @@ Partial Public Class Compistart
         '
         'commsToolStripMenuItem
         '
-        Me.commsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.minitelToolStripMenuItem, Me.téléphoneToolStripMenuItem, Me.serveurVocalToolStripMenuItem})
+        Me.commsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.minitelToolStripMenuItem, Me.téléphoneToolStripMenuItem, Me.serveurVocalToolStripMenuItem, Me.LECAMToolStripMenuItem})
         Me.commsToolStripMenuItem.Name = "commsToolStripMenuItem"
         Me.commsToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.commsToolStripMenuItem.Text = "Comms"
@@ -1929,6 +2318,19 @@ Partial Public Class Compistart
         Me.appelCourtToolStripMenuItem.Name = "appelCourtToolStripMenuItem"
         Me.appelCourtToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.appelCourtToolStripMenuItem.Text = "Appel court"
+        '
+        'LECAMToolStripMenuItem
+        '
+        Me.LECAMToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NoneToolStripMenuItem})
+        Me.LECAMToolStripMenuItem.Name = "LECAMToolStripMenuItem"
+        Me.LECAMToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.LECAMToolStripMenuItem.Text = "LECAM"
+        '
+        'NoneToolStripMenuItem
+        '
+        Me.NoneToolStripMenuItem.Name = "NoneToolStripMenuItem"
+        Me.NoneToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.NoneToolStripMenuItem.Text = "%none%"
         '
         'utilisateurToolStripMenuItem
         '
@@ -2073,18 +2475,25 @@ Partial Public Class Compistart
         '
         'réglagesToolStripMenuItem
         '
+        Me.réglagesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsoleToolStripMenuItem})
         Me.réglagesToolStripMenuItem.Name = "réglagesToolStripMenuItem"
         Me.réglagesToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.réglagesToolStripMenuItem.Text = "Réglages"
+        '
+        'ConsoleToolStripMenuItem
+        '
+        Me.ConsoleToolStripMenuItem.Name = "ConsoleToolStripMenuItem"
+        Me.ConsoleToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.ConsoleToolStripMenuItem.Text = "Console"
         '
         'statusStrip1
         '
         Me.statusStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.statusStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.statusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStripProgressBar1, Me.toolStripDropDownButton1, Me.toolStripStatusLabel1})
-        Me.statusStrip1.Location = New System.Drawing.Point(0, 703)
+        Me.statusStrip1.Location = New System.Drawing.Point(0, 843)
         Me.statusStrip1.Name = "statusStrip1"
-        Me.statusStrip1.Size = New System.Drawing.Size(1026, 22)
+        Me.statusStrip1.Size = New System.Drawing.Size(1243, 22)
         Me.statusStrip1.TabIndex = 26
         Me.statusStrip1.Text = "statusStrip1"
         '
@@ -2344,22 +2753,6 @@ Partial Public Class Compistart
         Me.toolTip1.SetToolTip(Me.button33, "Réglages avancés")
         Me.button33.UseVisualStyleBackColor = True
         '
-        'tabControl1
-        '
-        Me.tabControl1.Controls.Add(Me.tabPage1)
-        Me.tabControl1.Controls.Add(Me.tabPage2)
-        Me.tabControl1.Controls.Add(Me.tabPage3)
-        Me.tabControl1.Controls.Add(Me.tabPage4)
-        Me.tabControl1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.tabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.tabControl1.Location = New System.Drawing.Point(13, 6)
-        Me.tabControl1.Name = "tabControl1"
-        Me.tabControl1.SelectedIndex = 0
-        Me.tabControl1.Size = New System.Drawing.Size(278, 247)
-        Me.tabControl1.TabIndex = 17
-        Me.toolTip1.SetToolTip(Me.tabControl1, "Paramètres administrateur")
-        '
         'tabPage1
         '
         Me.tabPage1.Controls.Add(Me.checkbox5)
@@ -2385,14 +2778,15 @@ Partial Public Class Compistart
         Me.tabPage1.Size = New System.Drawing.Size(270, 221)
         Me.tabPage1.TabIndex = 0
         Me.tabPage1.Text = "Messagerie"
+        Me.toolTip1.SetToolTip(Me.tabPage1, "Configurez la messagerie")
         Me.tabPage1.UseVisualStyleBackColor = True
         '
         'groupBox3
         '
         Me.groupBox3.Controls.Add(Me.button31)
-        Me.groupBox3.Controls.Add(Me.radiobutton7)
-        Me.groupBox3.Controls.Add(Me.radiobutton8)
-        Me.groupBox3.Controls.Add(Me.radiobutton9)
+        Me.groupBox3.Controls.Add(Me.Ouvert)
+        Me.groupBox3.Controls.Add(Me.OuvertFermé)
+        Me.groupBox3.Controls.Add(Me.Fermé)
         Me.groupBox3.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl
@@ -2414,41 +2808,41 @@ Partial Public Class Compistart
         Me.button31.Text = "?"
         Me.button31.UseVisualStyleBackColor = True
         '
-        'radiobutton7
+        'Ouvert
         '
-        Me.radiobutton7.Cursor = System.Windows.Forms.Cursors.Default
-        Me.radiobutton7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.radiobutton7.Location = New System.Drawing.Point(6, 19)
-        Me.radiobutton7.Name = "radiobutton7"
-        Me.radiobutton7.Size = New System.Drawing.Size(61, 24)
-        Me.radiobutton7.TabIndex = 10
-        Me.radiobutton7.TabStop = True
-        Me.radiobutton7.Text = "Ouvert"
-        Me.radiobutton7.UseVisualStyleBackColor = True
+        Me.Ouvert.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Ouvert.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Ouvert.Location = New System.Drawing.Point(6, 19)
+        Me.Ouvert.Name = "Ouvert"
+        Me.Ouvert.Size = New System.Drawing.Size(61, 24)
+        Me.Ouvert.TabIndex = 10
+        Me.Ouvert.TabStop = True
+        Me.Ouvert.Text = "Ouvert"
+        Me.Ouvert.UseVisualStyleBackColor = True
         '
-        'radiobutton8
+        'OuvertFermé
         '
-        Me.radiobutton8.Cursor = System.Windows.Forms.Cursors.Default
-        Me.radiobutton8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.radiobutton8.Location = New System.Drawing.Point(6, 38)
-        Me.radiobutton8.Name = "radiobutton8"
-        Me.radiobutton8.Size = New System.Drawing.Size(61, 24)
-        Me.radiobutton8.TabIndex = 11
-        Me.radiobutton8.TabStop = True
-        Me.radiobutton8.Text = "Fermé"
-        Me.radiobutton8.UseVisualStyleBackColor = True
+        Me.OuvertFermé.Cursor = System.Windows.Forms.Cursors.Default
+        Me.OuvertFermé.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.OuvertFermé.Location = New System.Drawing.Point(6, 38)
+        Me.OuvertFermé.Name = "OuvertFermé"
+        Me.OuvertFermé.Size = New System.Drawing.Size(100, 24)
+        Me.OuvertFermé.TabIndex = 11
+        Me.OuvertFermé.TabStop = True
+        Me.OuvertFermé.Text = "Ouvert/Fermé"
+        Me.OuvertFermé.UseVisualStyleBackColor = True
         '
-        'radiobutton9
+        'Fermé
         '
-        Me.radiobutton9.Cursor = System.Windows.Forms.Cursors.Default
-        Me.radiobutton9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.radiobutton9.Location = New System.Drawing.Point(6, 58)
-        Me.radiobutton9.Name = "radiobutton9"
-        Me.radiobutton9.Size = New System.Drawing.Size(61, 24)
-        Me.radiobutton9.TabIndex = 12
-        Me.radiobutton9.TabStop = True
-        Me.radiobutton9.Text = "Dur"
-        Me.radiobutton9.UseVisualStyleBackColor = True
+        Me.Fermé.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Fermé.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Fermé.Location = New System.Drawing.Point(6, 58)
+        Me.Fermé.Name = "Fermé"
+        Me.Fermé.Size = New System.Drawing.Size(61, 24)
+        Me.Fermé.TabIndex = 12
+        Me.Fermé.TabStop = True
+        Me.Fermé.Text = "Fermé"
+        Me.Fermé.UseVisualStyleBackColor = True
         '
         'tabPage2
         '
@@ -2483,6 +2877,7 @@ Partial Public Class Compistart
         Me.tabPage2.Size = New System.Drawing.Size(270, 221)
         Me.tabPage2.TabIndex = 1
         Me.tabPage2.Text = "ADMIN"
+        Me.toolTip1.SetToolTip(Me.tabPage2, "Paramètres administrateur")
         Me.tabPage2.UseVisualStyleBackColor = True
         '
         'numericUpDown7
@@ -2693,6 +3088,7 @@ Partial Public Class Compistart
         Me.tabPage3.Size = New System.Drawing.Size(270, 221)
         Me.tabPage3.TabIndex = 2
         Me.tabPage3.Text = "Options"
+        Me.toolTip1.SetToolTip(Me.tabPage3, "Options diverses")
         Me.tabPage3.UseVisualStyleBackColor = True
         '
         'checkbox11
@@ -2786,6 +3182,7 @@ Partial Public Class Compistart
         Me.tabPage4.Size = New System.Drawing.Size(270, 221)
         Me.tabPage4.TabIndex = 3
         Me.tabPage4.Text = "LECAM"
+        Me.toolTip1.SetToolTip(Me.tabPage4, "Configurer le LEcteur de CArte à Mémoire")
         Me.tabPage4.UseVisualStyleBackColor = True
         '
         'button51
@@ -2843,6 +3240,159 @@ Partial Public Class Compistart
         Me.button63.Text = "Exporter le serveur"
         Me.toolTip1.SetToolTip(Me.button63, "Exporter le serveur et enregistrer votre travail")
         Me.button63.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(141, 31)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 7
+        Me.TextBox2.Text = "ATZ"
+        Me.toolTip1.SetToolTip(Me.TextBox2, "Définir la chaîne AT envoyée au démarrage du modem (souvent ATZ pour reset ou ATE" &
+        "0 pour désactiver l'écho)")
+        '
+        'NumericUpDown8
+        '
+        Me.NumericUpDown8.ContextMenuStrip = Me.ContextMenuStrip2
+        Me.NumericUpDown8.Increment = New Decimal(New Integer() {100, 0, 0, 0})
+        Me.NumericUpDown8.Location = New System.Drawing.Point(141, 75)
+        Me.NumericUpDown8.Maximum = New Decimal(New Integer() {150000, 0, 0, 0})
+        Me.NumericUpDown8.Name = "NumericUpDown8"
+        Me.NumericUpDown8.Size = New System.Drawing.Size(70, 20)
+        Me.NumericUpDown8.TabIndex = 11
+        Me.toolTip1.SetToolTip(Me.NumericUpDown8, "Indique")
+        Me.NumericUpDown8.Value = New Decimal(New Integer() {6000, 0, 0, 0})
+        '
+        'ContextMenuStrip2
+        '
+        Me.ContextMenuStrip2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RedefInc, Me.dftitem, Me.TSTB})
+        Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
+        Me.ContextMenuStrip2.Size = New System.Drawing.Size(189, 73)
+        '
+        'RedefInc
+        '
+        Me.RedefInc.Name = "RedefInc"
+        Me.RedefInc.Size = New System.Drawing.Size(188, 22)
+        Me.RedefInc.Text = "Redéfinir l'incrément"
+        '
+        'dftitem
+        '
+        Me.dftitem.Name = "dftitem"
+        Me.dftitem.Size = New System.Drawing.Size(188, 22)
+        Me.dftitem.Text = "ToolStripMenuItem56"
+        Me.dftitem.ToolTipText = "Réinitialiser (100 ms)"
+        '
+        'TSTB
+        '
+        Me.TSTB.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.TSTB.Name = "TSTB"
+        Me.TSTB.Size = New System.Drawing.Size(100, 23)
+        Me.TSTB.Text = "100"
+        '
+        'NumericUpDown9
+        '
+        Me.NumericUpDown9.ContextMenuStrip = Me.ContextMenuStrip2
+        Me.NumericUpDown9.Increment = New Decimal(New Integer() {100, 0, 0, 0})
+        Me.NumericUpDown9.Location = New System.Drawing.Point(141, 115)
+        Me.NumericUpDown9.Maximum = New Decimal(New Integer() {150000, 0, 0, 0})
+        Me.NumericUpDown9.Name = "NumericUpDown9"
+        Me.NumericUpDown9.Size = New System.Drawing.Size(70, 20)
+        Me.NumericUpDown9.TabIndex = 13
+        Me.toolTip1.SetToolTip(Me.NumericUpDown9, "Indique")
+        Me.NumericUpDown9.Value = New Decimal(New Integer() {6000, 0, 0, 0})
+        '
+        'TabPage9
+        '
+        Me.TabPage9.Controls.Add(Me.CheckBox19)
+        Me.TabPage9.Controls.Add(Me.CheckBox20)
+        Me.TabPage9.Controls.Add(Me.CheckBox10)
+        Me.TabPage9.Controls.Add(Me.CheckBox7)
+        Me.TabPage9.Controls.Add(Me.CheckBox21)
+        Me.TabPage9.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage9.Name = "TabPage9"
+        Me.TabPage9.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage9.Size = New System.Drawing.Size(270, 221)
+        Me.TabPage9.TabIndex = 4
+        Me.TabPage9.Text = "Accès"
+        Me.toolTip1.SetToolTip(Me.TabPage9, "Permet l'accès à des services disponibles sur ordinateur")
+        Me.TabPage9.UseVisualStyleBackColor = True
+        '
+        'CheckBox19
+        '
+        Me.CheckBox19.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CheckBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.CheckBox19.Location = New System.Drawing.Point(7, 42)
+        Me.CheckBox19.Name = "CheckBox19"
+        Me.CheckBox19.Size = New System.Drawing.Size(161, 16)
+        Me.CheckBox19.TabIndex = 36
+        Me.CheckBox19.Text = "Météo (MàJs nécessaires)"
+        Me.toolTip1.SetToolTip(Me.CheckBox19, "Autoriser l'accès au service de prévisions météo")
+        Me.CheckBox19.UseVisualStyleBackColor = True
+        '
+        'CheckBox20
+        '
+        Me.CheckBox20.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CheckBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.CheckBox20.Location = New System.Drawing.Point(7, 60)
+        Me.CheckBox20.Name = "CheckBox20"
+        Me.CheckBox20.Size = New System.Drawing.Size(183, 15)
+        Me.CheckBox20.TabIndex = 37
+        Me.CheckBox20.Text = "Informations (MàJs nécessaires)"
+        Me.toolTip1.SetToolTip(Me.CheckBox20, "Autoriser l'accès à un service d'information (journaux)")
+        Me.CheckBox20.UseVisualStyleBackColor = True
+        '
+        'CheckBox10
+        '
+        Me.CheckBox10.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CheckBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.CheckBox10.Location = New System.Drawing.Point(7, 23)
+        Me.CheckBox10.Name = "CheckBox10"
+        Me.CheckBox10.Size = New System.Drawing.Size(104, 18)
+        Me.CheckBox10.TabIndex = 35
+        Me.CheckBox10.Text = "Telehack"
+        Me.toolTip1.SetToolTip(Me.CheckBox10, "Autoriser l'accès au service Telehack")
+        Me.CheckBox10.UseVisualStyleBackColor = True
+        '
+        'CheckBox7
+        '
+        Me.CheckBox7.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CheckBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.CheckBox7.Location = New System.Drawing.Point(7, 5)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(104, 18)
+        Me.CheckBox7.TabIndex = 34
+        Me.CheckBox7.Text = "Google"
+        Me.toolTip1.SetToolTip(Me.CheckBox7, "Autoriser l'accès à Google")
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
+        'CheckBox21
+        '
+        Me.CheckBox21.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CheckBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.CheckBox21.Location = New System.Drawing.Point(7, 73)
+        Me.CheckBox21.Name = "CheckBox21"
+        Me.CheckBox21.Size = New System.Drawing.Size(104, 24)
+        Me.CheckBox21.TabIndex = 38
+        Me.CheckBox21.Text = "Autre..."
+        Me.toolTip1.SetToolTip(Me.CheckBox21, "Ajouter l'accès à un service personnalisé")
+        Me.CheckBox21.UseVisualStyleBackColor = True
+        '
+        'tabControl1
+        '
+        Me.tabControl1.Controls.Add(Me.tabPage1)
+        Me.tabControl1.Controls.Add(Me.tabPage2)
+        Me.tabControl1.Controls.Add(Me.tabPage3)
+        Me.tabControl1.Controls.Add(Me.tabPage4)
+        Me.tabControl1.Controls.Add(Me.TabPage9)
+        Me.tabControl1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.tabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.tabControl1.Location = New System.Drawing.Point(13, 6)
+        Me.tabControl1.Name = "tabControl1"
+        Me.tabControl1.SelectedIndex = 0
+        Me.tabControl1.Size = New System.Drawing.Size(278, 247)
+        Me.tabControl1.TabIndex = 17
         '
         'ROUGE
         '
@@ -2909,28 +3459,57 @@ Partial Public Class Compistart
         '
         'groupBox19
         '
+        Me.groupBox19.Controls.Add(Me.Button7)
         Me.groupBox19.Controls.Add(Me.TextBoxConsole)
+        Me.groupBox19.Controls.Add(Me.RichTextBox1)
+        Me.groupBox19.Controls.Add(Me.Button4)
         Me.groupBox19.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox19.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.groupBox19.Location = New System.Drawing.Point(625, 518)
         Me.groupBox19.Name = "groupBox19"
-        Me.groupBox19.Size = New System.Drawing.Size(350, 163)
+        Me.groupBox19.Size = New System.Drawing.Size(350, 221)
         Me.groupBox19.TabIndex = 28
         Me.groupBox19.TabStop = False
         Me.groupBox19.Text = "Console"
         '
-        'radiobutton5
+        'Button7
         '
-        Me.radiobutton5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.radiobutton5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.radiobutton5.Location = New System.Drawing.Point(6, 40)
-        Me.radiobutton5.Name = "radiobutton5"
-        Me.radiobutton5.Size = New System.Drawing.Size(84, 24)
-        Me.radiobutton5.TabIndex = 4
-        Me.radiobutton5.TabStop = True
-        Me.radiobutton5.Text = "COM2"
-        Me.radiobutton5.UseVisualStyleBackColor = True
+        Me.Button7.Location = New System.Drawing.Point(302, 163)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(33, 23)
+        Me.Button7.TabIndex = 31
+        Me.Button7.Text = "OK"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(74, 163)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(219, 23)
+        Me.RichTextBox1.TabIndex = 30
+        Me.RichTextBox1.Text = ""
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(14, 163)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(54, 23)
+        Me.Button4.TabIndex = 29
+        Me.Button4.Text = "Effacer"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'COM2
+        '
+        Me.COM2.Cursor = System.Windows.Forms.Cursors.Default
+        Me.COM2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.COM2.Location = New System.Drawing.Point(6, 40)
+        Me.COM2.Name = "COM2"
+        Me.COM2.Size = New System.Drawing.Size(84, 24)
+        Me.COM2.TabIndex = 4
+        Me.COM2.TabStop = True
+        Me.COM2.Text = "COM2"
+        Me.COM2.UseVisualStyleBackColor = True
         '
         'groupBox1
         '
@@ -3032,12 +3611,12 @@ Partial Public Class Compistart
         '
         'groupBox2
         '
-        Me.groupBox2.Controls.Add(Me.radiobutton6)
-        Me.groupBox2.Controls.Add(Me.radiobutton4)
-        Me.groupBox2.Controls.Add(Me.radiobutton5)
-        Me.groupBox2.Controls.Add(Me.radiobutton1)
-        Me.groupBox2.Controls.Add(Me.radiobutton3)
-        Me.groupBox2.Controls.Add(Me.radiobutton2)
+        Me.groupBox2.Controls.Add(Me.COM1)
+        Me.groupBox2.Controls.Add(Me.COM3)
+        Me.groupBox2.Controls.Add(Me.COM2)
+        Me.groupBox2.Controls.Add(Me.Automatic)
+        Me.groupBox2.Controls.Add(Me.COM4)
+        Me.groupBox2.Controls.Add(Me.Other)
         Me.groupBox2.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl
@@ -3048,65 +3627,65 @@ Partial Public Class Compistart
         Me.groupBox2.TabStop = False
         Me.groupBox2.Text = "Port série"
         '
-        'radiobutton6
+        'COM1
         '
-        Me.radiobutton6.Cursor = System.Windows.Forms.Cursors.Default
-        Me.radiobutton6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.radiobutton6.Location = New System.Drawing.Point(6, 19)
-        Me.radiobutton6.Name = "radiobutton6"
-        Me.radiobutton6.Size = New System.Drawing.Size(84, 24)
-        Me.radiobutton6.TabIndex = 5
-        Me.radiobutton6.TabStop = True
-        Me.radiobutton6.Text = "COM1"
-        Me.radiobutton6.UseVisualStyleBackColor = True
+        Me.COM1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.COM1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.COM1.Location = New System.Drawing.Point(6, 19)
+        Me.COM1.Name = "COM1"
+        Me.COM1.Size = New System.Drawing.Size(84, 24)
+        Me.COM1.TabIndex = 5
+        Me.COM1.TabStop = True
+        Me.COM1.Text = "COM1"
+        Me.COM1.UseVisualStyleBackColor = True
         '
-        'radiobutton4
+        'COM3
         '
-        Me.radiobutton4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.radiobutton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.radiobutton4.Location = New System.Drawing.Point(6, 58)
-        Me.radiobutton4.Name = "radiobutton4"
-        Me.radiobutton4.Size = New System.Drawing.Size(84, 24)
-        Me.radiobutton4.TabIndex = 3
-        Me.radiobutton4.TabStop = True
-        Me.radiobutton4.Text = "COM3"
-        Me.radiobutton4.UseVisualStyleBackColor = True
+        Me.COM3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.COM3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.COM3.Location = New System.Drawing.Point(6, 58)
+        Me.COM3.Name = "COM3"
+        Me.COM3.Size = New System.Drawing.Size(84, 24)
+        Me.COM3.TabIndex = 3
+        Me.COM3.TabStop = True
+        Me.COM3.Text = "COM3"
+        Me.COM3.UseVisualStyleBackColor = True
         '
-        'radiobutton1
+        'Automatic
         '
-        Me.radiobutton1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.radiobutton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.radiobutton1.Location = New System.Drawing.Point(6, 119)
-        Me.radiobutton1.Name = "radiobutton1"
-        Me.radiobutton1.Size = New System.Drawing.Size(84, 24)
-        Me.radiobutton1.TabIndex = 0
-        Me.radiobutton1.TabStop = True
-        Me.radiobutton1.Text = "Auto"
-        Me.radiobutton1.UseVisualStyleBackColor = True
+        Me.Automatic.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Automatic.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Automatic.Location = New System.Drawing.Point(6, 119)
+        Me.Automatic.Name = "Automatic"
+        Me.Automatic.Size = New System.Drawing.Size(84, 24)
+        Me.Automatic.TabIndex = 0
+        Me.Automatic.TabStop = True
+        Me.Automatic.Text = "Auto"
+        Me.Automatic.UseVisualStyleBackColor = True
         '
-        'radiobutton3
+        'COM4
         '
-        Me.radiobutton3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.radiobutton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.radiobutton3.Location = New System.Drawing.Point(6, 79)
-        Me.radiobutton3.Name = "radiobutton3"
-        Me.radiobutton3.Size = New System.Drawing.Size(84, 24)
-        Me.radiobutton3.TabIndex = 2
-        Me.radiobutton3.TabStop = True
-        Me.radiobutton3.Text = "COM4"
-        Me.radiobutton3.UseVisualStyleBackColor = True
+        Me.COM4.Cursor = System.Windows.Forms.Cursors.Default
+        Me.COM4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.COM4.Location = New System.Drawing.Point(6, 79)
+        Me.COM4.Name = "COM4"
+        Me.COM4.Size = New System.Drawing.Size(84, 24)
+        Me.COM4.TabIndex = 2
+        Me.COM4.TabStop = True
+        Me.COM4.Text = "COM4"
+        Me.COM4.UseVisualStyleBackColor = True
         '
-        'radiobutton2
+        'Other
         '
-        Me.radiobutton2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.radiobutton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.radiobutton2.Location = New System.Drawing.Point(6, 99)
-        Me.radiobutton2.Name = "radiobutton2"
-        Me.radiobutton2.Size = New System.Drawing.Size(84, 24)
-        Me.radiobutton2.TabIndex = 1
-        Me.radiobutton2.TabStop = True
-        Me.radiobutton2.Text = "Autre"
-        Me.radiobutton2.UseVisualStyleBackColor = True
+        Me.Other.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Other.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Other.Location = New System.Drawing.Point(6, 99)
+        Me.Other.Name = "Other"
+        Me.Other.Size = New System.Drawing.Size(84, 24)
+        Me.Other.TabIndex = 1
+        Me.Other.TabStop = True
+        Me.Other.Text = "Autre"
+        Me.Other.UseVisualStyleBackColor = True
         '
         'label3
         '
@@ -3249,6 +3828,7 @@ Partial Public Class Compistart
         '
         'groupBox8
         '
+        Me.groupBox8.Controls.Add(Me.Panel4)
         Me.groupBox8.Controls.Add(Me.button45)
         Me.groupBox8.Controls.Add(Me.groupBox9)
         Me.groupBox8.Controls.Add(Me.label17)
@@ -3261,6 +3841,63 @@ Partial Public Class Compistart
         Me.groupBox8.TabIndex = 22
         Me.groupBox8.TabStop = False
         Me.groupBox8.Text = "Blocage"
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.MenuStrip4)
+        Me.Panel4.Location = New System.Drawing.Point(9, 80)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(200, 44)
+        Me.Panel4.TabIndex = 4
+        '
+        'MenuStrip4
+        '
+        Me.MenuStrip4.BackColor = System.Drawing.SystemColors.Control
+        Me.MenuStrip4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.MenuStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NumérosBloquésToolStripMenuItem})
+        Me.MenuStrip4.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip4.Name = "MenuStrip4"
+        Me.MenuStrip4.Size = New System.Drawing.Size(200, 24)
+        Me.MenuStrip4.TabIndex = 0
+        Me.MenuStrip4.Text = "MenuStrip4"
+        '
+        'NumérosBloquésToolStripMenuItem
+        '
+        Me.NumérosBloquésToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.XxxxxxxxxToolStripMenuItem, Me.AfficherLaListeComplèteToolStripMenuItem})
+        Me.NumérosBloquésToolStripMenuItem.Name = "NumérosBloquésToolStripMenuItem"
+        Me.NumérosBloquésToolStripMenuItem.Size = New System.Drawing.Size(113, 20)
+        Me.NumérosBloquésToolStripMenuItem.Text = "Numéros bloqués"
+        '
+        'XxxxxxxxxToolStripMenuItem
+        '
+        Me.XxxxxxxxxToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DébloquerToolStripMenuItem, Me.DéfinirUneRéponseSpécifiqueToolStripMenuItem, Me.AppelerToolStripMenuItem})
+        Me.XxxxxxxxxToolStripMenuItem.Name = "XxxxxxxxxToolStripMenuItem"
+        Me.XxxxxxxxxToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
+        Me.XxxxxxxxxToolStripMenuItem.Text = "0xxxxxxxxx"
+        '
+        'DébloquerToolStripMenuItem
+        '
+        Me.DébloquerToolStripMenuItem.Name = "DébloquerToolStripMenuItem"
+        Me.DébloquerToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.DébloquerToolStripMenuItem.Text = "Débloquer"
+        '
+        'DéfinirUneRéponseSpécifiqueToolStripMenuItem
+        '
+        Me.DéfinirUneRéponseSpécifiqueToolStripMenuItem.Name = "DéfinirUneRéponseSpécifiqueToolStripMenuItem"
+        Me.DéfinirUneRéponseSpécifiqueToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.DéfinirUneRéponseSpécifiqueToolStripMenuItem.Text = "Définir une réponse spécifique"
+        '
+        'AppelerToolStripMenuItem
+        '
+        Me.AppelerToolStripMenuItem.Name = "AppelerToolStripMenuItem"
+        Me.AppelerToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.AppelerToolStripMenuItem.Text = "Appeler"
+        '
+        'AfficherLaListeComplèteToolStripMenuItem
+        '
+        Me.AfficherLaListeComplèteToolStripMenuItem.Name = "AfficherLaListeComplèteToolStripMenuItem"
+        Me.AfficherLaListeComplèteToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
+        Me.AfficherLaListeComplèteToolStripMenuItem.Text = "Afficher la liste complète"
         '
         'button45
         '
@@ -3279,9 +3916,9 @@ Partial Public Class Compistart
         '
         Me.groupBox9.Controls.Add(Me.checkbox6)
         Me.groupBox9.Controls.Add(Me.button46)
-        Me.groupBox9.Controls.Add(Me.radiobutton10)
-        Me.groupBox9.Controls.Add(Me.radiobutton11)
-        Me.groupBox9.Controls.Add(Me.radiobutton12)
+        Me.groupBox9.Controls.Add(Me.telMsg)
+        Me.groupBox9.Controls.Add(Me.minitelPage)
+        Me.groupBox9.Controls.Add(Me.raccrocher)
         Me.groupBox9.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl
@@ -3314,41 +3951,41 @@ Partial Public Class Compistart
         Me.button46.Text = "Choisir une autre page Minitel"
         Me.button46.UseVisualStyleBackColor = True
         '
-        'radiobutton10
+        'telMsg
         '
-        Me.radiobutton10.Cursor = System.Windows.Forms.Cursors.Default
-        Me.radiobutton10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.radiobutton10.Location = New System.Drawing.Point(6, 16)
-        Me.radiobutton10.Name = "radiobutton10"
-        Me.radiobutton10.Size = New System.Drawing.Size(135, 15)
-        Me.radiobutton10.TabIndex = 0
-        Me.radiobutton10.TabStop = True
-        Me.radiobutton10.Text = "Message téléphonique"
-        Me.radiobutton10.UseVisualStyleBackColor = True
+        Me.telMsg.Cursor = System.Windows.Forms.Cursors.Default
+        Me.telMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.telMsg.Location = New System.Drawing.Point(6, 16)
+        Me.telMsg.Name = "telMsg"
+        Me.telMsg.Size = New System.Drawing.Size(135, 15)
+        Me.telMsg.TabIndex = 0
+        Me.telMsg.TabStop = True
+        Me.telMsg.Text = "Message téléphonique"
+        Me.telMsg.UseVisualStyleBackColor = True
         '
-        'radiobutton11
+        'minitelPage
         '
-        Me.radiobutton11.Cursor = System.Windows.Forms.Cursors.Default
-        Me.radiobutton11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.radiobutton11.Location = New System.Drawing.Point(6, 30)
-        Me.radiobutton11.Name = "radiobutton11"
-        Me.radiobutton11.Size = New System.Drawing.Size(135, 19)
-        Me.radiobutton11.TabIndex = 1
-        Me.radiobutton11.TabStop = True
-        Me.radiobutton11.Text = "Page Minitel dédiée"
-        Me.radiobutton11.UseVisualStyleBackColor = True
+        Me.minitelPage.Cursor = System.Windows.Forms.Cursors.Default
+        Me.minitelPage.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.minitelPage.Location = New System.Drawing.Point(6, 30)
+        Me.minitelPage.Name = "minitelPage"
+        Me.minitelPage.Size = New System.Drawing.Size(135, 19)
+        Me.minitelPage.TabIndex = 1
+        Me.minitelPage.TabStop = True
+        Me.minitelPage.Text = "Page Minitel dédiée"
+        Me.minitelPage.UseVisualStyleBackColor = True
         '
-        'radiobutton12
+        'raccrocher
         '
-        Me.radiobutton12.Cursor = System.Windows.Forms.Cursors.Default
-        Me.radiobutton12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.radiobutton12.Location = New System.Drawing.Point(6, 46)
-        Me.radiobutton12.Name = "radiobutton12"
-        Me.radiobutton12.Size = New System.Drawing.Size(165, 48)
-        Me.radiobutton12.TabIndex = 3
-        Me.radiobutton12.TabStop = True
-        Me.radiobutton12.Text = "Raccrochage sans sommation, mais avez-vous vraiment envie de faire ça?"
-        Me.radiobutton12.UseVisualStyleBackColor = True
+        Me.raccrocher.Cursor = System.Windows.Forms.Cursors.Default
+        Me.raccrocher.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.raccrocher.Location = New System.Drawing.Point(6, 46)
+        Me.raccrocher.Name = "raccrocher"
+        Me.raccrocher.Size = New System.Drawing.Size(165, 48)
+        Me.raccrocher.TabIndex = 3
+        Me.raccrocher.TabStop = True
+        Me.raccrocher.Text = "Raccrochage sans sommation, mais avez-vous vraiment envie de faire ça?"
+        Me.raccrocher.UseVisualStyleBackColor = True
         '
         'label17
         '
@@ -3459,17 +4096,6 @@ Partial Public Class Compistart
         Me.progressBar2.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         Me.progressBar2.TabIndex = 5
         '
-        'button43
-        '
-        Me.button43.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.button43.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.button43.Location = New System.Drawing.Point(6, 144)
-        Me.button43.Name = "button43"
-        Me.button43.Size = New System.Drawing.Size(121, 23)
-        Me.button43.TabIndex = 6
-        Me.button43.Text = "Ajouter un numéro"
-        Me.button43.UseVisualStyleBackColor = True
-        '
         'textBox1
         '
         Me.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -3479,7 +4105,7 @@ Partial Public Class Compistart
         Me.textBox1.Name = "textBox1"
         Me.textBox1.Size = New System.Drawing.Size(121, 24)
         Me.textBox1.TabIndex = 5
-        Me.textBox1.Text = "0762849756"
+        Me.textBox1.Text = "- -"
         '
         'label13
         '
@@ -3497,7 +4123,7 @@ Partial Public Class Compistart
         Me.comboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.comboBox2.FormattingEnabled = True
         Me.comboBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.comboBox2.Items.AddRange(New Object() {"Minitel 2", "Minitel 12", "Minitel Magis", "Modem de ce PC", "Modem US Robotics 56K", "Modem personnalisé..."})
+        Me.comboBox2.Items.AddRange(New Object() {"Minitel 2", "Minitel 12", "Minitel Magis", "Local", "Modem US Robotics 56K", "Modem personnalisé..."})
         Me.comboBox2.Location = New System.Drawing.Point(6, 75)
         Me.comboBox2.Name = "comboBox2"
         Me.comboBox2.Size = New System.Drawing.Size(121, 21)
@@ -3505,7 +4131,14 @@ Partial Public Class Compistart
         '
         'groupBox6
         '
-        Me.groupBox6.Controls.Add(Me.button43)
+        Me.groupBox6.Controls.Add(Me.TrackBar2)
+        Me.groupBox6.Controls.Add(Me.NumericUpDown9)
+        Me.groupBox6.Controls.Add(Me.Label39)
+        Me.groupBox6.Controls.Add(Me.NumericUpDown8)
+        Me.groupBox6.Controls.Add(Me.Label37)
+        Me.groupBox6.Controls.Add(Me.Label36)
+        Me.groupBox6.Controls.Add(Me.Label35)
+        Me.groupBox6.Controls.Add(Me.TextBox2)
         Me.groupBox6.Controls.Add(Me.textBox1)
         Me.groupBox6.Controls.Add(Me.label13)
         Me.groupBox6.Controls.Add(Me.comboBox2)
@@ -3517,10 +4150,56 @@ Partial Public Class Compistart
         Me.groupBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.groupBox6.Location = New System.Drawing.Point(158, 20)
         Me.groupBox6.Name = "groupBox6"
-        Me.groupBox6.Size = New System.Drawing.Size(138, 203)
+        Me.groupBox6.Size = New System.Drawing.Size(435, 203)
         Me.groupBox6.TabIndex = 1
         Me.groupBox6.TabStop = False
         Me.groupBox6.Text = "Télécommunication"
+        '
+        'TrackBar2
+        '
+        Me.TrackBar2.AllowDrop = True
+        Me.TrackBar2.Location = New System.Drawing.Point(298, 63)
+        Me.TrackBar2.Maximum = 3
+        Me.TrackBar2.Name = "TrackBar2"
+        Me.TrackBar2.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.TrackBar2.Size = New System.Drawing.Size(45, 104)
+        Me.TrackBar2.TabIndex = 14
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(138, 99)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(69, 13)
+        Me.Label39.TabIndex = 12
+        Me.Label39.Text = "Nb.sonneries"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(217, 77)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(20, 13)
+        Me.Label37.TabIndex = 10
+        Me.Label37.Text = "ms"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(138, 59)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(87, 13)
+        Me.Label36.TabIndex = 9
+        Me.Label36.Text = "Délai d'expiration"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(138, 15)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(112, 13)
+        Me.Label35.TabIndex = 8
+        Me.Label35.Text = "Chaîne AT démarrage"
         '
         'label11
         '
@@ -3538,7 +4217,7 @@ Partial Public Class Compistart
         Me.comboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.comboBox1.FormattingEnabled = True
         Me.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.comboBox1.Items.AddRange(New Object() {"Ce PC", "Raspberry Pi", "Arduino Nano", "Arduino Uno", "Arduino Mega", "Autre..."})
+        Me.comboBox1.Items.AddRange(New Object() {"Local", "Raspberry Pi", "Arduino Uno", "Arduino Mega", "Arduino Nano", "Arduino Yùn", "ESP32", "Android", "iOS", "Autre..."})
         Me.comboBox1.Location = New System.Drawing.Point(6, 32)
         Me.comboBox1.Name = "comboBox1"
         Me.comboBox1.Size = New System.Drawing.Size(121, 21)
@@ -3563,7 +4242,7 @@ Partial Public Class Compistart
         Me.groupBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.groupBox4.Location = New System.Drawing.Point(12, 458)
         Me.groupBox4.Name = "groupBox4"
-        Me.groupBox4.Size = New System.Drawing.Size(310, 229)
+        Me.groupBox4.Size = New System.Drawing.Size(600, 229)
         Me.groupBox4.TabIndex = 20
         Me.groupBox4.TabStop = False
         Me.groupBox4.Text = "Divers"
@@ -3600,7 +4279,7 @@ Partial Public Class Compistart
         Me.label10.Name = "label10"
         Me.label10.Size = New System.Drawing.Size(131, 23)
         Me.label10.TabIndex = 16
-        Me.label10.Text = "Actuel : <bps_value>"
+        Me.label10.Text = "Actuel : - -"
         '
         'button34
         '
@@ -3687,7 +4366,7 @@ Partial Public Class Compistart
         Me.button41.Name = "button41"
         Me.button41.Size = New System.Drawing.Size(36, 34)
         Me.button41.TabIndex = 13
-        Me.button41.Text = "24600"
+        Me.button41.Text = "38400"
         Me.button41.UseVisualStyleBackColor = True
         '
         'button42
@@ -3706,7 +4385,7 @@ Partial Public Class Compistart
         Me.trackbar1.Cursor = System.Windows.Forms.Cursors.Default
         Me.trackbar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.trackbar1.Location = New System.Drawing.Point(7, 139)
-        Me.trackbar1.Maximum = 30000
+        Me.trackbar1.Maximum = 40000
         Me.trackbar1.Name = "trackbar1"
         Me.trackbar1.Size = New System.Drawing.Size(101, 45)
         Me.trackbar1.TabIndex = 15
@@ -3779,10 +4458,65 @@ Partial Public Class Compistart
         Me.label33.Text = "Vous pouvez maintenant enregistrer votre serveur en l'exportant au format *.serv." &
     ""
         '
+        'GroupBox20
+        '
+        Me.GroupBox20.Controls.Add(Me.Panel5)
+        Me.GroupBox20.Controls.Add(Me.Label34)
+        Me.GroupBox20.Cursor = System.Windows.Forms.Cursors.Default
+        Me.GroupBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.GroupBox20.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.GroupBox20.Location = New System.Drawing.Point(981, 9)
+        Me.GroupBox20.Name = "GroupBox20"
+        Me.GroupBox20.Size = New System.Drawing.Size(250, 247)
+        Me.GroupBox20.TabIndex = 23
+        Me.GroupBox20.TabStop = False
+        Me.GroupBox20.Text = "Exceptions"
+        '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.MenuStrip5)
+        Me.Panel5.Location = New System.Drawing.Point(13, 77)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(200, 30)
+        Me.Panel5.TabIndex = 4
+        '
+        'MenuStrip5
+        '
+        Me.MenuStrip5.BackColor = System.Drawing.SystemColors.Control
+        Me.MenuStrip5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.MenuStrip5.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem55})
+        Me.MenuStrip5.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip5.Name = "MenuStrip5"
+        Me.MenuStrip5.Size = New System.Drawing.Size(200, 24)
+        Me.MenuStrip5.TabIndex = 0
+        Me.MenuStrip5.Text = "MenuStrip5"
+        '
+        'ToolStripMenuItem55
+        '
+        Me.ToolStripMenuItem55.Name = "ToolStripMenuItem55"
+        Me.ToolStripMenuItem55.Size = New System.Drawing.Size(113, 20)
+        Me.ToolStripMenuItem55.Text = "Numéros bloqués"
+        '
+        'Label34
+        '
+        Me.Label34.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Label34.Location = New System.Drawing.Point(6, 16)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(237, 29)
+        Me.Label34.TabIndex = 0
+        Me.Label34.Text = "Les exceptions sont des numéros qui bénéficient d'un traitement particulier. Vous" &
+    " pouvez en définir plusieurs sur votre serveur"
+        '
+        'refreshTimer
+        '
+        Me.refreshTimer.Interval = 500
+        '
         'Compistart
         '
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(1026, 725)
+        Me.ClientSize = New System.Drawing.Size(1243, 865)
+        Me.Controls.Add(Me.GroupBox20)
         Me.Controls.Add(Me.panel2)
         Me.Controls.Add(Me.groupBox10)
         Me.Controls.Add(Me.groupBox15)
@@ -3799,8 +4533,9 @@ Partial Public Class Compistart
         Me.Controls.Add(Me.button17)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip4
         Me.Name = "Compistart"
-        Me.Text = "Compistart (mon oeuvre!)"
+        Me.Text = "Compistart (En développement)"
         Me.groupBox17.ResumeLayout(False)
         Me.tabControl3.ResumeLayout(False)
         Me.tabPage7.ResumeLayout(False)
@@ -3825,7 +4560,6 @@ Partial Public Class Compistart
         Me.menuStrip3.PerformLayout()
         Me.statusStrip1.ResumeLayout(False)
         Me.statusStrip1.PerformLayout()
-        Me.tabControl1.ResumeLayout(False)
         Me.tabPage1.ResumeLayout(False)
         Me.groupBox3.ResumeLayout(False)
         Me.tabPage2.ResumeLayout(False)
@@ -3834,6 +4568,12 @@ Partial Public Class Compistart
         CType(Me.numericUpDown6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabPage3.ResumeLayout(False)
         Me.tabPage4.ResumeLayout(False)
+        CType(Me.NumericUpDown8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip2.ResumeLayout(False)
+        Me.ContextMenuStrip2.PerformLayout()
+        CType(Me.NumericUpDown9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage9.ResumeLayout(False)
+        Me.tabControl1.ResumeLayout(False)
         Me.groupBox18.ResumeLayout(False)
         Me.groupBox19.ResumeLayout(False)
         Me.groupBox1.ResumeLayout(False)
@@ -3843,21 +4583,121 @@ Partial Public Class Compistart
         CType(Me.numericUpDown3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numericUpDown4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.groupBox8.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        Me.MenuStrip4.ResumeLayout(False)
+        Me.MenuStrip4.PerformLayout()
         Me.groupBox9.ResumeLayout(False)
         Me.groupBox7.ResumeLayout(False)
         Me.groupBox6.ResumeLayout(False)
         Me.groupBox6.PerformLayout()
+        CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.groupBox4.ResumeLayout(False)
         Me.groupBox5.ResumeLayout(False)
         Me.groupBox5.PerformLayout()
         CType(Me.trackbar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panel2.ResumeLayout(False)
+        Me.GroupBox20.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        Me.MenuStrip5.ResumeLayout(False)
+        Me.MenuStrip5.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents progressbar6 As Krypton.Toolkit.KryptonProgressBar
     Friend WithEvents progressbar3 As Krypton.Toolkit.KryptonProgressBar
     Private components As System.ComponentModel.IContainer
+    Friend WithEvents Button4 As Button
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Button7 As Button
+    Friend WithEvents ConsoleToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AuteurToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EnRédactionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EnregistréToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RouvertEtEnvoyéToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AuteurToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents DestinataireToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents UtilisateurToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents NDeTéléphoneToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents ContenuToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents UtilisateurToolStripMenuItem4 As ToolStripMenuItem
+    Friend WithEvents NDeTéléphoneToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents UtilisateurToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents NDeTéléphoneToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ContenuToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TitreToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ObjetToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CorpsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DestinataireToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UtilisateurToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents UtilisateurToolStripMenuItem5 As ToolStripMenuItem
+    Friend WithEvents NDeTéléphoneToolStripMenuItem4 As ToolStripMenuItem
+    Friend WithEvents NDeTéléphoneToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents CorpsToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents UtilisateurSpécifiqueToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NimporteLequelToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents UtilisateurSpécifiqueToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents NimporteLequelToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents UtilisateurSpécifiqueToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents NimporteLequelToolStripMenuItem3 As ToolStripMenuItem
+    Public WithEvents ToolStripMenuItem48 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem49 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem50 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem51 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem52 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem53 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem54 As ToolStripMenuItem
+    Public WithEvents ToolStripMenuItem41 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem42 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem43 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem44 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem45 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem46 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem47 As ToolStripMenuItem
+    Friend WithEvents PageToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SpécifiqueToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NimporteLaquelleToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UtilisateurToolStripMenuItem6 As ToolStripMenuItem
+    Friend WithEvents SpécifiqueToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents NimporteLequelToolStripMenuItem4 As ToolStripMenuItem
+    Friend WithEvents LECAMToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NoneToolStripMenuItem As ToolStripMenuItem
+    Public WithEvents ProgressBar6 As Windows.Forms.ProgressBar
+    Friend WithEvents Button64 As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents MenuStrip4 As MenuStrip
+    Friend WithEvents NumérosBloquésToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents XxxxxxxxxToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DébloquerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DéfinirUneRéponseSpécifiqueToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AppelerToolStripMenuItem As ToolStripMenuItem
+    Public WithEvents GroupBox20 As GroupBox
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents MenuStrip5 As MenuStrip
+    Friend WithEvents ToolStripMenuItem55 As ToolStripMenuItem
+    Public WithEvents Label34 As Label
+    Friend WithEvents AfficherLaListeComplèteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents modemPort As Ports.SerialPort
+    Friend WithEvents Label35 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents NumericUpDown8 As NumericUpDown
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label36 As Label
+    Friend WithEvents ContextMenuStrip2 As ContextMenuStrip
+    Friend WithEvents RedefInc As ToolStripMenuItem
+    Friend WithEvents TSTB As ToolStripTextBox
+    Friend WithEvents dftitem As ToolStripMenuItem
+    Friend WithEvents Label39 As Label
+    Friend WithEvents NumericUpDown9 As NumericUpDown
+    Friend WithEvents TrackBar2 As TrackBar
+    Friend WithEvents TabPage9 As TabPage
+    Public WithEvents CheckBox19 As CheckBox
+    Public WithEvents CheckBox20 As CheckBox
+    Public WithEvents CheckBox10 As CheckBox
+    Public WithEvents CheckBox7 As CheckBox
+    Public WithEvents CheckBox21 As CheckBox
+    Public WithEvents infoline5 As Label
+    Public WithEvents button50 As Button
+    Friend WithEvents refreshTimer As Windows.Forms.Timer
 End Class

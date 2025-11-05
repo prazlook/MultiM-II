@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Avalonia.11.3.0\build\Avalonia.props" Condition="Exists('..\packages\Avalonia.11.3.0\build\Avalonia.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -10,7 +11,7 @@
     <ProjectGuid>{2F0B6322-8366-4D0A-A787-C790D61F2FC1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>MultiM_II.Gestionnaire</StartupObject>
-    <StartupObject>MultiM_II.SplashScreen</StartupObject>
+    <StartupObject>MultiM_II.centre_acces</StartupObject>
     <RootNamespace>MultiM_II</RootNamespace>
     <AssemblyName>MultiM_II</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -32,6 +33,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -68,12 +71,21 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>Autres\Fichiers inutilisés\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Avalonia.Controls.ColorPicker, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.Controls.ColorPicker.11.3.0\lib\netstandard2.0\Avalonia.Controls.ColorPicker.dll</HintPath>
+    </Reference>
+    <Reference Include="AvaloniaColorPicker, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AvaloniaColorPicker.1.4.0\lib\netstandard2.0\AvaloniaColorPicker.dll</HintPath>
+    </Reference>
+    <Reference Include="ColorPicker, Version=3.4.2.0, Culture=neutral, PublicKeyToken=1c61eec504ce2276, processorArchitecture=MSIL">
+      <HintPath>..\packages\PixiEditor.ColorPicker.3.4.2\lib\net451\ColorPicker.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Design, Version=4.5.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <HintPath>..\packages\Krypton.Components.Suite.4.5.9\lib\net20\ComponentFactory.Krypton.Design.dll</HintPath>
     </Reference>
@@ -98,20 +110,89 @@
     <Reference Include="Krypton.Toolkit, Version=95.25.4.111, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <HintPath>..\packages\Krypton.Toolkit.95.25.4.111\lib\net48\Krypton.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="MicroCom.Runtime, Version=0.11.0.0, Culture=neutral, PublicKeyToken=b30be05a5f7688e9, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicroCom.Runtime.0.11.0\lib\netstandard2.0\MicroCom.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.31\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>Include\mysql.data.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="ProgressBar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ProgressBar.1.0.10\lib\ProgressBar.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.Grid.Base, Version=29.2462.5.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grid.Base.29.2.5\lib\net462\Syncfusion.Grid.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows, Version=29.2462.5.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grid.Windows.29.2.5\lib\net462\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=29.2462.5.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.29.2.5\lib\net462\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=29.2462.5.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.Base.29.2.5\lib\net462\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=29.2462.5.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.Windows.29.2.5\lib\net462\Syncfusion.Shared.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SpellChecker.Base, Version=29.2462.5.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SpellChecker.Base.29.2.5\lib\net462\Syncfusion.SpellChecker.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base, Version=29.2462.5.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Tools.Base.29.2.5\lib\net462\Syncfusion.Tools.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows, Version=29.2462.5.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Tools.Windows.29.2.5\lib\net462\Syncfusion.Tools.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.6.0.0\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Reflection.Metadata, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Reflection.MetadataLoadContext, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Reflection.TypeExtensions, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Speech" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="VelerSoftware.FTPLib">
       <HintPath>Include\VelerSoftware.FTPLib.dll</HintPath>
     </Reference>
@@ -121,6 +202,8 @@
     <Reference Include="VelerSoftware.VoiceRecognitionLib">
       <HintPath>Include\VelerSoftware.VoiceRecognitionLib.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -128,6 +211,10 @@
     <Import Include="System.Drawing" />
     <Import Include="System.IO" />
     <Import Include="System.Media" />
+    <Import Include="System.Runtime" />
+    <Import Include="System.Runtime.InteropServices" />
+    <Import Include="System.Runtime.InteropServices.ComTypes" />
+    <Import Include="System.Runtime.InteropServices.Expando" />
     <Import Include="System.Threading" />
     <Import Include="System.Threading.Tasks" />
     <Import Include="System.Timers" />
@@ -140,173 +227,267 @@
     <Import Include="System.Windows.Forms.VisualStyles" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\Avalonia\references" />
+    <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\Avalonia\resources" />
+    <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\Avalonia\Resources.Inputs.cache" />
+    <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.exe.config" />
+    <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.vbproj.AssemblyReference.cache" />
+    <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.vbproj.CoreCompileInputs.cache" />
+    <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.vbproj.GenerateResource.cache" />
+    <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.vbproj.ResolveComReference.cache" />
+    <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.vbproj.SuggestedBindingRedirects.cache" />
+    <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.vbproj.Up2Date" />
+    <None Include="Autres\Fichiers inutilisés\app.config" />
+    <None Include="Autres\Fichiers inutilisés\packages.config" />
+    <None Include="Resources\Minitel.ttf" />
     <None Include="Resources\son_demarrage.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accueil.Designer.vb">
-      <DependentUpon>Accueil.vb</DependentUpon>
+    <Compile Include="Autres\Dossiers inutilisés\obj\x86\Debug\.NETFramework,Version=4.0.AssemblyAttributes.vb" />
+    <Compile Include="documentation\Dev_HowItStartedUserControl.Designer.vb">
+      <DependentUpon>Dev_HowItStartedUserControl.vb</DependentUpon>
     </Compile>
-    <Compile Include="Accueil.vb">
-      <SubType>Form</SubType>
+    <Compile Include="documentation\Dev_HowItStartedUserControl.vb">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Accès_forum.Designer.vb">
-      <DependentUpon>Accès_forum.vb</DependentUpon>
+    <Compile Include="documentation\pages\BaseUserControl.vb">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Accès_forum.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="aide_compistart.Designer.vb">
+    <Compile Include="Forms\Aide\aide_compistart.Designer.vb">
       <DependentUpon>aide_compistart.vb</DependentUpon>
     </Compile>
-    <Compile Include="aide_compistart.vb">
+    <Compile Include="Forms\Aide\aide_compistart.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="aide_drcs.Designer.vb">
+    <Compile Include="Forms\Aide\aide_drcs.Designer.vb">
       <DependentUpon>aide_drcs.vb</DependentUpon>
     </Compile>
-    <Compile Include="aide_drcs.vb">
+    <Compile Include="Forms\Aide\aide_drcs.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="aide_gestionnaire.Designer.vb">
+    <Compile Include="Forms\Aide\aide_gestionnaire.Designer.vb">
       <DependentUpon>aide_gestionnaire.vb</DependentUpon>
     </Compile>
-    <Compile Include="aide_gestionnaire.vb">
+    <Compile Include="Forms\Aide\aide_gestionnaire.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="aide_vdtedit.Designer.vb">
+    <Compile Include="Forms\Aide\aide_vdtedit.Designer.vb">
       <DependentUpon>aide_vdtedit.vb</DependentUpon>
     </Compile>
-    <Compile Include="aide_vdtedit.vb">
+    <Compile Include="Forms\Aide\aide_vdtedit.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="Arbo_Edit.Designer.vb">
-      <DependentUpon>Arbo_Edit.vb</DependentUpon>
+    <Compile Include="Forms\Documentation_Materiel_CFZ.vb" />
+    <Compile Include="Forms\Pages d%27accueil\Accueil.Designer.vb">
+      <DependentUpon>Accueil.vb</DependentUpon>
     </Compile>
-    <Compile Include="Arbo_Edit.vb">
+    <Compile Include="Forms\Pages d%27accueil\Accueil.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Boîte_de_dialogue1.Designer.vb">
-      <DependentUpon>Boîte_de_dialogue1.vb</DependentUpon>
+    <Compile Include="Forms\Fenêtres additionnelles\Générique\Accès_forum.Designer.vb">
+      <DependentUpon>Accès_forum.vb</DependentUpon>
     </Compile>
-    <Compile Include="Boîte_de_dialogue1.vb">
+    <Compile Include="Forms\Fenêtres additionnelles\Générique\Accès_forum.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Boîte_de_dialogue2.Designer.vb">
-      <DependentUpon>Boîte_de_dialogue2.vb</DependentUpon>
+    <Compile Include="Autres\Fichiers inutilisés\ApplicationEvents.vb" />
+    <Compile Include="documentation\Database.Designer.vb">
+      <DependentUpon>Database.vb</DependentUpon>
     </Compile>
-    <Compile Include="Boîte_de_dialogue2.vb">
+    <Compile Include="documentation\Database.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Boîte_de_dialogue3.Designer.vb">
-      <DependentUpon>Boîte_de_dialogue3.vb</DependentUpon>
+    <Compile Include="Forms\Boîtes de dialogue\Dialog3.Designer.vb">
+      <DependentUpon>Dialog3.vb</DependentUpon>
     </Compile>
-    <Compile Include="Boîte_de_dialogue3.vb">
+    <Compile Include="Forms\Boîtes de dialogue\Dialog3.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Boîte_de_dialogueBarre.Designer.vb">
-      <DependentUpon>Boîte_de_dialogueBarre.vb</DependentUpon>
+    <Compile Include="Forms\Suite applis\Écrans de démarrage\BootCompistart.Designer.vb">
+      <DependentUpon>BootCompistart.vb</DependentUpon>
     </Compile>
-    <Compile Include="Boîte_de_dialogueBarre.vb">
+    <Compile Include="Forms\Suite applis\Écrans de démarrage\BootCompistart.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Centre_dAccès.Designer.vb">
-      <DependentUpon>Centre_dAccès.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Centre_dAccès.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Classe1.vb" />
-    <Compile Include="Compistart.Designer.vb">
-      <DependentUpon>Compistart.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Compistart.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="comptegmail.Designer.vb">
-      <DependentUpon>comptegmail.vb</DependentUpon>
-    </Compile>
-    <Compile Include="comptegmail.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="compte_inexistant.Designer.vb">
-      <DependentUpon>compte_inexistant.vb</DependentUpon>
-    </Compile>
-    <Compile Include="compte_inexistant.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Fenêtre.Designer.vb">
-      <DependentUpon>Fenêtre.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Fenêtre.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GestionnaireApp.Designer.vb">
-      <DependentUpon>GestionnaireApp.vb</DependentUpon>
-    </Compile>
-    <Compile Include="GestionnaireApp.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LECAMSettings.Designer.vb">
-      <DependentUpon>LECAMSettings.vb</DependentUpon>
-    </Compile>
-    <Compile Include="LECAMSettings.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LSettingsWarning.Designer.vb">
-      <DependentUpon>LSettingsWarning.vb</DependentUpon>
-    </Compile>
-    <Compile Include="LSettingsWarning.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Paramètres.Designer.vb">
-      <DependentUpon>Paramètres.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Paramètres.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Réalisation_Serveur.Designer.vb">
-      <DependentUpon>Réalisation_Serveur.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Réalisation_Serveur.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SplashScreen.Designer.vb">
-      <DependentUpon>SplashScreen.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SplashScreen.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BootVDTEdit.Designer.vb">
+    <Compile Include="Forms\Suite applis\Écrans de démarrage\BootVDTEdit.Designer.vb">
       <DependentUpon>BootVDTEdit.vb</DependentUpon>
     </Compile>
-    <Compile Include="BootVDTEdit.vb">
+    <Compile Include="Forms\Suite applis\Écrans de démarrage\BootVDTEdit.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="succes_connexion.Designer.vb">
-      <DependentUpon>succes_connexion.vb</DependentUpon>
+    <Compile Include="Forms\Boîtes de dialogue\Boîte_de_dialogue1.Designer.vb">
+      <DependentUpon>Boîte_de_dialogue1.vb</DependentUpon>
     </Compile>
-    <Compile Include="succes_connexion.vb">
+    <Compile Include="Forms\Boîtes de dialogue\Boîte_de_dialogue1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sélecteur de touche.Designer.vb">
-      <DependentUpon>Sélecteur de touche.vb</DependentUpon>
+    <Compile Include="Forms\Boîtes de dialogue\Boîte_de_dialogue2.Designer.vb">
+      <DependentUpon>Boîte_de_dialogue2.vb</DependentUpon>
     </Compile>
-    <Compile Include="Sélecteur de touche.vb">
+    <Compile Include="Forms\Boîtes de dialogue\Boîte_de_dialogue2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Variables_Module.vb" />
-    <Compile Include="VDT Edit.Designer.vb">
+    <Compile Include="Forms\Boîtes de dialogue\Boîte_de_dialogue3.Designer.vb">
+      <DependentUpon>Boîte_de_dialogue3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Boîtes de dialogue\Boîte_de_dialogue3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Boîtes de dialogue\Boîte_de_dialogueBarre.Designer.vb">
+      <DependentUpon>Boîte_de_dialogueBarre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Boîtes de dialogue\Boîte_de_dialogueBarre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pages d%27accueil\Centre_dAccès.Designer.vb">
+      <DependentUpon>Centre_dAccès.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pages d%27accueil\Centre_dAccès.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autres\Fichiers inutilisés\Class2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Autres\Fichiers inutilisés\Classe1.vb" />
+    <Compile Include="Forms\Suite applis\Compistart.Designer.vb">
+      <DependentUpon>Compistart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Suite applis\Compistart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Boîtes de dialogue\comptegmail.Designer.vb">
+      <DependentUpon>comptegmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Boîtes de dialogue\comptegmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Boîtes de dialogue\compte_inexistant.Designer.vb">
+      <DependentUpon>compte_inexistant.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Boîtes de dialogue\compte_inexistant.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Boîtes de dialogue\Dialog1.Designer.vb">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Boîtes de dialogue\Dialog1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Boîtes de dialogue\Dialog2.Designer.vb">
+      <DependentUpon>Dialog2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Boîtes de dialogue\Dialog2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Compistart\Fenêtre.Designer.vb">
+      <DependentUpon>Fenêtre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Compistart\Fenêtre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Suite applis\Arbo_Edit.Designer.vb">
+      <DependentUpon>Arbo_Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Suite applis\Arbo_Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Générique\GestionnaireApp.Designer.vb">
+      <DependentUpon>GestionnaireApp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Générique\GestionnaireApp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideDevSommmaire.Designer.vb">
+      <DependentUpon>GuideDevSommmaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideDevSommmaire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP1Accueil.Designer.vb">
+      <DependentUpon>GuideP1Accueil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP1Accueil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP2.Designer.vb">
+      <DependentUpon>GuideP2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP3Quiz.Designer.vb">
+      <DependentUpon>GuideP3Quiz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP3Quiz.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP4Reponses.Designer.vb">
+      <DependentUpon>GuideP4Reponses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP4Reponses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP5Emulateur.Designer.vb">
+      <DependentUpon>GuideP5Emulateur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP5Emulateur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP6VELiteIntro.Designer.vb">
+      <DependentUpon>GuideP6VELiteIntro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP6VELiteIntro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP7DemoEditionVDT.Designer.vb">
+      <DependentUpon>GuideP7DemoEditionVDT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP7DemoEditionVDT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP8IntroVELite.Designer.vb">
+      <DependentUpon>GuideP8IntroVELite.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Guides\GuideP8IntroVELite.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Compistart\LECAMSettings.Designer.vb">
+      <DependentUpon>LECAMSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Compistart\LECAMSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Compistart\LSettingsWarning.Designer.vb">
+      <DependentUpon>LSettingsWarning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Compistart\LSettingsWarning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Générique\Paramètres.Designer.vb">
+      <DependentUpon>Paramètres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Générique\Paramètres.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Générique\Paramètres_console.Designer.vb">
+      <DependentUpon>Paramètres_console.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Générique\Paramètres_console.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Suite applis\VDT Edit.Designer.vb">
       <DependentUpon>VDT Edit.vb</DependentUpon>
     </Compile>
-    <Compile Include="VDT Edit.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VDTPics.Designer.vb">
-      <DependentUpon>VDTPics.vb</DependentUpon>
-    </Compile>
-    <Compile Include="VDTPics.vb">
+    <Compile Include="Forms\Suite applis\VDT Edit.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Include\VelerSoftware.VistaMessageBoxLib.vb" />
@@ -321,88 +502,208 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Générique\Réalisation_Serveur.Designer.vb">
+      <DependentUpon>Réalisation_Serveur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Générique\Réalisation_Serveur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Boîtes de dialogue\succes_connexion.Designer.vb">
+      <DependentUpon>succes_connexion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Boîtes de dialogue\succes_connexion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Générique\Sélecteur de touche.Designer.vb">
+      <DependentUpon>Sélecteur de touche.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fenêtres additionnelles\Générique\Sélecteur de touche.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autres\Fichiers inutilisés\UserControl1.Designer.vb">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Autres\Fichiers inutilisés\UserControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Autres\Fichiers inutilisés\Variables_Module.vb" />
+    <Compile Include="Forms\Suite applis\VDTPics.Designer.vb">
+      <DependentUpon>VDTPics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Suite applis\VDTPics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Suite applis Lite\VDT_Edit_Lite.Designer.vb">
+      <DependentUpon>VDT_Edit_Lite.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Suite applis Lite\VDT_Edit_Lite.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Accueil.resx">
-      <DependentUpon>Accueil.vb</DependentUpon>
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Accueil.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Accès_forum.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.ajouter_page_arboedit.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.ArboEdit.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.BoiteCreationCompte.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.BootArboEdit.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.BootCompistart.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.BootVDTEdit.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Boîte_de_dialogue1.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Boîte_de_dialogue1b.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Boîte_de_dialogue3.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Boîte_de_dialogue4.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Boîte_de_dialogue5.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Boîte_de_dialogue6.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Boîte_de_dialogue7.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Boîte_de_dialogue8.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Boîte_de_dialogueBarre.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.centre_acces.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Compistart.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.comptegmail.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Dialog2.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Documentation_Materiel_CFZ.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Fenêtre4.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.FenêtreAvertissement.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Form1.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Gestionnaire.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.GuideDevSommmaire.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.GuideP1Accueil.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.GuideP2.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.GuideP3Quiz.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.GuideP4Reponses.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.GuideP5Emulateur.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.GuideP6VELiteIntro.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.GuideP7DemoEditionVDT.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.GuideP8IntroVELite.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.LECAMSettings.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.LSettingsWarning.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.param_console.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Paramètres.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Resources.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.Réalisation_Serveur.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.SplashScreen.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.SélectionTouche.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.UserControl1.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.VDT_Edit.resources" />
+    <EmbeddedResource Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.VDT_Edit_Lite.resources" />
+    <EmbeddedResource Include="documentation\Dev_HowItStartedUserControl.resx">
+      <DependentUpon>Dev_HowItStartedUserControl.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accès_forum.resx">
-      <DependentUpon>Accès_forum.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="aide_compistart.resx">
+    <EmbeddedResource Include="Forms\Aide\aide_compistart.resx">
       <DependentUpon>aide_compistart.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="aide_drcs.resx">
+    <EmbeddedResource Include="Forms\Aide\aide_drcs.resx">
       <DependentUpon>aide_drcs.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="aide_gestionnaire.resx">
+    <EmbeddedResource Include="Forms\Aide\aide_gestionnaire.resx">
       <DependentUpon>aide_gestionnaire.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="aide_vdtedit.resx">
+    <EmbeddedResource Include="Forms\Aide\aide_vdtedit.resx">
       <DependentUpon>aide_vdtedit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Arbo_Edit.resx">
-      <DependentUpon>Arbo_Edit.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Boîtes de dialogue\Dialog3.resx">
+      <DependentUpon>Dialog3.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Boîte_de_dialogue1.resx">
-      <DependentUpon>Boîte_de_dialogue1.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Pages d%27accueil\Accueil.resx">
+      <DependentUpon>Accueil.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Boîte_de_dialogue2.resx">
-      <DependentUpon>Boîte_de_dialogue2.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Fenêtres additionnelles\Générique\Accès_forum.resx">
+      <DependentUpon>Accès_forum.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Boîte_de_dialogue3.resx">
-      <DependentUpon>Boîte_de_dialogue3.vb</DependentUpon>
+    <EmbeddedResource Include="documentation\Database.resx">
+      <DependentUpon>Database.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Boîte_de_dialogueBarre.resx">
-      <DependentUpon>Boîte_de_dialogueBarre.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Suite applis\Écrans de démarrage\BootCompistart.resx">
+      <DependentUpon>BootCompistart.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Centre_dAccès.resx">
-      <DependentUpon>Centre_dAccès.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Compistart.resx">
-      <DependentUpon>Compistart.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="comptegmail.resx">
-      <DependentUpon>comptegmail.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="compte_inexistant.resx">
-      <DependentUpon>compte_inexistant.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Fenêtre.resx">
-      <DependentUpon>Fenêtre.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestionnaireApp.resx">
-      <DependentUpon>GestionnaireApp.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LECAMSettings.resx">
-      <DependentUpon>LECAMSettings.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LSettingsWarning.resx">
-      <DependentUpon>LSettingsWarning.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Paramètres.resx">
-      <DependentUpon>Paramètres.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Réalisation_Serveur.resx">
-      <DependentUpon>Réalisation_Serveur.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen.resx">
-      <DependentUpon>SplashScreen.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BootVDTEdit.resx">
+    <EmbeddedResource Include="Forms\Suite applis\Écrans de démarrage\BootVDTEdit.resx">
       <DependentUpon>BootVDTEdit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="succes_connexion.resx">
-      <DependentUpon>succes_connexion.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Boîtes de dialogue\Boîte_de_dialogue1.resx">
+      <DependentUpon>Boîte_de_dialogue1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sélecteur de touche.resx">
-      <DependentUpon>Sélecteur de touche.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Boîtes de dialogue\Boîte_de_dialogue2.resx">
+      <DependentUpon>Boîte_de_dialogue2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VDT Edit.resx">
+    <EmbeddedResource Include="Forms\Boîtes de dialogue\Boîte_de_dialogue3.resx">
+      <DependentUpon>Boîte_de_dialogue3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Boîtes de dialogue\Boîte_de_dialogueBarre.resx">
+      <DependentUpon>Boîte_de_dialogueBarre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pages d%27accueil\Centre_dAccès.resx">
+      <DependentUpon>Centre_dAccès.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Suite applis\Compistart.resx">
+      <DependentUpon>Compistart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Boîtes de dialogue\comptegmail.resx">
+      <DependentUpon>comptegmail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Boîtes de dialogue\compte_inexistant.resx">
+      <DependentUpon>compte_inexistant.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Boîtes de dialogue\Dialog1.resx">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Boîtes de dialogue\Dialog2.resx">
+      <DependentUpon>Dialog2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fenêtres additionnelles\Compistart\Fenêtre.resx">
+      <DependentUpon>Fenêtre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Suite applis\Arbo_Edit.resx">
+      <DependentUpon>Arbo_Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fenêtres additionnelles\Générique\GestionnaireApp.resx">
+      <DependentUpon>GestionnaireApp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Guides\GuideDevSommmaire.resx">
+      <DependentUpon>GuideDevSommmaire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Guides\GuideP1Accueil.resx">
+      <DependentUpon>GuideP1Accueil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Guides\GuideP2.resx">
+      <DependentUpon>GuideP2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Guides\GuideP3Quiz.resx">
+      <DependentUpon>GuideP3Quiz.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Guides\GuideP4Reponses.resx">
+      <DependentUpon>GuideP4Reponses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Guides\GuideP5Emulateur.resx">
+      <DependentUpon>GuideP5Emulateur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Guides\GuideP6VELiteIntro.resx">
+      <DependentUpon>GuideP6VELiteIntro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Guides\GuideP7DemoEditionVDT.resx">
+      <DependentUpon>GuideP7DemoEditionVDT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Guides\GuideP8IntroVELite.resx">
+      <DependentUpon>GuideP8IntroVELite.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fenêtres additionnelles\Compistart\LECAMSettings.resx">
+      <DependentUpon>LECAMSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fenêtres additionnelles\Compistart\LSettingsWarning.resx">
+      <DependentUpon>LSettingsWarning.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autres\Fichiers inutilisés\.resources" />
+    <EmbeddedResource Include="Forms\Fenêtres additionnelles\Générique\Paramètres.resx">
+      <DependentUpon>Paramètres.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fenêtres additionnelles\Générique\Paramètres_console.resx">
+      <DependentUpon>Paramètres_console.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Suite applis\VDT Edit.resx">
       <DependentUpon>VDT Edit.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VDTPics.resx">
-      <DependentUpon>VDTPics.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -410,9 +711,26 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <SubType>Designers</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fenêtres additionnelles\Générique\Réalisation_Serveur.resx">
+      <DependentUpon>Réalisation_Serveur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Boîtes de dialogue\succes_connexion.resx">
+      <DependentUpon>succes_connexion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fenêtres additionnelles\Générique\Sélecteur de touche.resx">
+      <DependentUpon>Sélecteur de touche.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autres\Fichiers inutilisés\UserControl1.resx">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Suite applis\VDTPics.resx">
+      <DependentUpon>VDTPics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Suite applis Lite\VDT_Edit_Lite.resx">
+      <DependentUpon>VDT_Edit_Lite.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -447,5 +765,100 @@
   <ItemGroup>
     <None Include="Resources\startup-sound-variation-6-316850-_2_.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\son_chargement.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MediaPlayer">
+      <Guid>{22D6F304-B0F6-11D0-94AB-0080C74C7E95}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="wkspbkaxLib">
+      <Guid>{A47EDEDD-2921-4E5A-9B91-13C953EC7FE3}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPDXMLib">
+      <Guid>{73F0DD5C-D071-46B6-A8BF-897C84EAAC49}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLauncher">
+      <Guid>{5CB42160-CD7C-4806-9367-1C4A65153F4A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\AxInterop.WMPLib.dll" />
+    <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\Interop.MediaPlayer.dll" />
+    <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\Interop.wkspbkaxLib.dll" />
+    <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\Interop.WMPDXMLib.dll" />
+    <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\Interop.WMPLauncher.dll" />
+    <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\Interop.WMPLib.dll" />
+    <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.exe" />
+    <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.pdb" />
+    <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.vbproj.FileListAbsolute.txt" />
+    <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.xml" />
+    <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\TempPE\My Project.Resources.Designer.vb-DESKTOP-7BATFOD.dll" />
+    <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <Content Include="Autres\Fichiers inutilisés\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Autres\Dossiers inutilisés\bin\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\Avalonia.BuildServices.0.0.31\build\Avalonia.BuildServices.targets" Condition="Exists('..\packages\Avalonia.BuildServices.0.0.31\build\Avalonia.BuildServices.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Avalonia.BuildServices.0.0.31\build\Avalonia.BuildServices.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Avalonia.BuildServices.0.0.31\build\Avalonia.BuildServices.targets'))" />
+    <Error Condition="!Exists('..\packages\Avalonia.11.3.0\build\Avalonia.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Avalonia.11.3.0\build\Avalonia.props'))" />
+    <Error Condition="!Exists('..\packages\Avalonia.11.3.0\build\Avalonia.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Avalonia.11.3.0\build\Avalonia.targets'))" />
+  </Target>
+  <Import Project="..\packages\Avalonia.11.3.0\build\Avalonia.targets" Condition="Exists('..\packages\Avalonia.11.3.0\build\Avalonia.targets')" />
 </Project>

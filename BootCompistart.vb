@@ -1,10 +1,7 @@
-﻿Public NotInheritable Class BootVDTEdit
+﻿Public Class BootCompistart
 
     'TODO: ce formulaire peut facilement être configuré comme écran de démarrage de l'application en accédant à l'onglet "Application"
     '  du Concepteur de projets ("Propriétés" sous le menu "Projet").
-    Private player As System.Media.SoundPlayer
-
-
 
     Private Async Sub DémarrerProgression()
         Dim random As New Random()
@@ -35,14 +32,12 @@
                   End Sub)
 
         ' Une fois la progression terminée, fermez l'écran de démarrage et ouvrez VDT Edit
-        VDT_Edit.Show()
+        Compistart.Show()
         Me.Close()
     End Sub
 
-
     Private Sub SplashScreen1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         DémarrerProgression()
-
     End Sub
 
 End Class

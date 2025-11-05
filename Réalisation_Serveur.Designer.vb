@@ -8,7 +8,7 @@ Partial Public Class Réalisation_Serveur
     End Sub
     
     Public Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VDT_Edit))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VDT_Edit_Lite))
         Me.SuspendLayout
         '
         'Fenêtre1

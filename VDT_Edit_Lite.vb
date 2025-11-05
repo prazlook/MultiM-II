@@ -1,7 +1,7 @@
 ﻿Imports System.Collections.Generic
 Imports System.Drawing.Text
 
-Public Class VDT_Edit
+Public Class VDT_Edit_Lite
 
     Dim PoliceMinitel As FontFamily
 
@@ -31,18 +31,12 @@ Public Class VDT_Edit
     Private TriangleSommet3 As Point
     Private TriangleDragIndex As Integer = -1
 
+    Private selectedBPS As Integer = 1200
+
     ' À placer dans la classe VDT_Edit
 
     ' Ajoutez ce champ pour mémoriser le dernier point dessiné
     Private DernierPoint As Point = Point.Empty
-
-    ' Nouveaux champs pour la détection OverColor
-    ' Chaque "caractère" sur l'écran est un groupe 2x3 pixels (6 pixels)
-    Private ReadOnly CELL_WIDTH As Integer = 2
-    Private ReadOnly CELL_HEIGHT As Integer = 3
-    Private ReadOnly CHAR_COLUMNS As Integer = LARGEUR_ECRAN \ 2
-    Private ReadOnly CHAR_ROWS As Integer = HAUTEUR_ECRAN \ 3
-    Private OverColorTriggered(CHAR_COLUMNS - 1, CHAR_ROWS - 1) As Boolean
 
     Private Sub ChargerPoliceMinitel()
         Dim pfc As New PrivateFontCollection()
@@ -55,22 +49,22 @@ Public Class VDT_Edit
     End Sub
 
     'Fonction button1_Click
-    Public Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) 'Handles button1.Click
+    Public Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) 'Handles button1.Click
         Me.treeView1.Nodes.Add("Barre de texte", "Barre de texte", 0, 0)
     End Sub
 
     'Fonction button2_Click
-    Public Sub Button2_Click(ByVal sender As Object, ByVal e As System.EventArgs) 'Handles button2.Click
+    Public Sub button2_Click(ByVal sender As Object, ByVal e As System.EventArgs) 'Handles button2.Click
         Me.treeView1.Nodes.Add("Bloc de texte", "Bloc de texte", 0, 0)
     End Sub
 
     'Fonction button5_Click
-    Public Sub Button5_Click(ByVal sender As Object, ByVal e As System.EventArgs) 'Handles button5.Click
+    Public Sub button5_Click(ByVal sender As Object, ByVal e As System.EventArgs) 'Handles button5.Click
         Me.treeView1.Nodes.Add("Graphiques", "Graphiques", 0, 0)
     End Sub
 
     'Fonction button3_Click
-    Public Sub Button3_Click(ByVal sender As Object, ByVal e As System.EventArgs) 'Handles button3.Click
+    Public Sub button3_Click(ByVal sender As Object, ByVal e As System.EventArgs) 'Handles button3.Click
         Boîte_de_dialogue4.ShowDialog()
     End Sub
 
@@ -202,7 +196,7 @@ Public Class VDT_Edit
 
     Private Sub VDT_Edit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ChargerPoliceMinitel()
-        centre_acces.player.Stop()
+        Accueil.player.Stop()
         For x = 0 To LARGEUR_ECRAN - 1
             For y = 0 To HAUTEUR_ECRAN - 1
                 Ecran(x, y) = Color.Black
@@ -250,14 +244,6 @@ Public Class VDT_Edit
             Ecran(x, y) = couleur
             CouleursPixels(x, y) = couleur
             PanelEcran.Invalidate(New Rectangle(x * TAILLE_PIXEL, y * TAILLE_PIXEL, TAILLE_PIXEL, TAILLE_PIXEL))
-            ' Vérifier le groupe 2x3 correspondant à ce pixel
-            Try
-                Dim cx = x \ CELL_WIDTH
-                Dim cy = y \ CELL_HEIGHT
-                CheckOverColorForCell(cx, cy)
-            Catch ex As Exception
-                ' ignore
-            End Try
         End If
     End Sub
 
@@ -307,11 +293,6 @@ Public Class VDT_Edit
         While True
             If x0 >= 0 AndAlso x0 < LARGEUR_ECRAN AndAlso y0 >= 0 AndAlso y0 < HAUTEUR_ECRAN Then
                 CouleursPixels(x0, y0) = couleur
-                ' Vérifier cellule correspondante
-                Try
-                    CheckOverColorForCell(x0 \ CELL_WIDTH, y0 \ CELL_HEIGHT)
-                Catch
-                End Try
             End If
             If x0 = x1 AndAlso y0 = y1 Then Exit While
             Dim e2 As Integer = 2 * err
@@ -358,26 +339,6 @@ Public Class VDT_Edit
                 g.DrawLine(p, 0, py, LARGEUR_ECRAN * TAILLE_PIXEL, py)
             Next
         End Using
-
-        ' Surbrillance des cellules détectées en OverColor (semi-transparente)
-        Using br As New SolidBrush(Color.FromArgb(120, Color.Red))
-            Dim cols = CHAR_COLUMNS
-            Dim rows = CHAR_ROWS
-            For cy = 0 To rows - 1
-                For cx = 0 To cols - 1
-                    If OverColorTriggered(cx, cy) Then
-                        Dim rx = cx * CELL_WIDTH * TAILLE_PIXEL
-                        Dim ry = cy * CELL_HEIGHT * TAILLE_PIXEL
-                        Dim rw = CELL_WIDTH * TAILLE_PIXEL
-                        Dim rh = CELL_HEIGHT * TAILLE_PIXEL
-                        g.FillRectangle(br, rx, ry, rw, rh)
-                    End If
-                Next
-            Next
-        End Using
-
-        ' Après le rendu, vérifier les cellules pour déclencher OverColor si nécessaire
-        CheckOverColorForAllCells()
     End Sub
 
     Private Function ConvertirEnGris(couleur As Color) As Color
@@ -442,7 +403,7 @@ Public Class VDT_Edit
         End If
     End Sub
 
-    Private Sub Button30_Click(sender As Object, e As EventArgs) Handles Button30.Click
+    Private Sub Button30_Click(sender As Object, e As EventArgs)
         Dim milieu As Integer = LARGEUR_ECRAN \ 2
         Dim hauteurA As Integer = HAUTEUR_ECRAN - 1
         For y = 0 To hauteurA
@@ -489,7 +450,7 @@ Public Class VDT_Edit
         SelectedColor = System.Drawing.Color.FromArgb(255, 255, 0)
     End Sub
 
-    Private Sub Button37_Click(sender As Object, e As EventArgs) Handles Button37.Click
+    Private Sub Button37_Click(sender As Object, e As EventArgs)
         OutilActif = "cercle"
     End Sub
 
@@ -497,7 +458,7 @@ Public Class VDT_Edit
         OutilActif = "crayon"
     End Sub
 
-    Private Sub Button32_Click(sender As Object, e As EventArgs) Handles Button32.Click
+    Private Sub Button32_Click(sender As Object, e As EventArgs)
         OutilActif = "pot"
     End Sub
 
@@ -509,7 +470,7 @@ Public Class VDT_Edit
         Refaire()
     End Sub
 
-    Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
+    Private Sub Button35_Click(sender As Object, e As EventArgs)
         OutilActif = "triangle"
         TriangleEnCours = False
         TriangleDragIndex = -1
@@ -569,23 +530,12 @@ Public Class VDT_Edit
                     stack.Push(New Point(px - 1, py))
                     stack.Push(New Point(px, py + 1))
                     stack.Push(New Point(px, py - 1))
-                    ' Vérifier cellule correspondante
-                    Try
-                        CheckOverColorForCell(px \ CELL_WIDTH, py \ CELL_HEIGHT)
-                    Catch
-                    End Try
                 End If
             End If
         End While
     End Sub
 
-    Private Sub Interrupteur1_Click(sender As Object, e As EventArgs) Handles Interrupteur1.Click
-        If Interrupteur1.Checked Then
-            Label4.Text = "Page *.vdt"
-        Else
-            Label4.Text = "Écran *.scm"
-        End If
-    End Sub
+
 
     Public Sub ExporterEcranVidetotex(fichier As String)
         Dim largeurCar As Integer = LARGEUR_ECRAN \ 2
@@ -615,71 +565,6 @@ Public Class VDT_Edit
         System.IO.File.WriteAllBytes(fichier, octets)
     End Sub
 
-    ' --- NOUVEAU : détection OverColor ---
-    Private Sub CheckOverColorForCell(cx As Integer, cy As Integer)
-        If cx < 0 OrElse cx >= CHAR_COLUMNS OrElse cy < 0 OrElse cy >= CHAR_ROWS Then Return
-        Dim distinct = CountDistinctColorsInCell(cx, cy)
-        If distinct > 2 Then
-            If Not OverColorTriggered(cx, cy) Then
-                OverColorTriggered(cx, cy) = True
-                OverColor(cx, cy)
-            End If
-        Else
-            If OverColorTriggered(cx, cy) Then
-                OverColorTriggered(cx, cy) = False
-                ' clear visual by invalidating cell
-                PanelEcran.Invalidate(New Rectangle(cx * CELL_WIDTH * TAILLE_PIXEL, cy * CELL_HEIGHT * TAILLE_PIXEL, CELL_WIDTH * TAILLE_PIXEL, CELL_HEIGHT * TAILLE_PIXEL))
-            End If
-        End If
-    End Sub
-
-    Private Function CountDistinctColorsInCell(cx As Integer, cy As Integer) As Integer
-        Dim setColors As New HashSet(Of Integer)()
-        For py = 0 To CELL_HEIGHT - 1
-            For px = 0 To CELL_WIDTH - 1
-                Dim x = cx * CELL_WIDTH + px
-                Dim y = cy * CELL_HEIGHT + py
-                If x >= 0 AndAlso x < LARGEUR_ECRAN AndAlso y >= 0 AndAlso y < HAUTEUR_ECRAN Then
-                    setColors.Add(CouleursPixels(x, y).ToArgb())
-                End If
-            Next
-        Next
-        Return setColors.Count
-    End Function
-
-    Private Sub CheckOverColorForAllCells()
-        Dim cols = CHAR_COLUMNS
-        Dim rows = CHAR_ROWS
-        For cy = 0 To rows - 1
-            For cx = 0 To cols - 1
-                Dim distinct = CountDistinctColorsInCell(cx, cy)
-                If distinct > 2 Then
-                    If Not OverColorTriggered(cx, cy) Then
-                        OverColorTriggered(cx, cy) = True
-                        OverColor(cx, cy)
-                    End If
-                Else
-                    If OverColorTriggered(cx, cy) Then
-                        OverColorTriggered(cx, cy) = False
-                    End If
-                End If
-            Next
-        Next
-    End Sub
-
-    Private Sub OverColor(cx As Integer, cy As Integer)
-        ' Déclenché quand plus de 2 couleurs différentes sont détectées dans une cellule 2x3
-        ' Action minimale : indiquer dans la barre d'état et invalider la cellule pour surbrillance
-        Try
-            ToolStripStatusLabel1.Text = String.Format("Il est impossible de placer plus de deux couleurs dans une cellule de 2*3 px.", cx, cy)
-            PanelEcran.Invalidate(New Rectangle(cx * CELL_WIDTH * TAILLE_PIXEL, cy * CELL_HEIGHT * TAILLE_PIXEL, CELL_WIDTH * TAILLE_PIXEL, CELL_HEIGHT * TAILLE_PIXEL))
-            Dialog3.Show()
-        Catch
-        End Try
-    End Sub
-
-    ' --- FIN OverColor ---
-
     Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
         Using dlg As New SaveFileDialog()
             dlg.Title = "Exporter l'écran au format Vidéotex"
@@ -690,6 +575,8 @@ Public Class VDT_Edit
         End Using
     End Sub
 
+    Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs)
 
+    End Sub
 End Class
 

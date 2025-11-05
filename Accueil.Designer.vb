@@ -24,8 +24,6 @@ Partial Public Class Accueil
 
     Public WithEvents button16 As System.Windows.Forms.Button
 
-    Public WithEvents button13 As System.Windows.Forms.Button
-
     Public toolTip1 As System.Windows.Forms.ToolTip
 
     Public toolTip4 As System.Windows.Forms.ToolTip
@@ -78,12 +76,13 @@ Partial Public Class Accueil
         Me.button12 = New System.Windows.Forms.Button()
         Me.button15 = New System.Windows.Forms.Button()
         Me.button16 = New System.Windows.Forms.Button()
-        Me.button13 = New System.Windows.Forms.Button()
         Me.toolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.button1 = New Krypton.Toolkit.KryptonButton()
         Me.button2 = New Krypton.Toolkit.KryptonButton()
         Me.button3 = New Krypton.Toolkit.KryptonButton()
         Me.button4 = New Krypton.Toolkit.KryptonButton()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button20 = New System.Windows.Forms.Button()
         Me.toolTip2 = New System.Windows.Forms.ToolTip(Me.components)
         Me.toolTip3 = New System.Windows.Forms.ToolTip(Me.components)
         Me.toolTip4 = New System.Windows.Forms.ToolTip(Me.components)
@@ -95,6 +94,9 @@ Partial Public Class Accueil
         Me.toolTip7 = New System.Windows.Forms.ToolTip(Me.components)
         Me.button19 = New System.Windows.Forms.Button()
         Me.KryptonPalette1 = New ComponentFactory.Krypton.Toolkit.KryptonPalette(Me.components)
+        Me.Button21 = New System.Windows.Forms.Button()
+        Me.Button22 = New System.Windows.Forms.Button()
+        Me.Button23 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'label1
@@ -135,12 +137,12 @@ Partial Public Class Accueil
         Me.button6.BackColor = System.Drawing.Color.RosyBrown
         Me.button6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.button6.Location = New System.Drawing.Point(210, 490)
+        Me.button6.Location = New System.Drawing.Point(12, 546)
         Me.button6.Name = "button6"
         Me.button6.Size = New System.Drawing.Size(190, 50)
         Me.button6.TabIndex = 7
         Me.button6.Text = "Paramètres"
-        Me.toolTip1.SetToolTip(Me.button6, "Désolé,pas encore disponible")
+        Me.toolTip3.SetToolTip(Me.button6, "Désolé,pas encore disponible")
         Me.button6.UseVisualStyleBackColor = False
         '
         'button7
@@ -153,7 +155,7 @@ Partial Public Class Accueil
         Me.button7.Size = New System.Drawing.Size(190, 50)
         Me.button7.TabIndex = 8
         Me.button7.Text = "Mises à Jour"
-        Me.toolTip1.SetToolTip(Me.button7, "Désolé,pas encore disponible")
+        Me.toolTip3.SetToolTip(Me.button7, "Désolé,pas encore disponible")
         Me.button7.UseVisualStyleBackColor = False
         '
         'button8
@@ -204,8 +206,9 @@ Partial Public Class Accueil
         Me.button11.Name = "button11"
         Me.button11.Size = New System.Drawing.Size(190, 50)
         Me.button11.TabIndex = 12
-        Me.button11.Text = "Conception Serveur"
-        Me.toolTip2.SetToolTip(Me.button11, "Désolé,pas encore disponible")
+        Me.button11.Text = "Emulatel"
+        Me.toolTip1.SetToolTip(Me.button11, "Émulateur de MultiM II, le plus performant et proche d'un véritable Minitel car n" &
+        "i plus ni moins basé sur le programme original inclus dans un Minitel")
         Me.button11.UseVisualStyleBackColor = False
         '
         'button12
@@ -217,8 +220,9 @@ Partial Public Class Accueil
         Me.button12.Name = "button12"
         Me.button12.Size = New System.Drawing.Size(190, 50)
         Me.button12.TabIndex = 13
-        Me.button12.Text = "Réalisation Serveur"
-        Me.toolTip2.SetToolTip(Me.button12, "Désolé,pas encore disponible")
+        Me.button12.Text = "Database"
+        Me.toolTip1.SetToolTip(Me.button12, "Base de données contenant une précieuse documentation sur le Minitel, le développ" &
+        "ement de MultiM II, etc.")
         Me.button12.UseVisualStyleBackColor = False
         '
         'button15
@@ -247,22 +251,12 @@ Partial Public Class Accueil
         Me.toolTip4.SetToolTip(Me.button16, "Désolé,pas encore disponible")
         Me.button16.UseVisualStyleBackColor = False
         '
-        'button13
-        '
-        Me.button13.BackgroundImage = CType(resources.GetObject("button13.BackgroundImage"), System.Drawing.Image)
-        Me.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.button13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.button13.Location = New System.Drawing.Point(132, 103)
-        Me.button13.Name = "button13"
-        Me.button13.Size = New System.Drawing.Size(46, 45)
-        Me.button13.TabIndex = 19
-        Me.toolTip5.SetToolTip(Me.button13, "Retour au Centre d'Accès")
-        Me.button13.UseVisualStyleBackColor = True
-        '
         'toolTip1
         '
+        Me.toolTip1.AutoPopDelay = 5000
         Me.toolTip1.BackColor = System.Drawing.SystemColors.Highlight
+        Me.toolTip1.InitialDelay = 0
+        Me.toolTip1.ReshowDelay = 100
         '
         'button1
         '
@@ -321,22 +315,60 @@ Partial Public Class Accueil
         Me.button4.Values.DropDownArrowColor = System.Drawing.Color.Empty
         Me.button4.Values.Text = "Compistart"
         '
+        'Button13
+        '
+        Me.Button13.BackColor = System.Drawing.Color.ForestGreen
+        Me.Button13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Button13.Location = New System.Drawing.Point(208, 546)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(190, 50)
+        Me.Button13.TabIndex = 28
+        Me.Button13.Text = "Réalisation Serveur"
+        Me.toolTip2.SetToolTip(Me.Button13, "Désolé,pas encore disponible")
+        Me.Button13.UseVisualStyleBackColor = False
+        '
+        'Button20
+        '
+        Me.Button20.BackColor = System.Drawing.Color.ForestGreen
+        Me.Button20.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Button20.Location = New System.Drawing.Point(208, 490)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(190, 50)
+        Me.Button20.TabIndex = 29
+        Me.Button20.Text = "Conception Serveur"
+        Me.toolTip2.SetToolTip(Me.Button20, "Désolé,pas encore disponible")
+        Me.Button20.UseVisualStyleBackColor = False
+        '
         'toolTip2
         '
-        Me.toolTip2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.toolTip2.AutoPopDelay = 5000
+        Me.toolTip2.BackColor = System.Drawing.Color.ForestGreen
+        Me.toolTip2.InitialDelay = 0
+        Me.toolTip2.ReshowDelay = 100
         '
         'toolTip3
         '
+        Me.toolTip3.AutoPopDelay = 5000
         Me.toolTip3.BackColor = System.Drawing.Color.RosyBrown
+        Me.toolTip3.InitialDelay = 0
+        Me.toolTip3.ReshowDelay = 100
         '
         'toolTip4
         '
+        Me.toolTip4.AutoPopDelay = 5000
         Me.toolTip4.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.toolTip4.InitialDelay = 0
+        Me.toolTip4.ReshowDelay = 100
         '
         'toolTip5
         '
+        Me.toolTip5.AutoPopDelay = 5000
         Me.toolTip5.BackColor = System.Drawing.Color.Lime
+        Me.toolTip5.InitialDelay = 0
         Me.toolTip5.IsBalloon = True
+        Me.toolTip5.ReshowDelay = 100
         Me.toolTip5.ToolTipTitle = "Revenir à l'accueil"
         '
         'button14
@@ -345,7 +377,7 @@ Partial Public Class Accueil
         Me.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.button14.Cursor = System.Windows.Forms.Cursors.Hand
         Me.button14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.button14.Location = New System.Drawing.Point(184, 103)
+        Me.button14.Location = New System.Drawing.Point(132, 103)
         Me.button14.Name = "button14"
         Me.button14.Size = New System.Drawing.Size(46, 45)
         Me.button14.TabIndex = 20
@@ -380,11 +412,17 @@ Partial Public Class Accueil
         '
         'toolTip6
         '
+        Me.toolTip6.AutoPopDelay = 5000
         Me.toolTip6.BackColor = System.Drawing.Color.Lime
+        Me.toolTip6.InitialDelay = 0
+        Me.toolTip6.ReshowDelay = 100
         '
         'toolTip7
         '
+        Me.toolTip7.AutoPopDelay = 5000
         Me.toolTip7.BackColor = System.Drawing.Color.Red
+        Me.toolTip7.InitialDelay = 0
+        Me.toolTip7.ReshowDelay = 100
         '
         'button19
         '
@@ -401,11 +439,55 @@ Partial Public Class Accueil
         Me.button19.UseVisualStyleBackColor = True
         Me.button19.Visible = False
         '
+        'Button21
+        '
+        Me.Button21.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button21.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button21.Location = New System.Drawing.Point(256, 602)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(92, 23)
+        Me.Button21.TabIndex = 32
+        Me.Button21.Text = "Récents"
+        Me.toolTip1.SetToolTip(Me.Button21, "Désolé, pas encore disponible")
+        Me.Button21.UseVisualStyleBackColor = False
+        '
+        'Button22
+        '
+        Me.Button22.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button22.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button22.Location = New System.Drawing.Point(163, 602)
+        Me.Button22.Name = "Button22"
+        Me.Button22.Size = New System.Drawing.Size(87, 23)
+        Me.Button22.TabIndex = 31
+        Me.Button22.Text = "Ouvrir"
+        Me.toolTip1.SetToolTip(Me.Button22, "Désolé, pas encore disponible")
+        Me.Button22.UseVisualStyleBackColor = False
+        '
+        'Button23
+        '
+        Me.Button23.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button23.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button23.Location = New System.Drawing.Point(57, 602)
+        Me.Button23.Name = "Button23"
+        Me.Button23.Size = New System.Drawing.Size(100, 23)
+        Me.Button23.TabIndex = 30
+        Me.Button23.Text = "Nouveau"
+        Me.toolTip1.SetToolTip(Me.Button23, "Désolé, pas encore disponible")
+        Me.Button23.UseVisualStyleBackColor = False
+        '
         'Accueil
         '
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(412, 548)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(412, 646)
+        Me.Controls.Add(Me.Button21)
+        Me.Controls.Add(Me.Button22)
+        Me.Controls.Add(Me.Button23)
+        Me.Controls.Add(Me.Button20)
+        Me.Controls.Add(Me.Button13)
         Me.Controls.Add(Me.button4)
         Me.Controls.Add(Me.button3)
         Me.Controls.Add(Me.button2)
@@ -413,7 +495,6 @@ Partial Public Class Accueil
         Me.Controls.Add(Me.button18)
         Me.Controls.Add(Me.button17)
         Me.Controls.Add(Me.button14)
-        Me.Controls.Add(Me.button13)
         Me.Controls.Add(Me.label2)
         Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.button5)
@@ -433,7 +514,7 @@ Partial Public Class Accueil
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Accueil"
-        Me.Text = "MultiM II V0.2.5.7"
+        Me.Text = "MultiM II V0.2.6.0 (En développement)"
         Me.ResumeLayout(False)
 
     End Sub
@@ -444,4 +525,9 @@ Partial Public Class Accueil
     Friend WithEvents button2 As Krypton.Toolkit.KryptonButton
     Friend WithEvents button3 As Krypton.Toolkit.KryptonButton
     Friend WithEvents button4 As Krypton.Toolkit.KryptonButton
+    Public WithEvents Button13 As Button
+    Public WithEvents Button20 As Button
+    Public WithEvents Button21 As Button
+    Public WithEvents Button22 As Button
+    Public WithEvents Button23 As Button
 End Class

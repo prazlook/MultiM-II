@@ -1,30 +1,16 @@
 ﻿Public Class ArboEdit
     
     'Fonction Fenêtre3_Load
-    Public Sub Fenêtre3_Load(ByVal sender As Object, ByVal e As System.EventArgs)
+    Public Sub Fenêtre3_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Cette fonction se déclenche à l'ouverture de la fenêtre.
         '
         'This function is launched during opening.
     End Sub
 
-    'Fonction label2_Click
-    Public Sub label2_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-    End Sub
 
-    'Fonction label3_Click
-    Public Sub label3_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-    End Sub
-
-    'Fonction label7_Click
-    Public Sub label7_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-    End Sub
-
-    'Fonction button4_Click
-    Public Sub button4_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-    End Sub
 
     'Fonction modifprops_Click
-    Public Sub modifprops_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Public Sub modifprops_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles modifprops.Click
         If Me.colorDialog1.ShowDialog() = DialogResult.OK Then
             If Me.treeView1.SelectedNode IsNot Nothing Then
                 Me.treeView1.SelectedNode.BackColor = Me.colorDialog1.Color
@@ -35,7 +21,7 @@
     End Sub
 
     'Fonction ajouterpage_Click
-    Public Sub ajouterpage_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Public Sub ajouterpage_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ajouterpage.Click
         ' Vérifier que NoeudSelectionne contient bien un nœud valide avant d'ajouter un enfant
         If NoeudSelectionne IsNot Nothing Then
             ' Créer un nouveau nœud enfant avec le nom défini dans la variable NomNoeud
@@ -60,15 +46,15 @@
     End Sub
 
     'Fonction groupBox5_Enter
-    Public Sub groupBox5_Enter(ByVal sender As Object, ByVal e As System.EventArgs)
+    Public Sub groupBox5_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles groupBox5.Enter
     End Sub
 
     'Fonction groupBox2_Enter
-    Public Sub groupBox2_Enter(ByVal sender As Object, ByVal e As System.EventArgs)
+    Public Sub groupBox2_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles groupBox2.Enter
     End Sub
 
     'Fonction button6_Click
-    Public Sub button6_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Public Sub button6_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button6.Click
         If treeView1.SelectedNode IsNot Nothing Then
             ' Ouvrir le dialogue de fichier
             openFileDialog1.Filter = "Fichiers VDT (*.VDT)|*.VDT|Tous les fichiers (*.*)|*.*"
@@ -103,11 +89,11 @@
     End Sub
 
     'Fonction button7_Click
-    Public Sub button7_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Public Sub button7_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button7.Click
     End Sub
 
     'Fonction button1_Click
-    Public Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Public Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button1.Click
         NomNoeud = "" & Me.textBox1.Text & ""
         Try
             ' Vérifier si un noeud est sélectionné dans TreeView1
@@ -145,7 +131,7 @@
     End Sub
 
     'Fonction treeView1_AfterSelect
-    Public Sub treeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs)
+    Public Sub treeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles treeView1.AfterSelect
         ' Vérifie si un nœud est sélectionné avant d'essayer de l'utiliser
         If treeView1.SelectedNode IsNot Nothing Then
             ' Vérifie si le Tag du nœud est défini
@@ -178,7 +164,7 @@
     End Sub
 
     'Fonction ImporterUneArborescenceToolStripMenuItem_Click
-    Public Sub ImporterUneArborescenceToolStripMenuItem_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Public Sub ImporterUneArborescenceToolStripMenuItem_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ArboImport.Click
         ' Boîte de sélection de fichier
         Dim ouvrir As New OpenFileDialog()
         ouvrir.Filter = "Fichiers ARB (*.arb)|*.arb"
@@ -284,7 +270,7 @@
     End Sub
 
     'Fonction ExporterLarborescenceToolStripMenuItem_Click
-    Public Sub ExporterLarborescenceToolStripMenuItem_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Public Sub ExporterLarborescenceToolStripMenuItem_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ArboExport.Click
         ' --- EXPORT ---
 
         ' Boîte de dialogue pour sélectionner le fichier de destination
@@ -355,7 +341,7 @@
     End Sub
 
     'Fonction button5_Click
-    Public Sub button5_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Public Sub button5_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button5.Click
         If colorDialog1.ShowDialog() = DialogResult.OK Then
             If treeView1.SelectedNode IsNot Nothing Then
                 ' Si le noeud sélectionné existe, modifie sa couleur de fond
@@ -373,7 +359,7 @@
     End Sub
 
     'Fonction button8_Click
-    Public Sub button8_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Public Sub button8_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button8.Click
         If colorDialog1.ShowDialog() = DialogResult.OK Then
             If treeView1.SelectedNode IsNot Nothing Then
                 ' Si le noeud sélectionné existe, modifie la couleur du texte (ForeColor)
@@ -391,7 +377,7 @@
     End Sub
     
     'Fonction label11_Click
-    Public Sub label11_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Public Sub label11_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles label11.Click
         Boîte_de_dialogue3.ShowDialog()
     End Sub
 End Class

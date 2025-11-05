@@ -5,7 +5,6 @@
         'Cette fonction se déclenche à l'ouverture de la fenêtre.
         '
         'This function is launched during opening.
-        SplashScreen.Show()
         centre_acces.Show()
     End Sub
 End Class
