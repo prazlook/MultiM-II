@@ -2,7 +2,7 @@
 Partial Public Class VDT_Edit
     Inherits System.Windows.Forms.Form
 
-    Public treeView1 As System.Windows.Forms.TreeView
+    Public tidgetsTree As System.Windows.Forms.TreeView
 
     Public toolTip1 As System.Windows.Forms.ToolTip
 
@@ -15,25 +15,54 @@ Partial Public Class VDT_Edit
 
     Public Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.treeView1 = New System.Windows.Forms.TreeView()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VDT_Edit))
+        Me.tidgetsTree = New System.Windows.Forms.TreeView()
         Me.label2a = New System.Windows.Forms.Label()
         Me.toolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.button7 = New System.Windows.Forms.Button()
-        Me.button15 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.button16 = New System.Windows.Forms.Button()
         Me.button17 = New System.Windows.Forms.Button()
+        Me.button18 = New System.Windows.Forms.Button()
         Me.button19 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.button7 = New System.Windows.Forms.Button()
+        Me.button15 = New System.Windows.Forms.Button()
         Me.button13 = New System.Windows.Forms.Button()
         Me.button14 = New System.Windows.Forms.Button()
-        Me.button18 = New System.Windows.Forms.Button()
+        Me.Button61 = New System.Windows.Forms.Button()
         Me.tabPage2 = New System.Windows.Forms.TabPage()
-        Me.GroupBox12 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox20 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox21 = New System.Windows.Forms.GroupBox()
+        Me.Button47 = New System.Windows.Forms.Button()
+        Me.Button44 = New System.Windows.Forms.Button()
+        Me.Button45 = New System.Windows.Forms.Button()
+        Me.Button46 = New System.Windows.Forms.Button()
+        Me.GroupBox19 = New System.Windows.Forms.GroupBox()
+        Me.Button48 = New System.Windows.Forms.Button()
+        Me.Button43 = New System.Windows.Forms.Button()
+        Me.Button42 = New System.Windows.Forms.Button()
+        Me.Button41 = New System.Windows.Forms.Button()
+        Me.GroupBox15 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox17 = New System.Windows.Forms.GroupBox()
+        Me.Button40 = New System.Windows.Forms.Button()
+        Me.GroupBox18 = New System.Windows.Forms.GroupBox()
+        Me.Button39 = New System.Windows.Forms.Button()
+        Me.Button25 = New System.Windows.Forms.Button()
+        Me.Button24 = New System.Windows.Forms.Button()
+        Me.Button23 = New System.Windows.Forms.Button()
+        Me.GroupBox16 = New System.Windows.Forms.GroupBox()
+        Me.Button22 = New System.Windows.Forms.Button()
+        Me.Button21 = New System.Windows.Forms.Button()
         Me.tabPage1 = New System.Windows.Forms.TabPage()
+        Me.GroupBox22 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox24 = New System.Windows.Forms.GroupBox()
+        Me.Button60 = New System.Windows.Forms.Button()
+        Me.Button62 = New System.Windows.Forms.Button()
+        Me.Button63 = New System.Windows.Forms.Button()
+        Me.Button64 = New System.Windows.Forms.Button()
+        Me.Button65 = New System.Windows.Forms.Button()
+        Me.Button66 = New System.Windows.Forms.Button()
+        Me.Button67 = New System.Windows.Forms.Button()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -41,6 +70,26 @@ Partial Public Class VDT_Edit
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.GroupBox23 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button59 = New System.Windows.Forms.Button()
+        Me.Button58 = New System.Windows.Forms.Button()
+        Me.Button57 = New System.Windows.Forms.Button()
+        Me.Button56 = New System.Windows.Forms.Button()
+        Me.Button53 = New System.Windows.Forms.Button()
+        Me.Button54 = New System.Windows.Forms.Button()
+        Me.Button51 = New System.Windows.Forms.Button()
+        Me.Button52 = New System.Windows.Forms.Button()
+        Me.Button50 = New System.Windows.Forms.Button()
+        Me.Button49 = New System.Windows.Forms.Button()
+        Me.Button30 = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.tabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage7 = New System.Windows.Forms.TabPage()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.Button55 = New System.Windows.Forms.Button()
@@ -54,12 +103,8 @@ Partial Public Class VDT_Edit
         Me.Button31 = New System.Windows.Forms.Button()
         Me.Button32 = New System.Windows.Forms.Button()
         Me.Label1001 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.Button30 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.tabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
@@ -87,6 +132,7 @@ Partial Public Class VDT_Edit
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
@@ -96,17 +142,30 @@ Partial Public Class VDT_Edit
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.Button29 = New System.Windows.Forms.Button()
+        Me.Edit_History = New System.Windows.Forms.Panel()
         Me.Interrupteur1 = New MultiM_II.Interrupteur()
         Me.tabPage2.SuspendLayout()
-        Me.GroupBox12.SuspendLayout()
+        Me.GroupBox20.SuspendLayout()
+        Me.GroupBox21.SuspendLayout()
+        Me.GroupBox19.SuspendLayout()
+        Me.GroupBox15.SuspendLayout()
+        Me.GroupBox17.SuspendLayout()
+        Me.GroupBox18.SuspendLayout()
+        Me.GroupBox16.SuspendLayout()
         Me.tabPage1.SuspendLayout()
+        Me.GroupBox22.SuspendLayout()
+        Me.GroupBox24.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox23.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.tabControl1.SuspendLayout()
+        Me.TabPage7.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.tabControl1.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.GroupBox12.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.PanelEcran.SuspendLayout()
         Me.PanelValTri.SuspendLayout()
@@ -119,16 +178,16 @@ Partial Public Class VDT_Edit
         Me.GroupBox10.SuspendLayout()
         Me.SuspendLayout()
         '
-        'treeView1
+        'tidgetsTree
         '
-        Me.treeView1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.treeView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.treeView1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.treeView1.Location = New System.Drawing.Point(1110, 277)
-        Me.treeView1.Name = "treeView1"
-        Me.treeView1.Size = New System.Drawing.Size(293, 744)
-        Me.treeView1.TabIndex = 1
-        Me.ToolTip9.SetToolTip(Me.treeView1, "Ici,s'affiche l'ordre dans lequel les éléments de l'écran vont s'afficher")
+        Me.tidgetsTree.Cursor = System.Windows.Forms.Cursors.Default
+        Me.tidgetsTree.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.tidgetsTree.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.tidgetsTree.Location = New System.Drawing.Point(1095, 277)
+        Me.tidgetsTree.Name = "tidgetsTree"
+        Me.tidgetsTree.Size = New System.Drawing.Size(318, 622)
+        Me.tidgetsTree.TabIndex = 1
+        Me.ToolTip9.SetToolTip(Me.tidgetsTree, "Ici,s'affiche l'ordre dans lequel les éléments de l'écran vont s'afficher")
         '
         'label2a
         '
@@ -149,29 +208,18 @@ Partial Public Class VDT_Edit
         Me.toolTip1.InitialDelay = 500
         Me.toolTip1.ReshowDelay = 100
         '
-        'button7
+        'Button2
         '
-        Me.button7.Cursor = System.Windows.Forms.Cursors.Default
-        Me.button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.button7.Location = New System.Drawing.Point(736, 94)
-        Me.button7.Name = "button7"
-        Me.button7.Size = New System.Drawing.Size(153, 23)
-        Me.button7.TabIndex = 7
-        Me.button7.Text = "Notification"
-        Me.toolTip1.SetToolTip(Me.button7, "Affiche une notification")
-        Me.button7.UseVisualStyleBackColor = True
-        '
-        'button15
-        '
-        Me.button15.Cursor = System.Windows.Forms.Cursors.Default
-        Me.button15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.button15.Location = New System.Drawing.Point(556, 65)
-        Me.button15.Name = "button15"
-        Me.button15.Size = New System.Drawing.Size(153, 23)
-        Me.button15.TabIndex = 2
-        Me.button15.Text = "Défilement"
-        Me.toolTip1.SetToolTip(Me.button15, "Fait défiler la page vers le haut ou le bas d'une hauteur définie")
-        Me.button15.UseVisualStyleBackColor = True
+        Me.Button2.BackColor = System.Drawing.Color.Black
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(11, 22)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(81, 23)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Noir,0%"
+        Me.toolTip1.SetToolTip(Me.Button2, "Affichera une couleur noire")
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'button16
         '
@@ -199,58 +247,6 @@ Partial Public Class VDT_Edit
         "un rond")
         Me.button17.UseVisualStyleBackColor = True
         '
-        'button19
-        '
-        Me.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.button19.Cursor = System.Windows.Forms.Cursors.Default
-        Me.button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.button19.Location = New System.Drawing.Point(760, 65)
-        Me.button19.Name = "button19"
-        Me.button19.Size = New System.Drawing.Size(153, 23)
-        Me.button19.TabIndex = 6
-        Me.button19.Text = "Générer un thème"
-        Me.toolTip1.SetToolTip(Me.button19, "Génère des couleurs,des tailles et des formes automatiquement")
-        Me.button19.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Black
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(11, 22)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(81, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Noir,0%"
-        Me.toolTip1.SetToolTip(Me.Button2, "Affichera une couleur noire")
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'button13
-        '
-        Me.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.button13.Cursor = System.Windows.Forms.Cursors.Default
-        Me.button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.button13.Location = New System.Drawing.Point(556, 6)
-        Me.button13.Name = "button13"
-        Me.button13.Size = New System.Drawing.Size(153, 23)
-        Me.button13.TabIndex = 0
-        Me.button13.Text = "Arc-en-ciel"
-        Me.toolTip1.SetToolTip(Me.button13, "Génère une ligne arc-en-ciel sur l'écran du Minitel")
-        Me.button13.UseVisualStyleBackColor = True
-        '
-        'button14
-        '
-        Me.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.button14.Cursor = System.Windows.Forms.Cursors.Default
-        Me.button14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.button14.Location = New System.Drawing.Point(556, 36)
-        Me.button14.Name = "button14"
-        Me.button14.Size = New System.Drawing.Size(153, 23)
-        Me.button14.TabIndex = 1
-        Me.button14.Text = "Arc-en-ciel avec mouvement"
-        Me.toolTip1.SetToolTip(Me.button14, "Génère sur l'écran du Minitel une ligne qui changera rapidement de couleur")
-        Me.button14.UseVisualStyleBackColor = True
-        '
         'button18
         '
         Me.button18.Cursor = System.Windows.Forms.Cursors.Default
@@ -264,41 +260,339 @@ Partial Public Class VDT_Edit
         "e d'un triangle")
         Me.button18.UseVisualStyleBackColor = True
         '
+        'button19
+        '
+        Me.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.button19.Cursor = System.Windows.Forms.Cursors.Default
+        Me.button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.button19.Location = New System.Drawing.Point(899, 66)
+        Me.button19.Name = "button19"
+        Me.button19.Size = New System.Drawing.Size(153, 23)
+        Me.button19.TabIndex = 13
+        Me.button19.Text = "Générer un thème"
+        Me.toolTip1.SetToolTip(Me.button19, "Génère des couleurs,des tailles et des formes automatiquement")
+        Me.button19.UseVisualStyleBackColor = True
+        '
+        'button7
+        '
+        Me.button7.Cursor = System.Windows.Forms.Cursors.Default
+        Me.button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.button7.Location = New System.Drawing.Point(875, 95)
+        Me.button7.Name = "button7"
+        Me.button7.Size = New System.Drawing.Size(153, 23)
+        Me.button7.TabIndex = 14
+        Me.button7.Text = "Notification"
+        Me.toolTip1.SetToolTip(Me.button7, "Affiche une notification")
+        Me.button7.UseVisualStyleBackColor = True
+        '
+        'button15
+        '
+        Me.button15.Cursor = System.Windows.Forms.Cursors.Default
+        Me.button15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.button15.Location = New System.Drawing.Point(695, 66)
+        Me.button15.Name = "button15"
+        Me.button15.Size = New System.Drawing.Size(153, 23)
+        Me.button15.TabIndex = 12
+        Me.button15.Text = "Défilement"
+        Me.toolTip1.SetToolTip(Me.button15, "Fait défiler la page vers le haut ou le bas d'une hauteur définie")
+        Me.button15.UseVisualStyleBackColor = True
+        '
+        'button13
+        '
+        Me.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.button13.Cursor = System.Windows.Forms.Cursors.Default
+        Me.button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.button13.Location = New System.Drawing.Point(695, 7)
+        Me.button13.Name = "button13"
+        Me.button13.Size = New System.Drawing.Size(153, 23)
+        Me.button13.TabIndex = 10
+        Me.button13.Text = "Arc-en-ciel"
+        Me.toolTip1.SetToolTip(Me.button13, "Génère une ligne arc-en-ciel sur l'écran du Minitel")
+        Me.button13.UseVisualStyleBackColor = True
+        '
+        'button14
+        '
+        Me.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.button14.Cursor = System.Windows.Forms.Cursors.Default
+        Me.button14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.button14.Location = New System.Drawing.Point(695, 37)
+        Me.button14.Name = "button14"
+        Me.button14.Size = New System.Drawing.Size(153, 23)
+        Me.button14.TabIndex = 11
+        Me.button14.Text = "Arc-en-ciel avec mouvement"
+        Me.toolTip1.SetToolTip(Me.button14, "Génère sur l'écran du Minitel une ligne qui changera rapidement de couleur")
+        Me.button14.UseVisualStyleBackColor = True
+        '
+        'Button61
+        '
+        Me.Button61.BackColor = System.Drawing.Color.Black
+        Me.Button61.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button61.ForeColor = System.Drawing.Color.White
+        Me.Button61.Location = New System.Drawing.Point(11, 22)
+        Me.Button61.Name = "Button61"
+        Me.Button61.Size = New System.Drawing.Size(81, 23)
+        Me.Button61.TabIndex = 1
+        Me.Button61.Text = "Noir,0%"
+        Me.toolTip1.SetToolTip(Me.Button61, "Affichera une couleur noire")
+        Me.Button61.UseVisualStyleBackColor = False
+        '
         'tabPage2
         '
-        Me.tabPage2.Controls.Add(Me.GroupBox12)
-        Me.tabPage2.Controls.Add(Me.button19)
-        Me.tabPage2.Controls.Add(Me.button7)
-        Me.tabPage2.Controls.Add(Me.button15)
-        Me.tabPage2.Controls.Add(Me.button13)
-        Me.tabPage2.Controls.Add(Me.button14)
+        Me.tabPage2.Controls.Add(Me.GroupBox20)
+        Me.tabPage2.Controls.Add(Me.GroupBox15)
         Me.tabPage2.Cursor = System.Windows.Forms.Cursors.Default
         Me.tabPage2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.tabPage2.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.tabPage2.Location = New System.Drawing.Point(4, 22)
         Me.tabPage2.Name = "tabPage2"
         Me.tabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabPage2.Size = New System.Drawing.Size(1393, 204)
+        Me.tabPage2.Size = New System.Drawing.Size(876, 204)
         Me.tabPage2.TabIndex = 1
-        Me.tabPage2.Text = "Effets graphiques prédéfinis"
+        Me.tabPage2.Text = "Écran"
         Me.tabPage2.UseVisualStyleBackColor = True
         '
-        'GroupBox12
+        'GroupBox20
         '
-        Me.GroupBox12.Controls.Add(Me.button16)
-        Me.GroupBox12.Controls.Add(Me.button17)
-        Me.GroupBox12.Controls.Add(Me.button18)
-        Me.GroupBox12.Location = New System.Drawing.Point(202, 7)
-        Me.GroupBox12.Name = "GroupBox12"
-        Me.GroupBox12.Size = New System.Drawing.Size(272, 190)
-        Me.GroupBox12.TabIndex = 9
-        Me.GroupBox12.TabStop = False
-        Me.GroupBox12.Text = "Éléments"
+        Me.GroupBox20.Controls.Add(Me.GroupBox21)
+        Me.GroupBox20.Controls.Add(Me.GroupBox19)
+        Me.GroupBox20.Location = New System.Drawing.Point(4, 7)
+        Me.GroupBox20.Name = "GroupBox20"
+        Me.GroupBox20.Size = New System.Drawing.Size(518, 191)
+        Me.GroupBox20.TabIndex = 7
+        Me.GroupBox20.TabStop = False
+        Me.GroupBox20.Text = "Effacement"
+        '
+        'GroupBox21
+        '
+        Me.GroupBox21.Controls.Add(Me.Button47)
+        Me.GroupBox21.Controls.Add(Me.Button44)
+        Me.GroupBox21.Controls.Add(Me.Button45)
+        Me.GroupBox21.Controls.Add(Me.Button46)
+        Me.GroupBox21.Location = New System.Drawing.Point(250, 19)
+        Me.GroupBox21.Name = "GroupBox21"
+        Me.GroupBox21.Size = New System.Drawing.Size(262, 166)
+        Me.GroupBox21.TabIndex = 3
+        Me.GroupBox21.TabStop = False
+        Me.GroupBox21.Text = "Étendu"
+        '
+        'Button47
+        '
+        Me.Button47.Location = New System.Drawing.Point(7, 128)
+        Me.Button47.Name = "Button47"
+        Me.Button47.Size = New System.Drawing.Size(220, 29)
+        Me.Button47.TabIndex = 3
+        Me.Button47.Text = "Effacer la ligne complète"
+        Me.ToolTip9.SetToolTip(Me.Button47, "Efface toute la ligne sur laquelle se trouve le curseur")
+        Me.Button47.UseVisualStyleBackColor = True
+        '
+        'Button44
+        '
+        Me.Button44.Location = New System.Drawing.Point(7, 93)
+        Me.Button44.Name = "Button44"
+        Me.Button44.Size = New System.Drawing.Size(220, 29)
+        Me.Button44.TabIndex = 2
+        Me.Button44.Text = "Effacer l'écran complet"
+        Me.ToolTip9.SetToolTip(Me.Button44, "Efface tout ce qui se trouve sur l'écran, peu importe la position du curseur ou l" &
+        "a ligne")
+        Me.Button44.UseVisualStyleBackColor = True
+        '
+        'Button45
+        '
+        Me.Button45.Location = New System.Drawing.Point(7, 58)
+        Me.Button45.Name = "Button45"
+        Me.Button45.Size = New System.Drawing.Size(220, 29)
+        Me.Button45.TabIndex = 1
+        Me.Button45.Text = "Tout effacer après le curseur"
+        Me.ToolTip9.SetToolTip(Me.Button45, "Efface tout ce qui précède la curseur, peu importe la ligne")
+        Me.Button45.UseVisualStyleBackColor = True
+        '
+        'Button46
+        '
+        Me.Button46.Location = New System.Drawing.Point(7, 23)
+        Me.Button46.Name = "Button46"
+        Me.Button46.Size = New System.Drawing.Size(220, 29)
+        Me.Button46.TabIndex = 0
+        Me.Button46.Text = "Tout effacer avant le curseur"
+        Me.ToolTip9.SetToolTip(Me.Button46, "Efface tout ce qui se situe après le curseur, peu importe la ligne")
+        Me.Button46.UseVisualStyleBackColor = True
+        '
+        'GroupBox19
+        '
+        Me.GroupBox19.Controls.Add(Me.Button48)
+        Me.GroupBox19.Controls.Add(Me.Button43)
+        Me.GroupBox19.Controls.Add(Me.Button42)
+        Me.GroupBox19.Controls.Add(Me.Button41)
+        Me.GroupBox19.Location = New System.Drawing.Point(6, 19)
+        Me.GroupBox19.Name = "GroupBox19"
+        Me.GroupBox19.Size = New System.Drawing.Size(238, 166)
+        Me.GroupBox19.TabIndex = 0
+        Me.GroupBox19.TabStop = False
+        Me.GroupBox19.Text = "Standard"
+        '
+        'Button48
+        '
+        Me.Button48.Location = New System.Drawing.Point(8, 128)
+        Me.Button48.Name = "Button48"
+        Me.Button48.Size = New System.Drawing.Size(220, 29)
+        Me.Button48.TabIndex = 4
+        Me.Button48.Text = "Effacer toute la ligne avant le curseur"
+        Me.ToolTip9.SetToolTip(Me.Button48, "Efface tout ce qui se trouve sur la ligne où se trouve le curseur, avant le curse" &
+        "ur")
+        Me.Button48.UseVisualStyleBackColor = True
+        '
+        'Button43
+        '
+        Me.Button43.Location = New System.Drawing.Point(7, 93)
+        Me.Button43.Name = "Button43"
+        Me.Button43.Size = New System.Drawing.Size(220, 29)
+        Me.Button43.TabIndex = 2
+        Me.Button43.Text = "Effacer toute la ligne après le curseur"
+        Me.ToolTip9.SetToolTip(Me.Button43, "Efface tout ce qui se trouve sur la ligne où se trouve le curseur, après le curse" &
+        "ur")
+        Me.Button43.UseVisualStyleBackColor = True
+        '
+        'Button42
+        '
+        Me.Button42.Location = New System.Drawing.Point(7, 58)
+        Me.Button42.Name = "Button42"
+        Me.Button42.Size = New System.Drawing.Size(220, 29)
+        Me.Button42.TabIndex = 1
+        Me.Button42.Text = "Effacer la barre d'état de l'écran"
+        Me.ToolTip9.SetToolTip(Me.Button42, "Efface la barre d'état de l'écran, c'est-à-dire la ligne où se situe le ""C"" (0, 1" &
+        ")")
+        Me.Button42.UseVisualStyleBackColor = True
+        '
+        'Button41
+        '
+        Me.Button41.Location = New System.Drawing.Point(8, 23)
+        Me.Button41.Name = "Button41"
+        Me.Button41.Size = New System.Drawing.Size(220, 29)
+        Me.Button41.TabIndex = 0
+        Me.Button41.Text = "Effacer l'écran"
+        Me.ToolTip9.SetToolTip(Me.Button41, "Efface l'écran complet, sauf la berre d'état")
+        Me.Button41.UseVisualStyleBackColor = True
+        '
+        'GroupBox15
+        '
+        Me.GroupBox15.Controls.Add(Me.GroupBox17)
+        Me.GroupBox15.Controls.Add(Me.GroupBox16)
+        Me.GroupBox15.Location = New System.Drawing.Point(528, 7)
+        Me.GroupBox15.Name = "GroupBox15"
+        Me.GroupBox15.Size = New System.Drawing.Size(336, 191)
+        Me.GroupBox15.TabIndex = 6
+        Me.GroupBox15.TabStop = False
+        Me.GroupBox15.Text = "Changer la position du curseur"
+        '
+        'GroupBox17
+        '
+        Me.GroupBox17.Controls.Add(Me.Button40)
+        Me.GroupBox17.Controls.Add(Me.GroupBox18)
+        Me.GroupBox17.Location = New System.Drawing.Point(6, 79)
+        Me.GroupBox17.Name = "GroupBox17"
+        Me.GroupBox17.Size = New System.Drawing.Size(324, 106)
+        Me.GroupBox17.TabIndex = 1
+        Me.GroupBox17.TabStop = False
+        Me.GroupBox17.Text = "Relatif (pour les directions, 1 caractère est un bloc de 6 pixels)"
+        '
+        'Button40
+        '
+        Me.Button40.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.Button40.Location = New System.Drawing.Point(185, 29)
+        Me.Button40.Name = "Button40"
+        Me.Button40.Size = New System.Drawing.Size(133, 70)
+        Me.Button40.TabIndex = 1
+        Me.Button40.Text = "│⟵ Retour au début de la ligne"
+        Me.ToolTip9.SetToolTip(Me.Button40, "Ramène le curseur au début de la ligne où il se trouve actuellement")
+        Me.Button40.UseVisualStyleBackColor = True
+        '
+        'GroupBox18
+        '
+        Me.GroupBox18.Controls.Add(Me.Button39)
+        Me.GroupBox18.Controls.Add(Me.Button25)
+        Me.GroupBox18.Controls.Add(Me.Button24)
+        Me.GroupBox18.Controls.Add(Me.Button23)
+        Me.GroupBox18.Location = New System.Drawing.Point(7, 20)
+        Me.GroupBox18.Name = "GroupBox18"
+        Me.GroupBox18.Size = New System.Drawing.Size(171, 80)
+        Me.GroupBox18.TabIndex = 0
+        Me.GroupBox18.TabStop = False
+        Me.GroupBox18.Text = "1 caractère dans une direction"
+        '
+        'Button39
+        '
+        Me.Button39.Location = New System.Drawing.Point(87, 51)
+        Me.Button39.Name = "Button39"
+        Me.Button39.Size = New System.Drawing.Size(75, 23)
+        Me.Button39.TabIndex = 3
+        Me.Button39.Text = "→ Droite"
+        Me.ToolTip9.SetToolTip(Me.Button39, "Déplace le curseur d'un caractère vers la droite")
+        Me.Button39.UseVisualStyleBackColor = True
+        '
+        'Button25
+        '
+        Me.Button25.Location = New System.Drawing.Point(6, 51)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Size = New System.Drawing.Size(75, 23)
+        Me.Button25.TabIndex = 2
+        Me.Button25.Text = "↓ Bas"
+        Me.ToolTip9.SetToolTip(Me.Button25, "Déplace le curseur d'un caractère vers le bas")
+        Me.Button25.UseVisualStyleBackColor = True
+        '
+        'Button24
+        '
+        Me.Button24.Location = New System.Drawing.Point(87, 19)
+        Me.Button24.Name = "Button24"
+        Me.Button24.Size = New System.Drawing.Size(75, 23)
+        Me.Button24.TabIndex = 1
+        Me.Button24.Text = "← Gauche"
+        Me.ToolTip9.SetToolTip(Me.Button24, "Déplace le curseur d'un caractère vers la gauche")
+        Me.Button24.UseVisualStyleBackColor = True
+        '
+        'Button23
+        '
+        Me.Button23.Location = New System.Drawing.Point(6, 19)
+        Me.Button23.Name = "Button23"
+        Me.Button23.Size = New System.Drawing.Size(75, 23)
+        Me.Button23.TabIndex = 0
+        Me.Button23.Text = "↑ Haut"
+        Me.ToolTip9.SetToolTip(Me.Button23, "Déplace le curseur d'un caractère vers le haut")
+        Me.Button23.UseVisualStyleBackColor = True
+        '
+        'GroupBox16
+        '
+        Me.GroupBox16.Controls.Add(Me.Button22)
+        Me.GroupBox16.Controls.Add(Me.Button21)
+        Me.GroupBox16.Location = New System.Drawing.Point(6, 19)
+        Me.GroupBox16.Name = "GroupBox16"
+        Me.GroupBox16.Size = New System.Drawing.Size(324, 54)
+        Me.GroupBox16.TabIndex = 0
+        Me.GroupBox16.TabStop = False
+        Me.GroupBox16.Text = "Absolu"
+        '
+        'Button22
+        '
+        Me.Button22.Location = New System.Drawing.Point(166, 19)
+        Me.Button22.Name = "Button22"
+        Me.Button22.Size = New System.Drawing.Size(152, 23)
+        Me.Button22.TabIndex = 1
+        Me.Button22.Text = "Position exacte en 2D(x, y)"
+        Me.ToolTip9.SetToolTip(Me.Button22, "Amène le curseur à une position exacte à définir")
+        Me.Button22.UseVisualStyleBackColor = True
+        '
+        'Button21
+        '
+        Me.Button21.Location = New System.Drawing.Point(6, 19)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(154, 23)
+        Me.Button21.TabIndex = 0
+        Me.Button21.Text = "Retour à l'accueil (0, 1)"
+        Me.ToolTip9.SetToolTip(Me.Button21, "Ramène le cuseur à l'accueil de la zone d'affichage, c'est-à-dire au début de la " &
+        "ligne juste en-dessous de la barre d'état")
+        Me.Button21.UseVisualStyleBackColor = True
         '
         'tabPage1
         '
-        Me.tabPage1.Controls.Add(Me.GroupBox7)
-        Me.tabPage1.Controls.Add(Me.GroupBox6)
+        Me.tabPage1.Controls.Add(Me.GroupBox22)
         Me.tabPage1.Controls.Add(Me.GroupBox1)
         Me.tabPage1.Cursor = System.Windows.Forms.Cursors.Default
         Me.tabPage1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
@@ -306,14 +600,134 @@ Partial Public Class VDT_Edit
         Me.tabPage1.Location = New System.Drawing.Point(4, 22)
         Me.tabPage1.Name = "tabPage1"
         Me.tabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabPage1.Size = New System.Drawing.Size(1393, 204)
+        Me.tabPage1.Size = New System.Drawing.Size(876, 204)
         Me.tabPage1.TabIndex = 0
         Me.tabPage1.Text = "Basique"
         Me.tabPage1.UseVisualStyleBackColor = True
         '
+        'GroupBox22
+        '
+        Me.GroupBox22.Controls.Add(Me.GroupBox24)
+        Me.GroupBox22.Controls.Add(Me.GroupBox7)
+        Me.GroupBox22.Location = New System.Drawing.Point(359, 7)
+        Me.GroupBox22.Name = "GroupBox22"
+        Me.GroupBox22.Size = New System.Drawing.Size(511, 191)
+        Me.GroupBox22.TabIndex = 2
+        Me.GroupBox22.TabStop = False
+        Me.GroupBox22.Text = "Couleur"
+        '
+        'GroupBox24
+        '
+        Me.GroupBox24.Controls.Add(Me.Button60)
+        Me.GroupBox24.Controls.Add(Me.Button61)
+        Me.GroupBox24.Controls.Add(Me.Button62)
+        Me.GroupBox24.Controls.Add(Me.Button63)
+        Me.GroupBox24.Controls.Add(Me.Button64)
+        Me.GroupBox24.Controls.Add(Me.Button65)
+        Me.GroupBox24.Controls.Add(Me.Button66)
+        Me.GroupBox24.Controls.Add(Me.Button67)
+        Me.GroupBox24.Location = New System.Drawing.Point(201, 19)
+        Me.GroupBox24.Name = "GroupBox24"
+        Me.GroupBox24.Size = New System.Drawing.Size(189, 139)
+        Me.GroupBox24.TabIndex = 9
+        Me.GroupBox24.TabStop = False
+        Me.GroupBox24.Text = "Couleur de texte"
+        '
+        'Button60
+        '
+        Me.Button60.BackColor = System.Drawing.Color.White
+        Me.Button60.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button60.Location = New System.Drawing.Point(98, 109)
+        Me.Button60.Name = "Button60"
+        Me.Button60.Size = New System.Drawing.Size(81, 23)
+        Me.Button60.TabIndex = 8
+        Me.Button60.Text = "Blanc,100%"
+        Me.ToolTip8.SetToolTip(Me.Button60, "Sur un écran noir et blanc,affichera 100% de l'échelle de noir et blanc.Sur un éc" &
+        "ran couleur,affichera du blanc.")
+        Me.Button60.UseVisualStyleBackColor = False
+        '
+        'Button62
+        '
+        Me.Button62.BackColor = System.Drawing.Color.Magenta
+        Me.Button62.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button62.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.Button62.Location = New System.Drawing.Point(98, 51)
+        Me.Button62.Name = "Button62"
+        Me.Button62.Size = New System.Drawing.Size(81, 23)
+        Me.Button62.TabIndex = 6
+        Me.Button62.Text = "Magenta,60%"
+        Me.ToolTip4.SetToolTip(Me.Button62, "Sur un écran noir et blanc,affichera 60% de l'échelle de noir et blanc.Sur un écr" &
+        "an couleur,affichera du magenta.")
+        Me.Button62.UseVisualStyleBackColor = False
+        '
+        'Button63
+        '
+        Me.Button63.BackColor = System.Drawing.Color.Lime
+        Me.Button63.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button63.Location = New System.Drawing.Point(11, 80)
+        Me.Button63.Name = "Button63"
+        Me.Button63.Size = New System.Drawing.Size(81, 23)
+        Me.Button63.TabIndex = 3
+        Me.Button63.Text = "Vert,70%"
+        Me.ToolTip5.SetToolTip(Me.Button63, "Sur un écran noir et blanc,affichera 70% de l'échelle de noir et blanc.Sur un écr" &
+        "an couleur,affichera du vert.")
+        Me.Button63.UseVisualStyleBackColor = False
+        '
+        'Button64
+        '
+        Me.Button64.BackColor = System.Drawing.Color.Red
+        Me.Button64.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button64.Location = New System.Drawing.Point(11, 51)
+        Me.Button64.Name = "Button64"
+        Me.Button64.Size = New System.Drawing.Size(81, 23)
+        Me.Button64.TabIndex = 2
+        Me.Button64.Text = "Rouge,50%"
+        Me.ToolTip3.SetToolTip(Me.Button64, "Sur un écran noir et blanc,affichera 50% de l'échelle de noir et blanc.Sur un écr" &
+        "an couleur,affichera du rouge.")
+        Me.Button64.UseVisualStyleBackColor = False
+        '
+        'Button65
+        '
+        Me.Button65.BackColor = System.Drawing.Color.Blue
+        Me.Button65.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button65.ForeColor = System.Drawing.Color.White
+        Me.Button65.Location = New System.Drawing.Point(98, 22)
+        Me.Button65.Name = "Button65"
+        Me.Button65.Size = New System.Drawing.Size(81, 23)
+        Me.Button65.TabIndex = 5
+        Me.Button65.Text = "Bleu,40%"
+        Me.ToolTip2.SetToolTip(Me.Button65, "Sur un écran noir et blanc,affichera 40% de l'échelle de noir et blanc.Sur un écr" &
+        "an couleur,affichera du bleu.")
+        Me.Button65.UseVisualStyleBackColor = False
+        '
+        'Button66
+        '
+        Me.Button66.BackColor = System.Drawing.Color.Yellow
+        Me.Button66.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button66.Location = New System.Drawing.Point(11, 109)
+        Me.Button66.Name = "Button66"
+        Me.Button66.Size = New System.Drawing.Size(81, 23)
+        Me.Button66.TabIndex = 4
+        Me.Button66.Text = "Jaune,90%"
+        Me.ToolTip7.SetToolTip(Me.Button66, "Sur un écran noir et blanc,affichera 90% de l'échelle de noir et blanc.Sur un écr" &
+        "an couleur,affichera du jaune.")
+        Me.Button66.UseVisualStyleBackColor = False
+        '
+        'Button67
+        '
+        Me.Button67.BackColor = System.Drawing.Color.Cyan
+        Me.Button67.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button67.Location = New System.Drawing.Point(98, 80)
+        Me.Button67.Name = "Button67"
+        Me.Button67.Size = New System.Drawing.Size(81, 23)
+        Me.Button67.TabIndex = 7
+        Me.Button67.Text = "Cyan,80%"
+        Me.ToolTip6.SetToolTip(Me.Button67, "Sur un écran noir et blanc,affichera 80% de l'échelle de noir et blanc.Sur un écr" &
+        "an couleur,affichera du cyan.")
+        Me.Button67.UseVisualStyleBackColor = False
+        '
         'GroupBox7
         '
-        Me.GroupBox7.Controls.Add(Me.GroupBox2)
         Me.GroupBox7.Controls.Add(Me.Button10)
         Me.GroupBox7.Controls.Add(Me.Button2)
         Me.GroupBox7.Controls.Add(Me.Button8)
@@ -322,49 +736,12 @@ Partial Public Class VDT_Edit
         Me.GroupBox7.Controls.Add(Me.Button6)
         Me.GroupBox7.Controls.Add(Me.Button5)
         Me.GroupBox7.Controls.Add(Me.Button9)
-        Me.GroupBox7.Location = New System.Drawing.Point(1198, 6)
+        Me.GroupBox7.Location = New System.Drawing.Point(6, 19)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(189, 191)
+        Me.GroupBox7.Size = New System.Drawing.Size(189, 139)
         Me.GroupBox7.TabIndex = 4
         Me.GroupBox7.TabStop = False
-        Me.GroupBox7.Text = "Couleur"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.RadioButton2)
-        Me.GroupBox2.Controls.Add(Me.RadioButton1)
-        Me.GroupBox2.Location = New System.Drawing.Point(11, 136)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(168, 49)
-        Me.GroupBox2.TabIndex = 9
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Mode"
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(73, 19)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(85, 17)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.Text = "Noir et blanc"
-        Me.ToolTip9.SetToolTip(Me.RadioButton2, "Affichera les couleurs comme sur un Minitel noir et blanc classique")
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Checked = True
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 19)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(61, 17)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Couleur"
-        Me.ToolTip9.SetToolTip(Me.RadioButton1, "Affiche les couleurs comme sur un Minitel couleur,par exemple" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "le CFZ de chez la " &
-        "Radiotechnique,un émulateur,un chauffe-plat" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ou encore un Minitel 2 couleur Phil" &
-        "ips")
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.GroupBox7.Text = "Couleur de fond"
         '
         'Button10
         '
@@ -381,7 +758,7 @@ Partial Public Class VDT_Edit
         '
         'Button8
         '
-        Me.Button8.BackColor = System.Drawing.Color.Fuchsia
+        Me.Button8.BackColor = System.Drawing.Color.Magenta
         Me.Button8.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
         Me.Button8.Location = New System.Drawing.Point(98, 51)
@@ -459,14 +836,234 @@ Partial Public Class VDT_Edit
         "an couleur,affichera du cyan.")
         Me.Button9.UseVisualStyleBackColor = False
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.GroupBox23)
+        Me.GroupBox1.Controls.Add(Me.Button30)
+        Me.GroupBox1.Location = New System.Drawing.Point(7, 7)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(345, 191)
+        Me.GroupBox1.TabIndex = 1
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Texte"
+        '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Location = New System.Drawing.Point(6, 160)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(98, 25)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Barre de texte"
+        Me.ToolTip9.SetToolTip(Me.Button1, "Ajoute une barre de texte")
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'GroupBox23
+        '
+        Me.GroupBox23.Controls.Add(Me.Label1)
+        Me.GroupBox23.Controls.Add(Me.Button59)
+        Me.GroupBox23.Controls.Add(Me.Button58)
+        Me.GroupBox23.Controls.Add(Me.Button57)
+        Me.GroupBox23.Controls.Add(Me.Button56)
+        Me.GroupBox23.Controls.Add(Me.Button53)
+        Me.GroupBox23.Controls.Add(Me.Button54)
+        Me.GroupBox23.Controls.Add(Me.Button51)
+        Me.GroupBox23.Controls.Add(Me.Button52)
+        Me.GroupBox23.Controls.Add(Me.Button50)
+        Me.GroupBox23.Controls.Add(Me.Button49)
+        Me.GroupBox23.Location = New System.Drawing.Point(9, 19)
+        Me.GroupBox23.Name = "GroupBox23"
+        Me.GroupBox23.Size = New System.Drawing.Size(330, 136)
+        Me.GroupBox23.TabIndex = 4
+        Me.GroupBox23.TabStop = False
+        Me.GroupBox23.Text = "Effets"
+        '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(116, 78)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(105, 55)
+        Me.Label1.TabIndex = 10
+        Me.Label1.Text = "Effets graphiques Minitel. Les effets peuvent être" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "combinés."
+        '
+        'Button59
+        '
+        Me.Button59.Location = New System.Drawing.Point(226, 106)
+        Me.Button59.Name = "Button59"
+        Me.Button59.Size = New System.Drawing.Size(98, 23)
+        Me.Button59.TabIndex = 9
+        Me.Button59.Text = "Taille x2"
+        Me.Button59.UseVisualStyleBackColor = True
+        '
+        'Button58
+        '
+        Me.Button58.Location = New System.Drawing.Point(227, 77)
+        Me.Button58.Name = "Button58"
+        Me.Button58.Size = New System.Drawing.Size(98, 23)
+        Me.Button58.TabIndex = 8
+        Me.Button58.Text = "Largeur x2"
+        Me.Button58.UseVisualStyleBackColor = True
+        '
+        'Button57
+        '
+        Me.Button57.Location = New System.Drawing.Point(227, 48)
+        Me.Button57.Name = "Button57"
+        Me.Button57.Size = New System.Drawing.Size(98, 23)
+        Me.Button57.TabIndex = 7
+        Me.Button57.Text = "Hauteur x2"
+        Me.Button57.UseVisualStyleBackColor = True
+        '
+        'Button56
+        '
+        Me.Button56.Location = New System.Drawing.Point(226, 19)
+        Me.Button56.Name = "Button56"
+        Me.Button56.Size = New System.Drawing.Size(98, 23)
+        Me.Button56.TabIndex = 6
+        Me.Button56.Text = "Taille normale"
+        Me.Button56.UseVisualStyleBackColor = True
+        '
+        'Button53
+        '
+        Me.Button53.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.Button53.Location = New System.Drawing.Point(116, 48)
+        Me.Button53.Name = "Button53"
+        Me.Button53.Size = New System.Drawing.Size(104, 23)
+        Me.Button53.TabIndex = 5
+        Me.Button53.Text = "Soulignement OFF"
+        Me.Button53.UseVisualStyleBackColor = True
+        '
+        'Button54
+        '
+        Me.Button54.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline)
+        Me.Button54.Location = New System.Drawing.Point(116, 19)
+        Me.Button54.Name = "Button54"
+        Me.Button54.Size = New System.Drawing.Size(104, 23)
+        Me.Button54.TabIndex = 4
+        Me.Button54.Text = "Soulignement ON"
+        Me.Button54.UseVisualStyleBackColor = True
+        '
+        'Button51
+        '
+        Me.Button51.Location = New System.Drawing.Point(6, 106)
+        Me.Button51.Name = "Button51"
+        Me.Button51.Size = New System.Drawing.Size(104, 23)
+        Me.Button51.TabIndex = 3
+        Me.Button51.Text = "Inversion OFF"
+        Me.Button51.UseVisualStyleBackColor = True
+        '
+        'Button52
+        '
+        Me.Button52.BackColor = System.Drawing.SystemColors.ControlText
+        Me.Button52.ForeColor = System.Drawing.Color.White
+        Me.Button52.Location = New System.Drawing.Point(6, 77)
+        Me.Button52.Name = "Button52"
+        Me.Button52.Size = New System.Drawing.Size(104, 23)
+        Me.Button52.TabIndex = 2
+        Me.Button52.Text = "Inversion ON"
+        Me.Button52.UseVisualStyleBackColor = False
+        '
+        'Button50
+        '
+        Me.Button50.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.Button50.Location = New System.Drawing.Point(6, 48)
+        Me.Button50.Name = "Button50"
+        Me.Button50.Size = New System.Drawing.Size(104, 23)
+        Me.Button50.TabIndex = 1
+        Me.Button50.Text = "Clignotement OFF"
+        Me.Button50.UseVisualStyleBackColor = True
+        '
+        'Button49
+        '
+        Me.Button49.Location = New System.Drawing.Point(6, 19)
+        Me.Button49.Name = "Button49"
+        Me.Button49.Size = New System.Drawing.Size(104, 23)
+        Me.Button49.TabIndex = 0
+        Me.Button49.Text = "Clignotement ON"
+        Me.Button49.UseVisualStyleBackColor = True
+        '
+        'Button30
+        '
+        Me.Button30.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button30.Location = New System.Drawing.Point(110, 161)
+        Me.Button30.Name = "Button30"
+        Me.Button30.Size = New System.Drawing.Size(209, 23)
+        Me.Button30.TabIndex = 2
+        Me.Button30.Text = "Afficher un gros A graphique (dev)"
+        Me.ToolTip9.SetToolTip(Me.Button30, "Ceci est une option pour les développeurs")
+        Me.Button30.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.RadioButton2)
+        Me.GroupBox2.Controls.Add(Me.RadioButton1)
+        Me.GroupBox2.Location = New System.Drawing.Point(7, 466)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(254, 49)
+        Me.GroupBox2.TabIndex = 9
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Mode"
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(73, 19)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(85, 17)
+        Me.RadioButton2.TabIndex = 1
+        Me.RadioButton2.Text = "Noir et blanc"
+        Me.ToolTip9.SetToolTip(Me.RadioButton2, "Affichera les couleurs comme sur un Minitel noir et blanc classique")
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
+        Me.RadioButton1.Location = New System.Drawing.Point(6, 19)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(61, 17)
+        Me.RadioButton1.TabIndex = 0
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Couleur"
+        Me.ToolTip9.SetToolTip(Me.RadioButton1, "Affiche les couleurs comme sur un Minitel couleur,par exemple" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "le CFZ de chez la " &
+        "Radiotechnique,un émulateur,un chauffe-plat" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ou encore un Minitel 2 couleur Phil" &
+        "ips")
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'tabControl1
+        '
+        Me.tabControl1.Controls.Add(Me.tabPage1)
+        Me.tabControl1.Controls.Add(Me.tabPage2)
+        Me.tabControl1.Controls.Add(Me.TabPage7)
+        Me.tabControl1.Controls.Add(Me.TabPage3)
+        Me.tabControl1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.tabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.tabControl1.Location = New System.Drawing.Point(12, 12)
+        Me.tabControl1.Name = "tabControl1"
+        Me.tabControl1.SelectedIndex = 0
+        Me.tabControl1.Size = New System.Drawing.Size(884, 230)
+        Me.tabControl1.TabIndex = 0
+        '
+        'TabPage7
+        '
+        Me.TabPage7.Controls.Add(Me.GroupBox6)
+        Me.TabPage7.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage7.Name = "TabPage7"
+        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage7.Size = New System.Drawing.Size(876, 204)
+        Me.TabPage7.TabIndex = 2
+        Me.TabPage7.Text = "Graphiques"
+        Me.TabPage7.UseVisualStyleBackColor = True
+        '
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.GroupBox9)
         Me.GroupBox6.Controls.Add(Me.GroupBox8)
-        Me.GroupBox6.Location = New System.Drawing.Point(338, 7)
+        Me.GroupBox6.Location = New System.Drawing.Point(3, 6)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(854, 191)
-        Me.GroupBox6.TabIndex = 3
+        Me.GroupBox6.Size = New System.Drawing.Size(317, 191)
+        Me.GroupBox6.TabIndex = 4
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Graphiques"
         '
@@ -491,9 +1088,9 @@ Partial Public Class VDT_Edit
         Me.Button55.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button55.Location = New System.Drawing.Point(9, 107)
         Me.Button55.Name = "Button55"
-        Me.Button55.Size = New System.Drawing.Size(75, 23)
+        Me.Button55.Size = New System.Drawing.Size(109, 23)
         Me.Button55.TabIndex = 8
-        Me.Button55.Text = "Rond"
+        Me.Button55.Text = "⬠ ⬡ 🔷 Polygone"
         Me.Button55.UseVisualStyleBackColor = True
         '
         'Button38
@@ -503,7 +1100,7 @@ Partial Public Class VDT_Edit
         Me.Button38.Name = "Button38"
         Me.Button38.Size = New System.Drawing.Size(103, 23)
         Me.Button38.TabIndex = 7
-        Me.Button38.Text = "Triangle plein"
+        Me.Button38.Text = "▲ Triangle plein"
         Me.Button38.UseVisualStyleBackColor = True
         '
         'Button35
@@ -513,17 +1110,17 @@ Partial Public Class VDT_Edit
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(75, 23)
         Me.Button35.TabIndex = 4
-        Me.Button35.Text = "Triangle"
+        Me.Button35.Text = "△ Triangle"
         Me.Button35.UseVisualStyleBackColor = True
         '
         'Button34
         '
         Me.Button34.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button34.Location = New System.Drawing.Point(9, 49)
+        Me.Button34.Location = New System.Drawing.Point(9, 136)
         Me.Button34.Name = "Button34"
-        Me.Button34.Size = New System.Drawing.Size(75, 23)
+        Me.Button34.Size = New System.Drawing.Size(184, 23)
         Me.Button34.TabIndex = 3
-        Me.Button34.Text = "Rectangle"
+        Me.Button34.Text = "Rectangle.NE PAS UTILISER"
         Me.Button34.UseVisualStyleBackColor = True
         '
         'Button36
@@ -543,7 +1140,7 @@ Partial Public Class VDT_Edit
         Me.Button37.Name = "Button37"
         Me.Button37.Size = New System.Drawing.Size(75, 23)
         Me.Button37.TabIndex = 6
-        Me.Button37.Text = "Cercle"
+        Me.Button37.Text = "◯ Cercle"
         Me.Button37.UseVisualStyleBackColor = True
         '
         'Button33
@@ -553,7 +1150,7 @@ Partial Public Class VDT_Edit
         Me.Button33.Name = "Button33"
         Me.Button33.Size = New System.Drawing.Size(103, 23)
         Me.Button33.TabIndex = 2
-        Me.Button33.Text = "Cercle plein"
+        Me.Button33.Text = "⚫ Cercle plein"
         Me.Button33.UseVisualStyleBackColor = True
         '
         'GroupBox8
@@ -575,17 +1172,18 @@ Partial Public Class VDT_Edit
         Me.Button31.Name = "Button31"
         Me.Button31.Size = New System.Drawing.Size(75, 23)
         Me.Button31.TabIndex = 0
-        Me.Button31.Text = "Crayon"
+        Me.Button31.Text = "🖉 Crayon"
         Me.Button31.UseVisualStyleBackColor = True
         '
         'Button32
         '
+        Me.Button32.BackgroundImage = CType(resources.GetObject("Button32.BackgroundImage"), System.Drawing.Image)
+        Me.Button32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button32.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button32.Location = New System.Drawing.Point(8, 121)
         Me.Button32.Name = "Button32"
-        Me.Button32.Size = New System.Drawing.Size(75, 38)
+        Me.Button32.Size = New System.Drawing.Size(73, 38)
         Me.Button32.TabIndex = 1
-        Me.Button32.Text = "Pot de peinture"
         Me.Button32.UseVisualStyleBackColor = True
         '
         'Label1001
@@ -596,80 +1194,40 @@ Partial Public Class VDT_Edit
         Me.Label1001.TabIndex = 2
         Me.Label1001.Text = "Outils simples et classiques pour éditer les graphiques affichés sur l'écran"
         '
-        'GroupBox1
+        'TabPage3
         '
-        Me.GroupBox1.Controls.Add(Me.CheckBox5)
-        Me.GroupBox1.Controls.Add(Me.Button30)
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Location = New System.Drawing.Point(7, 7)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(325, 191)
-        Me.GroupBox1.TabIndex = 1
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Texte"
+        Me.TabPage3.Controls.Add(Me.GroupBox12)
+        Me.TabPage3.Controls.Add(Me.button19)
+        Me.TabPage3.Controls.Add(Me.button7)
+        Me.TabPage3.Controls.Add(Me.button15)
+        Me.TabPage3.Controls.Add(Me.button13)
+        Me.TabPage3.Controls.Add(Me.button14)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(876, 204)
+        Me.TabPage3.TabIndex = 3
+        Me.TabPage3.Text = "TabPage3"
+        Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'CheckBox5
+        'GroupBox12
         '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(6, 168)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(87, 17)
-        Me.CheckBox5.TabIndex = 1
-        Me.CheckBox5.Text = "Clignotement"
-        Me.CheckBox5.UseVisualStyleBackColor = True
-        '
-        'Button30
-        '
-        Me.Button30.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button30.Location = New System.Drawing.Point(5, 124)
-        Me.Button30.Name = "Button30"
-        Me.Button30.Size = New System.Drawing.Size(281, 23)
-        Me.Button30.TabIndex = 2
-        Me.Button30.Text = "Afficher un gros A graphique"
-        Me.Button30.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Location = New System.Drawing.Point(7, 19)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(98, 25)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Barre de texte"
-        Me.ToolTip9.SetToolTip(Me.Button1, "Ajoute une barre de texte")
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'tabControl1
-        '
-        Me.tabControl1.Controls.Add(Me.tabPage1)
-        Me.tabControl1.Controls.Add(Me.tabPage2)
-        Me.tabControl1.Controls.Add(Me.TabPage7)
-        Me.tabControl1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.tabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.tabControl1.Location = New System.Drawing.Point(12, 12)
-        Me.tabControl1.Multiline = True
-        Me.tabControl1.Name = "tabControl1"
-        Me.tabControl1.SelectedIndex = 0
-        Me.tabControl1.Size = New System.Drawing.Size(1401, 230)
-        Me.tabControl1.TabIndex = 0
-        '
-        'TabPage7
-        '
-        Me.TabPage7.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(1393, 204)
-        Me.TabPage7.TabIndex = 2
-        Me.TabPage7.Text = "Animations personnalisées"
-        Me.TabPage7.UseVisualStyleBackColor = True
+        Me.GroupBox12.Controls.Add(Me.button16)
+        Me.GroupBox12.Controls.Add(Me.button17)
+        Me.GroupBox12.Controls.Add(Me.button18)
+        Me.GroupBox12.Location = New System.Drawing.Point(341, 8)
+        Me.GroupBox12.Name = "GroupBox12"
+        Me.GroupBox12.Size = New System.Drawing.Size(272, 190)
+        Me.GroupBox12.TabIndex = 15
+        Me.GroupBox12.TabStop = False
+        Me.GroupBox12.Text = "Éléments"
         '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 1032)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 902)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1425, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1556, 22)
         Me.StatusStrip1.TabIndex = 4
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -731,6 +1289,7 @@ Partial Public Class VDT_Edit
         '
         'Button28
         '
+        Me.Button28.BackgroundImage = CType(resources.GetObject("Button28.BackgroundImage"), System.Drawing.Image)
         Me.Button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button28.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button28.Location = New System.Drawing.Point(88, 19)
@@ -742,6 +1301,7 @@ Partial Public Class VDT_Edit
         '
         'Button26
         '
+        Me.Button26.BackgroundImage = CType(resources.GetObject("Button26.BackgroundImage"), System.Drawing.Image)
         Me.Button26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button26.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button26.Location = New System.Drawing.Point(6, 19)
@@ -753,6 +1313,7 @@ Partial Public Class VDT_Edit
         '
         'Button27
         '
+        Me.Button27.BackgroundImage = CType(resources.GetObject("Button27.BackgroundImage"), System.Drawing.Image)
         Me.Button27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button27.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button27.Location = New System.Drawing.Point(47, 19)
@@ -786,6 +1347,7 @@ Partial Public Class VDT_Edit
         'ButtonAnnTri
         '
         Me.ButtonAnnTri.BackColor = System.Drawing.SystemColors.Control
+        Me.ButtonAnnTri.BackgroundImage = CType(resources.GetObject("ButtonAnnTri.BackgroundImage"), System.Drawing.Image)
         Me.ButtonAnnTri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ButtonAnnTri.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonAnnTri.Location = New System.Drawing.Point(69, 3)
@@ -796,7 +1358,8 @@ Partial Public Class VDT_Edit
         '
         'ButtonValTri
         '
-        Me.ButtonValTri.BackColor = System.Drawing.SystemColors.Control
+        Me.ButtonValTri.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ButtonValTri.BackgroundImage = CType(resources.GetObject("ButtonValTri.BackgroundImage"), System.Drawing.Image)
         Me.ButtonValTri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ButtonValTri.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonValTri.Location = New System.Drawing.Point(3, 3)
@@ -807,20 +1370,21 @@ Partial Public Class VDT_Edit
         '
         'GroupBox13
         '
-        Me.GroupBox13.Location = New System.Drawing.Point(20, 766)
+        Me.GroupBox13.Location = New System.Drawing.Point(902, 30)
         Me.GroupBox13.Name = "GroupBox13"
-        Me.GroupBox13.Size = New System.Drawing.Size(259, 263)
+        Me.GroupBox13.Size = New System.Drawing.Size(644, 208)
         Me.GroupBox13.TabIndex = 11
         Me.GroupBox13.TabStop = False
         Me.GroupBox13.Text = "Propriétés"
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.GroupBox2)
         Me.GroupBox3.Controls.Add(Me.GroupBox14)
         Me.GroupBox3.Controls.Add(Me.GroupBox11)
         Me.GroupBox3.Location = New System.Drawing.Point(13, 249)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(266, 511)
+        Me.GroupBox3.Size = New System.Drawing.Size(266, 528)
         Me.GroupBox3.TabIndex = 12
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Options supplémentaires"
@@ -836,7 +1400,7 @@ Partial Public Class VDT_Edit
         Me.GroupBox14.Controls.Add(Me.Button11)
         Me.GroupBox14.Location = New System.Drawing.Point(6, 19)
         Me.GroupBox14.Name = "GroupBox14"
-        Me.GroupBox14.Size = New System.Drawing.Size(254, 226)
+        Me.GroupBox14.Size = New System.Drawing.Size(254, 160)
         Me.GroupBox14.TabIndex = 16
         Me.GroupBox14.TabStop = False
         Me.GroupBox14.Text = "Édition"
@@ -879,6 +1443,7 @@ Partial Public Class VDT_Edit
         '
         'Button12
         '
+        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
         Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button12.Location = New System.Drawing.Point(73, 20)
@@ -889,6 +1454,7 @@ Partial Public Class VDT_Edit
         '
         'Button11
         '
+        Me.Button11.BackgroundImage = CType(resources.GetObject("Button11.BackgroundImage"), System.Drawing.Image)
         Me.Button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button11.Location = New System.Drawing.Point(7, 20)
@@ -899,18 +1465,30 @@ Partial Public Class VDT_Edit
         '
         'GroupBox11
         '
+        Me.GroupBox11.Controls.Add(Me.CheckBox4)
         Me.GroupBox11.Controls.Add(Me.GroupBox4)
         Me.GroupBox11.Controls.Add(Me.CheckBox1)
         Me.GroupBox11.Controls.Add(Me.CheckBox3)
         Me.GroupBox11.Controls.Add(Me.CheckBox2)
         Me.GroupBox11.Controls.Add(Me.GroupBox5)
         Me.GroupBox11.Controls.Add(Me.GroupBox10)
-        Me.GroupBox11.Location = New System.Drawing.Point(6, 251)
+        Me.GroupBox11.Location = New System.Drawing.Point(7, 185)
         Me.GroupBox11.Name = "GroupBox11"
-        Me.GroupBox11.Size = New System.Drawing.Size(254, 254)
+        Me.GroupBox11.Size = New System.Drawing.Size(254, 275)
         Me.GroupBox11.TabIndex = 15
         Me.GroupBox11.TabStop = False
         Me.GroupBox11.Text = "Prévisualisation"
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox4.Location = New System.Drawing.Point(6, 250)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(141, 17)
+        Me.CheckBox4.TabIndex = 15
+        Me.CheckBox4.Text = "Afficher la grille de pixels"
+        Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'GroupBox4
         '
@@ -1000,6 +1578,7 @@ Partial Public Class VDT_Edit
         '
         'Button29
         '
+        Me.Button29.BackgroundImage = CType(resources.GetObject("Button29.BackgroundImage"), System.Drawing.Image)
         Me.Button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button29.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button29.Location = New System.Drawing.Point(10, 18)
@@ -1007,6 +1586,13 @@ Partial Public Class VDT_Edit
         Me.Button29.Size = New System.Drawing.Size(85, 43)
         Me.Button29.TabIndex = 0
         Me.Button29.UseVisualStyleBackColor = True
+        '
+        'Edit_History
+        '
+        Me.Edit_History.Location = New System.Drawing.Point(1419, 277)
+        Me.Edit_History.Name = "Edit_History"
+        Me.Edit_History.Size = New System.Drawing.Size(127, 622)
+        Me.Edit_History.TabIndex = 13
         '
         'Interrupteur1
         '
@@ -1022,29 +1608,41 @@ Partial Public Class VDT_Edit
         'VDT_Edit
         '
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(1425, 1054)
+        Me.ClientSize = New System.Drawing.Size(1556, 924)
+        Me.Controls.Add(Me.Edit_History)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox13)
         Me.Controls.Add(Me.label2a)
         Me.Controls.Add(Me.tabControl1)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.treeView1)
+        Me.Controls.Add(Me.tidgetsTree)
         Me.Controls.Add(Me.PanelEcran)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Name = "VDT_Edit"
         Me.Text = "VDT Edit"
         Me.tabPage2.ResumeLayout(False)
-        Me.GroupBox12.ResumeLayout(False)
+        Me.GroupBox20.ResumeLayout(False)
+        Me.GroupBox21.ResumeLayout(False)
+        Me.GroupBox19.ResumeLayout(False)
+        Me.GroupBox15.ResumeLayout(False)
+        Me.GroupBox17.ResumeLayout(False)
+        Me.GroupBox18.ResumeLayout(False)
+        Me.GroupBox16.ResumeLayout(False)
         Me.tabPage1.ResumeLayout(False)
+        Me.GroupBox22.ResumeLayout(False)
+        Me.GroupBox24.ResumeLayout(False)
         Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox23.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.tabControl1.ResumeLayout(False)
+        Me.TabPage7.ResumeLayout(False)
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox9.ResumeLayout(False)
         Me.GroupBox8.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.tabControl1.ResumeLayout(False)
+        Me.TabPage3.ResumeLayout(False)
+        Me.GroupBox12.ResumeLayout(False)
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.PanelEcran.ResumeLayout(False)
@@ -1066,13 +1664,6 @@ Partial Public Class VDT_Edit
 
     Private components As System.ComponentModel.IContainer
     Public WithEvents tabPage2 As TabPage
-    Public WithEvents button19 As Button
-    Public WithEvents button17 As Button
-    Public WithEvents button16 As Button
-    Public WithEvents button7 As Button
-    Public WithEvents button15 As Button
-    Public WithEvents button13 As Button
-    Public WithEvents button14 As Button
     Public WithEvents tabPage1 As TabPage
     Public WithEvents tabControl1 As TabControl
     Friend WithEvents GroupBox1 As GroupBox
@@ -1100,25 +1691,9 @@ Partial Public Class VDT_Edit
     Friend WithEvents ToolTip9 As ToolTip
     Friend WithEvents Button30 As Button
     Friend WithEvents PanelEcran As Panel
-    Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents GroupBox7 As GroupBox
-    Friend WithEvents GroupBox12 As GroupBox
-    Public WithEvents button18 As Button
     Friend WithEvents TabPage7 As TabPage
     Friend WithEvents GroupBox13 As GroupBox
-    Friend WithEvents GroupBox9 As GroupBox
-    Friend WithEvents Button55 As Button
-    Friend WithEvents Button38 As Button
-    Friend WithEvents Button35 As Button
-    Friend WithEvents Button34 As Button
-    Friend WithEvents Button36 As Button
-    Friend WithEvents Button37 As Button
-    Friend WithEvents Button33 As Button
-    Friend WithEvents GroupBox8 As GroupBox
-    Friend WithEvents Button31 As Button
-    Friend WithEvents Button32 As Button
-    Friend WithEvents Label1001 As Label
-    Friend WithEvents CheckBox5 As CheckBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents Button28 As Button
@@ -1144,4 +1719,73 @@ Partial Public Class VDT_Edit
     Friend WithEvents Interrupteur1 As Interrupteur
     Friend WithEvents Label4 As Label
     Friend WithEvents Button20 As Button
+    Friend WithEvents Edit_History As Panel
+    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents GroupBox12 As GroupBox
+    Public WithEvents button16 As Button
+    Public WithEvents button17 As Button
+    Public WithEvents button18 As Button
+    Public WithEvents button19 As Button
+    Public WithEvents button7 As Button
+    Public WithEvents button15 As Button
+    Public WithEvents button13 As Button
+    Public WithEvents button14 As Button
+    Friend WithEvents GroupBox19 As GroupBox
+    Friend WithEvents Button42 As Button
+    Friend WithEvents Button41 As Button
+    Friend WithEvents Button43 As Button
+    Friend WithEvents GroupBox20 As GroupBox
+    Friend WithEvents GroupBox15 As GroupBox
+    Friend WithEvents GroupBox17 As GroupBox
+    Friend WithEvents Button40 As Button
+    Friend WithEvents GroupBox18 As GroupBox
+    Friend WithEvents Button39 As Button
+    Friend WithEvents Button25 As Button
+    Friend WithEvents Button24 As Button
+    Friend WithEvents Button23 As Button
+    Friend WithEvents GroupBox16 As GroupBox
+    Friend WithEvents Button22 As Button
+    Friend WithEvents Button21 As Button
+    Friend WithEvents GroupBox21 As GroupBox
+    Friend WithEvents Button44 As Button
+    Friend WithEvents Button45 As Button
+    Friend WithEvents Button46 As Button
+    Friend WithEvents Button47 As Button
+    Friend WithEvents Button48 As Button
+    Friend WithEvents GroupBox23 As GroupBox
+    Friend WithEvents Button50 As Button
+    Friend WithEvents Button49 As Button
+    Friend WithEvents Button51 As Button
+    Friend WithEvents Button52 As Button
+    Friend WithEvents Button59 As Button
+    Friend WithEvents Button58 As Button
+    Friend WithEvents Button57 As Button
+    Friend WithEvents Button56 As Button
+    Friend WithEvents Button53 As Button
+    Friend WithEvents Button54 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents GroupBox9 As GroupBox
+    Friend WithEvents Button55 As Button
+    Friend WithEvents Button38 As Button
+    Friend WithEvents Button35 As Button
+    Friend WithEvents Button34 As Button
+    Friend WithEvents Button36 As Button
+    Friend WithEvents Button37 As Button
+    Friend WithEvents Button33 As Button
+    Friend WithEvents GroupBox8 As GroupBox
+    Friend WithEvents Button31 As Button
+    Friend WithEvents Button32 As Button
+    Friend WithEvents Label1001 As Label
+    Friend WithEvents GroupBox22 As GroupBox
+    Friend WithEvents GroupBox24 As GroupBox
+    Friend WithEvents Button60 As Button
+    Friend WithEvents Button61 As Button
+    Friend WithEvents Button62 As Button
+    Friend WithEvents Button63 As Button
+    Friend WithEvents Button64 As Button
+    Friend WithEvents Button65 As Button
+    Friend WithEvents Button66 As Button
+    Friend WithEvents Button67 As Button
 End Class

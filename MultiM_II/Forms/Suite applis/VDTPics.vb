@@ -1,6 +1,6 @@
 ﻿Imports System.Reflection.Emit
 
-Public Class Fenêtre4
+Public Class VDTPics
 
     'Fonction Form_Load
     Public Sub Form_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load

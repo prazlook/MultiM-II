@@ -36,7 +36,7 @@ Public Class Compistart
         "limitPrvMsg=False" & Chr(13) & Chr(10) &
         "limitPbcMsg=False" & Chr(13) & Chr(10) &
         "messagerie=ouvert" & Chr(13) & Chr(10) &
-        "repNumBloqués=raccrocher" & Chr(13) & Chr(10) &
+        "repNumBloqués=minitelPage" & Chr(13) & Chr(10) &
         "NumBloqués=(0000000000;1111111111;2222222222)" & Chr(13) & Chr(10) &
         "BloquerDeconnectBrut=True" & Chr(13) & Chr(10) &
         "BloquerSpam=True" & Chr(13) & Chr(10) &
@@ -653,12 +653,12 @@ Public Class Compistart
     'Fonction trackBar1_Scroll
     Public Sub trackBar1_Scroll(ByVal sender As Object, ByVal e As System.EventArgs) Handles trackbar1.Scroll
         label10.Text = "Actuel : " & trackbar1.Value.ToString()
-
+        ModifierParametre("parametres", "BPS", trackbar1.Value.ToString())
     End Sub
 
     'Fonction trackBar1_ValueChanged
     Public Sub trackBar1_ValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles trackbar1.ValueChanged
-        label10.Text = "Actuel : " & trackbar1.Value.ToString()
+        label10.Text = "Actuel :  " & trackbar1.Value.ToString()
 
     End Sub
 
@@ -1100,7 +1100,6 @@ Public Class Compistart
             lblList.Text = String.Join(", ", utilisateurs)
         End If
 
-        AjouterALaConsole("Informations actualisées.")
 
     End Sub
 
@@ -1184,44 +1183,62 @@ Public Class Compistart
 
     End Sub
 
-    Private Sub ConsoleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsoleToolStripMenuItem.Click
+    Private Sub ConsoleToolStripMenuItem_Click(sender As Object, e As EventArgs) 
         param_console.Show()
     End Sub
 
     Private Sub button34_Click(sender As Object, e As EventArgs) Handles button34.Click
         ModifierParametre("parametres", "BPS", "50")
+        trackbar1.Value = 50
+        label10.Text = "Actuel : 50"
     End Sub
 
     Private Sub button35_Click(sender As Object, e As EventArgs) Handles button35.Click
         ModifierParametre("parametres", "BPS", "400")
+        trackbar1.Value = 400
+        label10.Text = "Actuel : 400"
     End Sub
 
     Private Sub button36_Click(sender As Object, e As EventArgs) Handles button36.Click
         ModifierParametre("parametres", "BPS", "1200")
+        trackbar1.Value = 1200
+        label10.Text = "Actuel : 1200"
     End Sub
 
     Private Sub button37_Click(sender As Object, e As EventArgs) Handles button37.Click
         ModifierParametre("parametres", "BPS", "2400")
+        trackbar1.Value = 2400
+        label10.Text = "Actuel : 2400"
     End Sub
 
     Private Sub button38_Click(sender As Object, e As EventArgs) Handles button38.Click
         ModifierParametre("parametres", "BPS", "4800")
+        trackbar1.Value = 4800
+        label10.Text = "Actuel : 4800"
     End Sub
 
     Private Sub button39_Click(sender As Object, e As EventArgs) Handles button39.Click
         ModifierParametre("parametres", "BPS", "9600")
+        trackbar1.Value = 9600
+        label10.Text = "Actuel : 4800"
     End Sub
 
     Private Sub button40_Click(sender As Object, e As EventArgs) Handles button40.Click
         ModifierParametre("parametres", "BPS", "19200")
+        trackbar1.Value = 19200
+        label10.Text = "Actuel : 19200"
     End Sub
 
     Private Sub button41_Click(sender As Object, e As EventArgs) Handles button41.Click
         ModifierParametre("parametres", "BPS", "38400")
+        trackbar1.Value = 38400
+        label10.Text = "Actuel : 38400"
     End Sub
 
     Private Sub button42_Click(sender As Object, e As EventArgs) Handles button42.Click
         ModifierParametre("parametres", "BPS", "MAX")
+        trackbar1.Value = trackbar1.Maximum
+        label10.Text = "Actuel : MAX"
     End Sub
 
     Private Sub checkbox8_CheckedChanged(sender As Object, e As EventArgs) Handles checkbox8.CheckedChanged
@@ -1304,7 +1321,7 @@ Public Class Compistart
         BoiteCreationCompte.Show()
     End Sub
 
-    Private Sub arbToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles arbToolStripMenuItem.Click
+    Private Sub arbToolStripMenuItem_Click(sender As Object, e As EventArgs) 
         Dim dlg As New OpenFileDialog()
         dlg.Title = "Sélectionnez le fichier d'arborescence"
         dlg.Filter = "Fichiers ARB (*.arb)|*.arb|Tous les fichiers (*.*)|*.*"
@@ -1399,7 +1416,7 @@ Public Class Compistart
     End Sub
 
 
-    Private Sub exporterLeServeurToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles exporterLeServeurToolStripMenuItem.Click
+    Private Sub exporterLeServeurToolStripMenuItem_Click(sender As Object, e As EventArgs) 
         button63_Click(button63, EventArgs.Empty)
     End Sub
 
@@ -1419,5 +1436,8 @@ Public Class Compistart
         RemplirInfosMinitel(line3, Me)  ' infoline17 à infoline24
     End Sub
 
-
+    Private Sub label10_textChanged(sender As Object, e As EventArgs) Handles label10.TextChanged
+        label10.Text = "Actuel : " & trackbar1.Value.ToString()
+        ModifierParametre("parametres", "BPS", trackbar1.Value.ToString())
+    End Sub
 End Class

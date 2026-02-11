@@ -7,9 +7,9 @@
         BlinkButton7()
 
         ' Charge et démarre le son
-        Dim soundStream As UnmanagedMemoryStream = My.Resources.son_demarrage
-        player = New System.Media.SoundPlayer(soundStream)
-        player.Play()
+        'Dim soundStream As UnmanagedMemoryStream = My.Resources.son_demarrage
+        'player = New System.Media.SoundPlayer(soundStream)
+        'player.Play()
 
     End Sub
 
@@ -79,5 +79,13 @@
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
+    End Sub
+
+    Private Sub label3_Click(sender As Object, e As EventArgs) Handles label3.Click
+
+    End Sub
+
+    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
+        VDTEDITTESTS.Show()
     End Sub
 End Class

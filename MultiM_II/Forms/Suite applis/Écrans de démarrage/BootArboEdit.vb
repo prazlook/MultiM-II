@@ -1,8 +1,7 @@
-﻿Public Class BootCompistart
+﻿Public NotInheritable Class BootArboEdit
 
     'TODO: ce formulaire peut facilement être configuré comme écran de démarrage de l'application en accédant à l'onglet "Application"
     '  du Concepteur de projets ("Propriétés" sous le menu "Projet").
-
     Private Async Sub DémarrerProgression()
         Dim random As New Random()
         Dim valeur As Integer = 0
@@ -32,7 +31,7 @@
                   End Sub)
 
         ' Une fois la progression terminée, fermez l'écran de démarrage et ouvrez VDT Edit
-        Compistart.Show()
+        ArboEdit.Show()
         Me.Close()
     End Sub
 

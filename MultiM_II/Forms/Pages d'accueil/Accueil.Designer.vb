@@ -81,6 +81,9 @@ Partial Public Class Accueil
         Me.button2 = New Krypton.Toolkit.KryptonButton()
         Me.button3 = New Krypton.Toolkit.KryptonButton()
         Me.button4 = New Krypton.Toolkit.KryptonButton()
+        Me.Button21 = New System.Windows.Forms.Button()
+        Me.Button22 = New System.Windows.Forms.Button()
+        Me.Button23 = New System.Windows.Forms.Button()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button20 = New System.Windows.Forms.Button()
         Me.toolTip2 = New System.Windows.Forms.ToolTip(Me.components)
@@ -94,9 +97,6 @@ Partial Public Class Accueil
         Me.toolTip7 = New System.Windows.Forms.ToolTip(Me.components)
         Me.button19 = New System.Windows.Forms.Button()
         Me.KryptonPalette1 = New ComponentFactory.Krypton.Toolkit.KryptonPalette(Me.components)
-        Me.Button21 = New System.Windows.Forms.Button()
-        Me.Button22 = New System.Windows.Forms.Button()
-        Me.Button23 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'label1
@@ -315,6 +315,45 @@ Partial Public Class Accueil
         Me.button4.Values.DropDownArrowColor = System.Drawing.Color.Empty
         Me.button4.Values.Text = "Compistart"
         '
+        'Button21
+        '
+        Me.Button21.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button21.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button21.Location = New System.Drawing.Point(256, 602)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(92, 23)
+        Me.Button21.TabIndex = 32
+        Me.Button21.Text = "Récents"
+        Me.toolTip1.SetToolTip(Me.Button21, "Désolé, pas encore disponible")
+        Me.Button21.UseVisualStyleBackColor = False
+        '
+        'Button22
+        '
+        Me.Button22.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button22.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button22.Location = New System.Drawing.Point(163, 602)
+        Me.Button22.Name = "Button22"
+        Me.Button22.Size = New System.Drawing.Size(87, 23)
+        Me.Button22.TabIndex = 31
+        Me.Button22.Text = "Ouvrir"
+        Me.toolTip1.SetToolTip(Me.Button22, "Désolé, pas encore disponible")
+        Me.Button22.UseVisualStyleBackColor = False
+        '
+        'Button23
+        '
+        Me.Button23.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button23.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button23.Location = New System.Drawing.Point(57, 602)
+        Me.Button23.Name = "Button23"
+        Me.Button23.Size = New System.Drawing.Size(100, 23)
+        Me.Button23.TabIndex = 30
+        Me.Button23.Text = "Nouveau"
+        Me.toolTip1.SetToolTip(Me.Button23, "Désolé, pas encore disponible")
+        Me.Button23.UseVisualStyleBackColor = False
+        '
         'Button13
         '
         Me.Button13.BackColor = System.Drawing.Color.ForestGreen
@@ -439,45 +478,6 @@ Partial Public Class Accueil
         Me.button19.UseVisualStyleBackColor = True
         Me.button19.Visible = False
         '
-        'Button21
-        '
-        Me.Button21.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button21.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Button21.Location = New System.Drawing.Point(256, 602)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(92, 23)
-        Me.Button21.TabIndex = 32
-        Me.Button21.Text = "Récents"
-        Me.toolTip1.SetToolTip(Me.Button21, "Désolé, pas encore disponible")
-        Me.Button21.UseVisualStyleBackColor = False
-        '
-        'Button22
-        '
-        Me.Button22.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button22.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Button22.Location = New System.Drawing.Point(163, 602)
-        Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(87, 23)
-        Me.Button22.TabIndex = 31
-        Me.Button22.Text = "Ouvrir"
-        Me.toolTip1.SetToolTip(Me.Button22, "Désolé, pas encore disponible")
-        Me.Button22.UseVisualStyleBackColor = False
-        '
-        'Button23
-        '
-        Me.Button23.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button23.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Button23.Location = New System.Drawing.Point(57, 602)
-        Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(100, 23)
-        Me.Button23.TabIndex = 30
-        Me.Button23.Text = "Nouveau"
-        Me.toolTip1.SetToolTip(Me.Button23, "Désolé, pas encore disponible")
-        Me.Button23.UseVisualStyleBackColor = False
-        '
         'Accueil
         '
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
@@ -514,7 +514,7 @@ Partial Public Class Accueil
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Accueil"
-        Me.Text = "MultiM II V0.2.6.0 (En développement)"
+        Me.Text = "MultiM II V0.2.6.2 (En développement)"
         Me.ResumeLayout(False)
 
     End Sub

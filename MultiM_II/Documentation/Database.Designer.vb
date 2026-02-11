@@ -68,7 +68,7 @@ Partial Class Database
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(349, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(360, 17)
         Me.ToolStripStatusLabel1.Text = "Prêt. Sélectionnez un noeud de l'Arborescence pour commencer."
         '
         'TreeView1
@@ -77,7 +77,7 @@ Partial Class Database
         Me.TreeView1.Name = "TreeView1"
         TreeNode1.Name = "howItStarted"
         TreeNode1.Text = "Comment tout a commencé"
-        TreeNode2.Name = "Nœud8"
+        TreeNode2.Name = "devSuite"
         TreeNode2.Text = "Suite"
         TreeNode3.Name = "Nœud10"
         TreeNode3.Text = "Suite Lite"

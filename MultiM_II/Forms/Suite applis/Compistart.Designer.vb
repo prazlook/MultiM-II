@@ -178,28 +178,6 @@ Partial Public Class Compistart
 
     Public WithEvents button57 As System.Windows.Forms.Button
 
-    Public panel1 As System.Windows.Forms.Panel
-
-    Public menuStrip3 As System.Windows.Forms.MenuStrip
-
-    Public fichierToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
-    Public importerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
-    Public WithEvents arbToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
-    Public serveurToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
-    Public écransToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
-    Public configurationToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
-    Public outilsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
-    Public aideToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
-    Public réglagesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
     Public statusStrip1 As System.Windows.Forms.StatusStrip
 
     Public toolStripProgressBar1 As System.Windows.Forms.ToolStripProgressBar
@@ -394,8 +372,6 @@ Partial Public Class Compistart
 
     Public label17 As System.Windows.Forms.Label
 
-    Public progressBar1 As System.Windows.Forms.ProgressBar
-
     Public groupBox7 As System.Windows.Forms.GroupBox
 
     Public label15 As System.Windows.Forms.Label
@@ -422,7 +398,7 @@ Partial Public Class Compistart
 
     Public groupBox5 As System.Windows.Forms.GroupBox
 
-    Public label10 As System.Windows.Forms.Label
+    Public WithEvents label10 As System.Windows.Forms.Label
 
     Public WithEvents button34 As System.Windows.Forms.Button
 
@@ -517,10 +493,6 @@ Partial Public Class Compistart
     Public désactivéToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
     Public contextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
-
-    Public exporterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
-    Public WithEvents exporterLeServeurToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
     Public panel2 As System.Windows.Forms.Panel
 
@@ -733,20 +705,6 @@ Partial Public Class Compistart
         Me.activéToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.désactivéToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.button57 = New System.Windows.Forms.Button()
-        Me.panel1 = New System.Windows.Forms.Panel()
-        Me.menuStrip3 = New System.Windows.Forms.MenuStrip()
-        Me.fichierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.importerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.arbToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.serveurToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.écransToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.configurationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.exporterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.exporterLeServeurToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.outilsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.aideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.réglagesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsoleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.statusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.toolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
         Me.toolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
@@ -878,9 +836,8 @@ Partial Public Class Compistart
         Me.raccrocher = New System.Windows.Forms.RadioButton()
         Me.label17 = New System.Windows.Forms.Label()
         Me.button44 = New ComponentFactory.Krypton.Toolkit.KryptonButton()
-        Me.progressBar1 = New System.Windows.Forms.ProgressBar()
         Me.groupBox7 = New System.Windows.Forms.GroupBox()
-        Me.progressbar3 = New Krypton.Toolkit.KryptonProgressBar()
+        Me.ProgressBar3 = New System.Windows.Forms.ProgressBar()
         Me.label15 = New System.Windows.Forms.Label()
         Me.label14 = New System.Windows.Forms.Label()
         Me.progressBar2 = New System.Windows.Forms.ProgressBar()
@@ -922,6 +879,56 @@ Partial Public Class Compistart
         Me.Label34 = New System.Windows.Forms.Label()
         Me.modemPort = New System.IO.Ports.SerialPort(Me.components)
         Me.refreshTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.MenuStrip6 = New System.Windows.Forms.MenuStrip()
+        Me.FichiersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NouveauToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OuvrirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RécentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AucunFichierRécentCliquezIciPourEnOuvrirUnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnregistrerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnregistrerLeProjetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnregistrerSousToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImporterToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ServeurATOMIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ServeurSTUTONEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ArborescenceMultiMIIarbToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExporterToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ServeurAtomioatsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ServeurSTUTONEToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem56 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem58 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem59 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem60 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem61 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem62 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem63 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem64 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem65 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem66 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem67 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem68 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem69 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem70 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem71 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RéglagesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UtiliserLaConsoleEnEntréToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AideToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DocumentationRacineCompistartToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MessagerieToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ADMINToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LECAMToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AccèsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ArborescenceDePocheToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ServeurToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DiversToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CompilationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BlocageEtRéponseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ÉtatDuServeurToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExceptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FonctionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsoleToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProgressBar1 = New Krypton.Toolkit.KryptonProgressBar()
         Me.groupBox17.SuspendLayout()
         Me.tabControl3.SuspendLayout()
         Me.tabPage7.SuspendLayout()
@@ -936,8 +943,6 @@ Partial Public Class Compistart
         Me.tabControl2.SuspendLayout()
         Me.tabPage5.SuspendLayout()
         Me.menuStrip1.SuspendLayout()
-        Me.panel1.SuspendLayout()
-        Me.menuStrip3.SuspendLayout()
         Me.statusStrip1.SuspendLayout()
         Me.tabPage1.SuspendLayout()
         Me.groupBox3.SuspendLayout()
@@ -974,6 +979,7 @@ Partial Public Class Compistart
         Me.GroupBox20.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.MenuStrip5.SuspendLayout()
+        Me.MenuStrip6.SuspendLayout()
         Me.SuspendLayout()
         '
         'tabPage6
@@ -1356,7 +1362,7 @@ Partial Public Class Compistart
         Me.selectedLineLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.selectedLineLabel.Location = New System.Drawing.Point(7, 20)
         Me.selectedLineLabel.Name = "selectedLineLabel"
-        Me.selectedLineLabel.Size = New System.Drawing.Size(133, 19)
+        Me.selectedLineLabel.Size = New System.Drawing.Size(144, 19)
         Me.selectedLineLabel.TabIndex = 0
         Me.selectedLineLabel.Text = "Aucune ligne sélectionnée"
         Me.toolTip1.SetToolTip(Me.selectedLineLabel, "Numéro de ligne")
@@ -1478,7 +1484,7 @@ Partial Public Class Compistart
         Me.groupBox10.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox10.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.groupBox10.Location = New System.Drawing.Point(554, 9)
+        Me.groupBox10.Location = New System.Drawing.Point(554, 31)
         Me.groupBox10.Name = "groupBox10"
         Me.groupBox10.Size = New System.Drawing.Size(421, 270)
         Me.groupBox10.TabIndex = 23
@@ -1743,9 +1749,9 @@ Partial Public Class Compistart
         Me.groupBox15.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox15.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.groupBox15.Location = New System.Drawing.Point(12, 693)
+        Me.groupBox15.Location = New System.Drawing.Point(981, 284)
         Me.groupBox15.Name = "groupBox15"
-        Me.groupBox15.Size = New System.Drawing.Size(283, 140)
+        Me.groupBox15.Size = New System.Drawing.Size(290, 140)
         Me.groupBox15.TabIndex = 24
         Me.groupBox15.TabStop = False
         Me.groupBox15.Text = "Fonctions"
@@ -2386,106 +2392,6 @@ Partial Public Class Compistart
         Me.button57.Text = "Aide..."
         Me.button57.UseVisualStyleBackColor = True
         '
-        'panel1
-        '
-        Me.panel1.Controls.Add(Me.menuStrip3)
-        Me.panel1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.panel1.Location = New System.Drawing.Point(296, 256)
-        Me.panel1.Name = "panel1"
-        Me.panel1.Size = New System.Drawing.Size(252, 23)
-        Me.panel1.TabIndex = 25
-        '
-        'menuStrip3
-        '
-        Me.menuStrip3.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.menuStrip3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.menuStrip3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.menuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.fichierToolStripMenuItem, Me.outilsToolStripMenuItem, Me.aideToolStripMenuItem, Me.réglagesToolStripMenuItem})
-        Me.menuStrip3.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
-        Me.menuStrip3.Location = New System.Drawing.Point(0, 0)
-        Me.menuStrip3.Name = "menuStrip3"
-        Me.menuStrip3.Size = New System.Drawing.Size(252, 24)
-        Me.menuStrip3.TabIndex = 0
-        Me.menuStrip3.Text = "menuStrip3"
-        '
-        'fichierToolStripMenuItem
-        '
-        Me.fichierToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.importerToolStripMenuItem, Me.exporterToolStripMenuItem})
-        Me.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem"
-        Me.fichierToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
-        Me.fichierToolStripMenuItem.Text = "Fichier"
-        '
-        'importerToolStripMenuItem
-        '
-        Me.importerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.arbToolStripMenuItem, Me.serveurToolStripMenuItem, Me.écransToolStripMenuItem, Me.configurationToolStripMenuItem})
-        Me.importerToolStripMenuItem.Name = "importerToolStripMenuItem"
-        Me.importerToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
-        Me.importerToolStripMenuItem.Text = "Importer"
-        '
-        'arbToolStripMenuItem
-        '
-        Me.arbToolStripMenuItem.Name = "arbToolStripMenuItem"
-        Me.arbToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
-        Me.arbToolStripMenuItem.Text = "Arborescence"
-        '
-        'serveurToolStripMenuItem
-        '
-        Me.serveurToolStripMenuItem.Name = "serveurToolStripMenuItem"
-        Me.serveurToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
-        Me.serveurToolStripMenuItem.Text = "Serveur"
-        '
-        'écransToolStripMenuItem
-        '
-        Me.écransToolStripMenuItem.Name = "écransToolStripMenuItem"
-        Me.écransToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
-        Me.écransToolStripMenuItem.Text = "Écrans"
-        '
-        'configurationToolStripMenuItem
-        '
-        Me.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem"
-        Me.configurationToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
-        Me.configurationToolStripMenuItem.Text = "Configuration"
-        '
-        'exporterToolStripMenuItem
-        '
-        Me.exporterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.exporterLeServeurToolStripMenuItem})
-        Me.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem"
-        Me.exporterToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
-        Me.exporterToolStripMenuItem.Text = "Exporter"
-        '
-        'exporterLeServeurToolStripMenuItem
-        '
-        Me.exporterLeServeurToolStripMenuItem.Name = "exporterLeServeurToolStripMenuItem"
-        Me.exporterLeServeurToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
-        Me.exporterLeServeurToolStripMenuItem.Text = "Exporter le serveur"
-        '
-        'outilsToolStripMenuItem
-        '
-        Me.outilsToolStripMenuItem.Name = "outilsToolStripMenuItem"
-        Me.outilsToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
-        Me.outilsToolStripMenuItem.Text = "Outils"
-        '
-        'aideToolStripMenuItem
-        '
-        Me.aideToolStripMenuItem.Name = "aideToolStripMenuItem"
-        Me.aideToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
-        Me.aideToolStripMenuItem.Text = "Aide"
-        '
-        'réglagesToolStripMenuItem
-        '
-        Me.réglagesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsoleToolStripMenuItem})
-        Me.réglagesToolStripMenuItem.Name = "réglagesToolStripMenuItem"
-        Me.réglagesToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
-        Me.réglagesToolStripMenuItem.Text = "Réglages"
-        '
-        'ConsoleToolStripMenuItem
-        '
-        Me.ConsoleToolStripMenuItem.Name = "ConsoleToolStripMenuItem"
-        Me.ConsoleToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.ConsoleToolStripMenuItem.Text = "Console"
-        '
         'statusStrip1
         '
         Me.statusStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
@@ -2493,7 +2399,7 @@ Partial Public Class Compistart
         Me.statusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStripProgressBar1, Me.toolStripDropDownButton1, Me.toolStripStatusLabel1})
         Me.statusStrip1.Location = New System.Drawing.Point(0, 843)
         Me.statusStrip1.Name = "statusStrip1"
-        Me.statusStrip1.Size = New System.Drawing.Size(1243, 22)
+        Me.statusStrip1.Size = New System.Drawing.Size(1283, 22)
         Me.statusStrip1.TabIndex = 26
         Me.statusStrip1.Text = "statusStrip1"
         '
@@ -3388,7 +3294,7 @@ Partial Public Class Compistart
         Me.tabControl1.Cursor = System.Windows.Forms.Cursors.Default
         Me.tabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.tabControl1.Location = New System.Drawing.Point(13, 6)
+        Me.tabControl1.Location = New System.Drawing.Point(13, 28)
         Me.tabControl1.Name = "tabControl1"
         Me.tabControl1.SelectedIndex = 0
         Me.tabControl1.Size = New System.Drawing.Size(278, 247)
@@ -3407,7 +3313,7 @@ Partial Public Class Compistart
         Me.groupBox18.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox18.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.groupBox18.Location = New System.Drawing.Point(618, 286)
+        Me.groupBox18.Location = New System.Drawing.Point(618, 308)
         Me.groupBox18.Name = "groupBox18"
         Me.groupBox18.Size = New System.Drawing.Size(357, 221)
         Me.groupBox18.TabIndex = 27
@@ -3466,7 +3372,7 @@ Partial Public Class Compistart
         Me.groupBox19.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox19.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.groupBox19.Location = New System.Drawing.Point(625, 518)
+        Me.groupBox19.Location = New System.Drawing.Point(625, 540)
         Me.groupBox19.Name = "groupBox19"
         Me.groupBox19.Size = New System.Drawing.Size(350, 221)
         Me.groupBox19.TabIndex = 28
@@ -3533,7 +3439,7 @@ Partial Public Class Compistart
         Me.groupBox1.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.groupBox1.Location = New System.Drawing.Point(13, 278)
+        Me.groupBox1.Location = New System.Drawing.Point(13, 300)
         Me.groupBox1.Name = "groupBox1"
         Me.groupBox1.Size = New System.Drawing.Size(278, 174)
         Me.groupBox1.TabIndex = 16
@@ -3835,7 +3741,7 @@ Partial Public Class Compistart
         Me.groupBox8.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.groupBox8.Location = New System.Drawing.Point(298, 6)
+        Me.groupBox8.Location = New System.Drawing.Point(298, 28)
         Me.groupBox8.Name = "groupBox8"
         Me.groupBox8.Size = New System.Drawing.Size(250, 247)
         Me.groupBox8.TabIndex = 22
@@ -3959,12 +3865,12 @@ Partial Public Class Compistart
         Me.telMsg.Name = "telMsg"
         Me.telMsg.Size = New System.Drawing.Size(135, 15)
         Me.telMsg.TabIndex = 0
-        Me.telMsg.TabStop = True
         Me.telMsg.Text = "Message téléphonique"
         Me.telMsg.UseVisualStyleBackColor = True
         '
         'minitelPage
         '
+        Me.minitelPage.Checked = True
         Me.minitelPage.Cursor = System.Windows.Forms.Cursors.Default
         Me.minitelPage.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.minitelPage.Location = New System.Drawing.Point(6, 30)
@@ -4022,46 +3928,34 @@ Partial Public Class Compistart
         Me.button44.TabIndex = 7
         Me.button44.Values.Text = "Compiler le serveur"
         '
-        'progressBar1
-        '
-        Me.progressBar1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.progressBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.progressBar1.ForeColor = System.Drawing.Color.Red
-        Me.progressBar1.Location = New System.Drawing.Point(7, 139)
-        Me.progressBar1.Name = "progressBar1"
-        Me.progressBar1.Size = New System.Drawing.Size(191, 9)
-        Me.progressBar1.TabIndex = 3
-        '
         'groupBox7
         '
-        Me.groupBox7.Controls.Add(Me.progressbar3)
+        Me.groupBox7.Controls.Add(Me.ProgressBar1)
+        Me.groupBox7.Controls.Add(Me.ProgressBar3)
         Me.groupBox7.Controls.Add(Me.button44)
         Me.groupBox7.Controls.Add(Me.label16)
-        Me.groupBox7.Controls.Add(Me.progressBar1)
         Me.groupBox7.Controls.Add(Me.label15)
         Me.groupBox7.Controls.Add(Me.label14)
         Me.groupBox7.Controls.Add(Me.progressBar2)
         Me.groupBox7.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.groupBox7.Location = New System.Drawing.Point(298, 278)
+        Me.groupBox7.Location = New System.Drawing.Point(298, 300)
         Me.groupBox7.Name = "groupBox7"
         Me.groupBox7.Size = New System.Drawing.Size(313, 174)
         Me.groupBox7.TabIndex = 21
         Me.groupBox7.TabStop = False
         Me.groupBox7.Text = "Compileur et console"
         '
-        'progressbar3
+        'ProgressBar3
         '
-        Me.progressbar3.Location = New System.Drawing.Point(7, 160)
-        Me.progressbar3.Name = "progressbar3"
-        Me.progressbar3.Size = New System.Drawing.Size(192, 10)
-        Me.progressbar3.StateCommon.Back.Color1 = System.Drawing.Color.Green
-        Me.progressbar3.StateDisabled.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.OneNote
-        Me.progressbar3.StateNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.OneNote
-        Me.progressbar3.Style = System.Windows.Forms.ProgressBarStyle.Blocks
-        Me.progressbar3.TabIndex = 29
-        Me.progressbar3.Values.Text = ""
+        Me.ProgressBar3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ProgressBar3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.ProgressBar3.ForeColor = System.Drawing.Color.Gray
+        Me.ProgressBar3.Location = New System.Drawing.Point(7, 161)
+        Me.ProgressBar3.Name = "ProgressBar3"
+        Me.ProgressBar3.Size = New System.Drawing.Size(191, 9)
+        Me.ProgressBar3.TabIndex = 8
         '
         'label15
         '
@@ -4240,7 +4134,7 @@ Partial Public Class Compistart
         Me.groupBox4.Cursor = System.Windows.Forms.Cursors.Default
         Me.groupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.groupBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.groupBox4.Location = New System.Drawing.Point(12, 458)
+        Me.groupBox4.Location = New System.Drawing.Point(12, 480)
         Me.groupBox4.Name = "groupBox4"
         Me.groupBox4.Size = New System.Drawing.Size(600, 229)
         Me.groupBox4.TabIndex = 20
@@ -4394,7 +4288,7 @@ Partial Public Class Compistart
         '
         Me.label6.Cursor = System.Windows.Forms.Cursors.Default
         Me.label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.label6.Location = New System.Drawing.Point(48, 260)
+        Me.label6.Location = New System.Drawing.Point(48, 282)
         Me.label6.Name = "label6"
         Me.label6.Size = New System.Drawing.Size(150, 23)
         Me.label6.TabIndex = 19
@@ -4404,7 +4298,7 @@ Partial Public Class Compistart
         '
         Me.button17.Cursor = System.Windows.Forms.Cursors.Hand
         Me.button17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.button17.Location = New System.Drawing.Point(13, 256)
+        Me.button17.Location = New System.Drawing.Point(13, 278)
         Me.button17.Name = "button17"
         Me.button17.Size = New System.Drawing.Size(28, 23)
         Me.button17.TabIndex = 18
@@ -4427,7 +4321,7 @@ Partial Public Class Compistart
         Me.panel2.Cursor = System.Windows.Forms.Cursors.Default
         Me.panel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.panel2.Location = New System.Drawing.Point(500, 300)
+        Me.panel2.Location = New System.Drawing.Point(500, 322)
         Me.panel2.Name = "panel2"
         Me.panel2.Size = New System.Drawing.Size(204, 87)
         Me.panel2.TabIndex = 7
@@ -4465,9 +4359,9 @@ Partial Public Class Compistart
         Me.GroupBox20.Cursor = System.Windows.Forms.Cursors.Default
         Me.GroupBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.GroupBox20.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.GroupBox20.Location = New System.Drawing.Point(981, 9)
+        Me.GroupBox20.Location = New System.Drawing.Point(981, 31)
         Me.GroupBox20.Name = "GroupBox20"
-        Me.GroupBox20.Size = New System.Drawing.Size(250, 247)
+        Me.GroupBox20.Size = New System.Drawing.Size(290, 247)
         Me.GroupBox20.TabIndex = 23
         Me.GroupBox20.TabStop = False
         Me.GroupBox20.Text = "Exceptions"
@@ -4494,8 +4388,8 @@ Partial Public Class Compistart
         'ToolStripMenuItem55
         '
         Me.ToolStripMenuItem55.Name = "ToolStripMenuItem55"
-        Me.ToolStripMenuItem55.Size = New System.Drawing.Size(113, 20)
-        Me.ToolStripMenuItem55.Text = "Numéros bloqués"
+        Me.ToolStripMenuItem55.Size = New System.Drawing.Size(120, 20)
+        Me.ToolStripMenuItem55.Text = "Groupes à modifier"
         '
         'Label34
         '
@@ -4503,25 +4397,375 @@ Partial Public Class Compistart
         Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Label34.Location = New System.Drawing.Point(6, 16)
         Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(237, 29)
+        Me.Label34.Size = New System.Drawing.Size(237, 51)
         Me.Label34.TabIndex = 0
-        Me.Label34.Text = "Les exceptions sont des numéros qui bénéficient d'un traitement particulier. Vous" &
-    " pouvez en définir plusieurs sur votre serveur"
+        Me.Label34.Text = "Les exceptions sont des numéros faisant parties de groupes de règles, mais qui fo" &
+    "nt exception à certaines des règles du groupe.. Vous pouvez en définir plusieurs" &
+    " sur votre serveur"
         '
         'refreshTimer
         '
         Me.refreshTimer.Interval = 500
         '
+        'MenuStrip6
+        '
+        Me.MenuStrip6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.MenuStrip6.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FichiersToolStripMenuItem, Me.ToolStripMenuItem56, Me.RéglagesToolStripMenuItem1, Me.AideToolStripMenuItem1})
+        Me.MenuStrip6.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip6.Name = "MenuStrip6"
+        Me.MenuStrip6.Size = New System.Drawing.Size(1283, 24)
+        Me.MenuStrip6.TabIndex = 29
+        Me.MenuStrip6.Text = "MenuStrip6"
+        '
+        'FichiersToolStripMenuItem
+        '
+        Me.FichiersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NouveauToolStripMenuItem, Me.OuvrirToolStripMenuItem, Me.RécentsToolStripMenuItem, Me.EnregistrerToolStripMenuItem, Me.ImporterToolStripMenuItem1, Me.ExporterToolStripMenuItem1})
+        Me.FichiersToolStripMenuItem.Name = "FichiersToolStripMenuItem"
+        Me.FichiersToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.FichiersToolStripMenuItem.Text = "Fichier"
+        '
+        'NouveauToolStripMenuItem
+        '
+        Me.NouveauToolStripMenuItem.Name = "NouveauToolStripMenuItem"
+        Me.NouveauToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.NouveauToolStripMenuItem.Text = "Nouveau"
+        '
+        'OuvrirToolStripMenuItem
+        '
+        Me.OuvrirToolStripMenuItem.Name = "OuvrirToolStripMenuItem"
+        Me.OuvrirToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.OuvrirToolStripMenuItem.Text = "Ouvrir"
+        '
+        'RécentsToolStripMenuItem
+        '
+        Me.RécentsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AucunFichierRécentCliquezIciPourEnOuvrirUnToolStripMenuItem})
+        Me.RécentsToolStripMenuItem.Name = "RécentsToolStripMenuItem"
+        Me.RécentsToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.RécentsToolStripMenuItem.Text = "Récents..."
+        '
+        'AucunFichierRécentCliquezIciPourEnOuvrirUnToolStripMenuItem
+        '
+        Me.AucunFichierRécentCliquezIciPourEnOuvrirUnToolStripMenuItem.Name = "AucunFichierRécentCliquezIciPourEnOuvrirUnToolStripMenuItem"
+        Me.AucunFichierRécentCliquezIciPourEnOuvrirUnToolStripMenuItem.Size = New System.Drawing.Size(344, 22)
+        Me.AucunFichierRécentCliquezIciPourEnOuvrirUnToolStripMenuItem.Text = "(Aucun fichier récent.Cliquez ici pour en ouvrir un.)"
+        '
+        'EnregistrerToolStripMenuItem
+        '
+        Me.EnregistrerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnregistrerLeProjetToolStripMenuItem, Me.EnregistrerSousToolStripMenuItem})
+        Me.EnregistrerToolStripMenuItem.Name = "EnregistrerToolStripMenuItem"
+        Me.EnregistrerToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.EnregistrerToolStripMenuItem.Text = "Enregistrer"
+        '
+        'EnregistrerLeProjetToolStripMenuItem
+        '
+        Me.EnregistrerLeProjetToolStripMenuItem.Name = "EnregistrerLeProjetToolStripMenuItem"
+        Me.EnregistrerLeProjetToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.EnregistrerLeProjetToolStripMenuItem.Text = "Enregistrer le projet"
+        '
+        'EnregistrerSousToolStripMenuItem
+        '
+        Me.EnregistrerSousToolStripMenuItem.Name = "EnregistrerSousToolStripMenuItem"
+        Me.EnregistrerSousToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.EnregistrerSousToolStripMenuItem.Text = "Enregistrer sous..."
+        '
+        'ImporterToolStripMenuItem1
+        '
+        Me.ImporterToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ServeurATOMIOToolStripMenuItem, Me.ServeurSTUTONEToolStripMenuItem, Me.ArborescenceMultiMIIarbToolStripMenuItem})
+        Me.ImporterToolStripMenuItem1.Name = "ImporterToolStripMenuItem1"
+        Me.ImporterToolStripMenuItem1.Size = New System.Drawing.Size(130, 22)
+        Me.ImporterToolStripMenuItem1.Text = "Importer"
+        '
+        'ServeurATOMIOToolStripMenuItem
+        '
+        Me.ServeurATOMIOToolStripMenuItem.Name = "ServeurATOMIOToolStripMenuItem"
+        Me.ServeurATOMIOToolStripMenuItem.Size = New System.Drawing.Size(233, 22)
+        Me.ServeurATOMIOToolStripMenuItem.Text = "Serveur ATOMIO (*.ats)"
+        '
+        'ServeurSTUTONEToolStripMenuItem
+        '
+        Me.ServeurSTUTONEToolStripMenuItem.Name = "ServeurSTUTONEToolStripMenuItem"
+        Me.ServeurSTUTONEToolStripMenuItem.Size = New System.Drawing.Size(233, 22)
+        Me.ServeurSTUTONEToolStripMenuItem.Text = "Serveur STUT ONE"
+        '
+        'ArborescenceMultiMIIarbToolStripMenuItem
+        '
+        Me.ArborescenceMultiMIIarbToolStripMenuItem.Name = "ArborescenceMultiMIIarbToolStripMenuItem"
+        Me.ArborescenceMultiMIIarbToolStripMenuItem.Size = New System.Drawing.Size(233, 22)
+        Me.ArborescenceMultiMIIarbToolStripMenuItem.Text = "Arborescence MultiM II (*.arb)"
+        '
+        'ExporterToolStripMenuItem1
+        '
+        Me.ExporterToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ServeurAtomioatsToolStripMenuItem, Me.ServeurSTUTONEToolStripMenuItem1})
+        Me.ExporterToolStripMenuItem1.Name = "ExporterToolStripMenuItem1"
+        Me.ExporterToolStripMenuItem1.Size = New System.Drawing.Size(130, 22)
+        Me.ExporterToolStripMenuItem1.Text = "Exporter"
+        '
+        'ServeurAtomioatsToolStripMenuItem
+        '
+        Me.ServeurAtomioatsToolStripMenuItem.Name = "ServeurAtomioatsToolStripMenuItem"
+        Me.ServeurAtomioatsToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+        Me.ServeurAtomioatsToolStripMenuItem.Text = "Serveur Atomio (*.ats)"
+        '
+        'ServeurSTUTONEToolStripMenuItem1
+        '
+        Me.ServeurSTUTONEToolStripMenuItem1.Name = "ServeurSTUTONEToolStripMenuItem1"
+        Me.ServeurSTUTONEToolStripMenuItem1.Size = New System.Drawing.Size(190, 22)
+        Me.ServeurSTUTONEToolStripMenuItem1.Text = "Serveur STUT ONE"
+        '
+        'ToolStripMenuItem56
+        '
+        Me.ToolStripMenuItem56.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem58, Me.ToolStripMenuItem59, Me.ToolStripMenuItem60, Me.ToolStripMenuItem61, Me.ToolStripMenuItem62, Me.ToolStripMenuItem63, Me.ToolStripMenuItem64, Me.ToolStripMenuItem65, Me.ToolStripMenuItem66, Me.ToolStripMenuItem67, Me.ToolStripMenuItem68, Me.ToolStripMenuItem69, Me.ToolStripMenuItem70, Me.ToolStripMenuItem71})
+        Me.ToolStripMenuItem56.Name = "ToolStripMenuItem56"
+        Me.ToolStripMenuItem56.Size = New System.Drawing.Size(50, 20)
+        Me.ToolStripMenuItem56.Text = "Outils"
+        '
+        'ToolStripMenuItem58
+        '
+        Me.ToolStripMenuItem58.Checked = True
+        Me.ToolStripMenuItem58.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem58.Name = "ToolStripMenuItem58"
+        Me.ToolStripMenuItem58.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem58.Text = "Messagerie"
+        '
+        'ToolStripMenuItem59
+        '
+        Me.ToolStripMenuItem59.Checked = True
+        Me.ToolStripMenuItem59.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem59.Name = "ToolStripMenuItem59"
+        Me.ToolStripMenuItem59.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem59.Text = "ADMIN"
+        '
+        'ToolStripMenuItem60
+        '
+        Me.ToolStripMenuItem60.Checked = True
+        Me.ToolStripMenuItem60.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem60.Name = "ToolStripMenuItem60"
+        Me.ToolStripMenuItem60.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem60.Text = "Options"
+        '
+        'ToolStripMenuItem61
+        '
+        Me.ToolStripMenuItem61.Checked = True
+        Me.ToolStripMenuItem61.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem61.Name = "ToolStripMenuItem61"
+        Me.ToolStripMenuItem61.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem61.Text = "LECAM"
+        '
+        'ToolStripMenuItem62
+        '
+        Me.ToolStripMenuItem62.Checked = True
+        Me.ToolStripMenuItem62.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem62.Name = "ToolStripMenuItem62"
+        Me.ToolStripMenuItem62.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem62.Text = "Accès"
+        '
+        'ToolStripMenuItem63
+        '
+        Me.ToolStripMenuItem63.Checked = True
+        Me.ToolStripMenuItem63.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem63.Name = "ToolStripMenuItem63"
+        Me.ToolStripMenuItem63.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem63.Text = "Arborescence de poche"
+        '
+        'ToolStripMenuItem64
+        '
+        Me.ToolStripMenuItem64.Checked = True
+        Me.ToolStripMenuItem64.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem64.Name = "ToolStripMenuItem64"
+        Me.ToolStripMenuItem64.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem64.Text = "Serveur : état acutel"
+        '
+        'ToolStripMenuItem65
+        '
+        Me.ToolStripMenuItem65.Checked = True
+        Me.ToolStripMenuItem65.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem65.Name = "ToolStripMenuItem65"
+        Me.ToolStripMenuItem65.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem65.Text = "Divers"
+        '
+        'ToolStripMenuItem66
+        '
+        Me.ToolStripMenuItem66.Checked = True
+        Me.ToolStripMenuItem66.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem66.Name = "ToolStripMenuItem66"
+        Me.ToolStripMenuItem66.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem66.Text = "Compilation"
+        '
+        'ToolStripMenuItem67
+        '
+        Me.ToolStripMenuItem67.Checked = True
+        Me.ToolStripMenuItem67.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem67.Name = "ToolStripMenuItem67"
+        Me.ToolStripMenuItem67.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem67.Text = "Blocage"
+        '
+        'ToolStripMenuItem68
+        '
+        Me.ToolStripMenuItem68.Checked = True
+        Me.ToolStripMenuItem68.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem68.Name = "ToolStripMenuItem68"
+        Me.ToolStripMenuItem68.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem68.Text = "État du serveur"
+        '
+        'ToolStripMenuItem69
+        '
+        Me.ToolStripMenuItem69.Checked = True
+        Me.ToolStripMenuItem69.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem69.Name = "ToolStripMenuItem69"
+        Me.ToolStripMenuItem69.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem69.Text = "Exceptions"
+        '
+        'ToolStripMenuItem70
+        '
+        Me.ToolStripMenuItem70.Checked = True
+        Me.ToolStripMenuItem70.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem70.Name = "ToolStripMenuItem70"
+        Me.ToolStripMenuItem70.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem70.Text = "Fonctions"
+        '
+        'ToolStripMenuItem71
+        '
+        Me.ToolStripMenuItem71.Checked = True
+        Me.ToolStripMenuItem71.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem71.Name = "ToolStripMenuItem71"
+        Me.ToolStripMenuItem71.Size = New System.Drawing.Size(198, 22)
+        Me.ToolStripMenuItem71.Text = "Console"
+        '
+        'RéglagesToolStripMenuItem1
+        '
+        Me.RéglagesToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UtiliserLaConsoleEnEntréToolStripMenuItem})
+        Me.RéglagesToolStripMenuItem1.Name = "RéglagesToolStripMenuItem1"
+        Me.RéglagesToolStripMenuItem1.Size = New System.Drawing.Size(66, 20)
+        Me.RéglagesToolStripMenuItem1.Text = "Réglages"
+        '
+        'UtiliserLaConsoleEnEntréToolStripMenuItem
+        '
+        Me.UtiliserLaConsoleEnEntréToolStripMenuItem.Name = "UtiliserLaConsoleEnEntréToolStripMenuItem"
+        Me.UtiliserLaConsoleEnEntréToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.UtiliserLaConsoleEnEntréToolStripMenuItem.Text = "Utiliser la console en entré"
+        '
+        'AideToolStripMenuItem1
+        '
+        Me.AideToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DocumentationRacineCompistartToolStripMenuItem, Me.MessagerieToolStripMenuItem1, Me.ADMINToolStripMenuItem, Me.OptionsToolStripMenuItem, Me.LECAMToolStripMenuItem1, Me.AccèsToolStripMenuItem, Me.ArborescenceDePocheToolStripMenuItem, Me.ServeurToolStripMenuItem2, Me.DiversToolStripMenuItem, Me.CompilationToolStripMenuItem, Me.BlocageEtRéponseToolStripMenuItem, Me.ÉtatDuServeurToolStripMenuItem, Me.ExceptionsToolStripMenuItem, Me.FonctionsToolStripMenuItem, Me.ConsoleToolStripMenuItem1})
+        Me.AideToolStripMenuItem1.Name = "AideToolStripMenuItem1"
+        Me.AideToolStripMenuItem1.Size = New System.Drawing.Size(43, 20)
+        Me.AideToolStripMenuItem1.Text = "Aide"
+        '
+        'DocumentationRacineCompistartToolStripMenuItem
+        '
+        Me.DocumentationRacineCompistartToolStripMenuItem.Name = "DocumentationRacineCompistartToolStripMenuItem"
+        Me.DocumentationRacineCompistartToolStripMenuItem.Size = New System.Drawing.Size(254, 22)
+        Me.DocumentationRacineCompistartToolStripMenuItem.Text = "Documentation racine Compistart"
+        '
+        'MessagerieToolStripMenuItem1
+        '
+        Me.MessagerieToolStripMenuItem1.Name = "MessagerieToolStripMenuItem1"
+        Me.MessagerieToolStripMenuItem1.Size = New System.Drawing.Size(254, 22)
+        Me.MessagerieToolStripMenuItem1.Text = "Messagerie"
+        '
+        'ADMINToolStripMenuItem
+        '
+        Me.ADMINToolStripMenuItem.Name = "ADMINToolStripMenuItem"
+        Me.ADMINToolStripMenuItem.Size = New System.Drawing.Size(254, 22)
+        Me.ADMINToolStripMenuItem.Text = "ADMIN"
+        '
+        'OptionsToolStripMenuItem
+        '
+        Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(254, 22)
+        Me.OptionsToolStripMenuItem.Text = "Options"
+        '
+        'LECAMToolStripMenuItem1
+        '
+        Me.LECAMToolStripMenuItem1.Name = "LECAMToolStripMenuItem1"
+        Me.LECAMToolStripMenuItem1.Size = New System.Drawing.Size(254, 22)
+        Me.LECAMToolStripMenuItem1.Text = "LECAM"
+        '
+        'AccèsToolStripMenuItem
+        '
+        Me.AccèsToolStripMenuItem.Name = "AccèsToolStripMenuItem"
+        Me.AccèsToolStripMenuItem.Size = New System.Drawing.Size(254, 22)
+        Me.AccèsToolStripMenuItem.Text = "Accès"
+        '
+        'ArborescenceDePocheToolStripMenuItem
+        '
+        Me.ArborescenceDePocheToolStripMenuItem.Name = "ArborescenceDePocheToolStripMenuItem"
+        Me.ArborescenceDePocheToolStripMenuItem.Size = New System.Drawing.Size(254, 22)
+        Me.ArborescenceDePocheToolStripMenuItem.Text = "Arborescence de poche"
+        '
+        'ServeurToolStripMenuItem2
+        '
+        Me.ServeurToolStripMenuItem2.Name = "ServeurToolStripMenuItem2"
+        Me.ServeurToolStripMenuItem2.Size = New System.Drawing.Size(254, 22)
+        Me.ServeurToolStripMenuItem2.Text = "Serveur"
+        '
+        'DiversToolStripMenuItem
+        '
+        Me.DiversToolStripMenuItem.Name = "DiversToolStripMenuItem"
+        Me.DiversToolStripMenuItem.Size = New System.Drawing.Size(254, 22)
+        Me.DiversToolStripMenuItem.Text = "Divers"
+        '
+        'CompilationToolStripMenuItem
+        '
+        Me.CompilationToolStripMenuItem.Name = "CompilationToolStripMenuItem"
+        Me.CompilationToolStripMenuItem.Size = New System.Drawing.Size(254, 22)
+        Me.CompilationToolStripMenuItem.Text = "Compilation"
+        '
+        'BlocageEtRéponseToolStripMenuItem
+        '
+        Me.BlocageEtRéponseToolStripMenuItem.Name = "BlocageEtRéponseToolStripMenuItem"
+        Me.BlocageEtRéponseToolStripMenuItem.Size = New System.Drawing.Size(254, 22)
+        Me.BlocageEtRéponseToolStripMenuItem.Text = "Blocage et réponse"
+        '
+        'ÉtatDuServeurToolStripMenuItem
+        '
+        Me.ÉtatDuServeurToolStripMenuItem.Name = "ÉtatDuServeurToolStripMenuItem"
+        Me.ÉtatDuServeurToolStripMenuItem.Size = New System.Drawing.Size(254, 22)
+        Me.ÉtatDuServeurToolStripMenuItem.Text = "État du serveur"
+        '
+        'ExceptionsToolStripMenuItem
+        '
+        Me.ExceptionsToolStripMenuItem.Name = "ExceptionsToolStripMenuItem"
+        Me.ExceptionsToolStripMenuItem.Size = New System.Drawing.Size(254, 22)
+        Me.ExceptionsToolStripMenuItem.Text = "Exceptions"
+        '
+        'FonctionsToolStripMenuItem
+        '
+        Me.FonctionsToolStripMenuItem.Name = "FonctionsToolStripMenuItem"
+        Me.FonctionsToolStripMenuItem.Size = New System.Drawing.Size(254, 22)
+        Me.FonctionsToolStripMenuItem.Text = "Fonctions"
+        '
+        'ConsoleToolStripMenuItem1
+        '
+        Me.ConsoleToolStripMenuItem1.Name = "ConsoleToolStripMenuItem1"
+        Me.ConsoleToolStripMenuItem1.Size = New System.Drawing.Size(254, 22)
+        Me.ConsoleToolStripMenuItem1.Text = "Console"
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(7, 139)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(191, 9)
+        Me.ProgressBar1.StateCommon.Back.Color1 = System.Drawing.Color.Red
+        Me.ProgressBar1.StateCommon.Back.Color2 = System.Drawing.Color.Red
+        Me.ProgressBar1.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.ProgressBar1.StateDisabled.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.OneNote
+        Me.ProgressBar1.StateNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.OneNote
+        Me.ProgressBar1.TabIndex = 9
+        Me.ProgressBar1.TextBackdropColor = System.Drawing.Color.Empty
+        Me.ProgressBar1.TextShadowColor = System.Drawing.Color.Empty
+        Me.ProgressBar1.Values.Text = ""
+        '
         'Compistart
         '
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(1243, 865)
+        Me.ClientSize = New System.Drawing.Size(1283, 865)
         Me.Controls.Add(Me.GroupBox20)
         Me.Controls.Add(Me.panel2)
         Me.Controls.Add(Me.groupBox10)
         Me.Controls.Add(Me.groupBox15)
-        Me.Controls.Add(Me.panel1)
         Me.Controls.Add(Me.statusStrip1)
+        Me.Controls.Add(Me.MenuStrip6)
         Me.Controls.Add(Me.groupBox18)
         Me.Controls.Add(Me.groupBox19)
         Me.Controls.Add(Me.groupBox1)
@@ -4554,10 +4798,6 @@ Partial Public Class Compistart
         Me.tabPage5.PerformLayout()
         Me.menuStrip1.ResumeLayout(False)
         Me.menuStrip1.PerformLayout()
-        Me.panel1.ResumeLayout(False)
-        Me.panel1.PerformLayout()
-        Me.menuStrip3.ResumeLayout(False)
-        Me.menuStrip3.PerformLayout()
         Me.statusStrip1.ResumeLayout(False)
         Me.statusStrip1.PerformLayout()
         Me.tabPage1.ResumeLayout(False)
@@ -4602,16 +4842,16 @@ Partial Public Class Compistart
         Me.Panel5.PerformLayout()
         Me.MenuStrip5.ResumeLayout(False)
         Me.MenuStrip5.PerformLayout()
+        Me.MenuStrip6.ResumeLayout(False)
+        Me.MenuStrip6.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents progressbar3 As Krypton.Toolkit.KryptonProgressBar
     Private components As System.ComponentModel.IContainer
     Friend WithEvents Button4 As Button
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Button7 As Button
-    Friend WithEvents ConsoleToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AuteurToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EnRédactionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EnregistréToolStripMenuItem As ToolStripMenuItem
@@ -4700,4 +4940,55 @@ Partial Public Class Compistart
     Public WithEvents infoline5 As Label
     Public WithEvents button50 As Button
     Friend WithEvents refreshTimer As Windows.Forms.Timer
+    Public WithEvents ProgressBar3 As Windows.Forms.ProgressBar
+    Friend WithEvents MenuStrip6 As MenuStrip
+    Friend WithEvents FichiersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NouveauToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OuvrirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RécentsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RéglagesToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents AideToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents EnregistrerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ImporterToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ServeurATOMIOToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ServeurSTUTONEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExporterToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents AucunFichierRécentCliquezIciPourEnOuvrirUnToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EnregistrerLeProjetToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EnregistrerSousToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ServeurAtomioatsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ServeurSTUTONEToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ArborescenceMultiMIIarbToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DocumentationRacineCompistartToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MessagerieToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ADMINToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OptionsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LECAMToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents AccèsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ArborescenceDePocheToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ServeurToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents DiversToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CompilationToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BlocageEtRéponseToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ÉtatDuServeurToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExceptionsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FonctionsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsoleToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem56 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem58 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem59 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem60 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem61 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem62 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem63 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem64 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem65 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem66 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem67 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem68 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem69 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem70 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem71 As ToolStripMenuItem
+    Friend WithEvents UtiliserLaConsoleEnEntréToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProgressBar1 As Krypton.Toolkit.KryptonProgressBar
 End Class

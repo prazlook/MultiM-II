@@ -6,7 +6,16 @@ Public Class Accueil
     Public player As System.Media.SoundPlayer
 
     Public Async Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button1.Click
-        centre_acces.player.Stop()
+        If centre_acces.player IsNot Nothing Then
+            centre_acces.player.Stop()
+        End If
+
+        Dim soundStream As UnmanagedMemoryStream = My.Resources.son_demarrage
+        player = New System.Media.SoundPlayer(soundStream)
+        player.Play()
+
+        Await Task.Delay(2000)
+
         ' 3. Ouvrir BootVDTEdit
         Dim splash As New BootVDTEdit
         splash.Show()
@@ -25,24 +34,38 @@ Public Class Accueil
 
 
     'Fonction button2_Click
-    Public Sub button2_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-        Fenêtre4.Show()
+    Public Async Sub button2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button2.Click
+        If centre_acces.player IsNot Nothing Then
+            centre_acces.player.Stop()
+        End If
+
+        Dim soundStream As UnmanagedMemoryStream = My.Resources.son_demarrage
+        player = New System.Media.SoundPlayer(soundStream)
+        player.Play()
+
+        Await Task.Delay(2000)
+
+        VDTPics.Show()
     End Sub
 
     'Fonction button3_Click
     Public Sub button3_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-        ArboEdit.Show()
+        BootArboEdit.Show()
     End Sub
 
 
     Private Async Sub button4_Click(sender As Object, e As EventArgs) Handles button4.Click
-        centre_acces.player.Stop()
+        If centre_acces.player IsNot Nothing Then
+            centre_acces.player.Stop()
+        End If
 
-        ' 3. Ouvrir BootVDTEdit
-        Dim splash As New BootCompistart
-        splash.Show()
+        Dim soundStream As UnmanagedMemoryStream = My.Resources.son_demarrage
+        player = New System.Media.SoundPlayer(soundStream)
+        player.Play()
 
-        Await Task.Delay(10000)
+        Await Task.Delay(2000)
+
+        BootCompistart.Show()
     End Sub
 
 
@@ -136,6 +159,20 @@ Public Class Accueil
     Private Sub Accueil_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         centre_acces.Show()
         centre_acces.BringToFront()
+    End Sub
+
+    Private Async Sub button3_Click_1(sender As Object, e As EventArgs) Handles button3.Click
+        If centre_acces.player IsNot Nothing Then
+            centre_acces.player.Stop()
+        End If
+
+        Dim soundStream As UnmanagedMemoryStream = My.Resources.son_demarrage
+        player = New System.Media.SoundPlayer(soundStream)
+        player.Play()
+
+        Await Task.Delay(2000)
+
+        BootArboEdit.Show()
     End Sub
 
 End Class

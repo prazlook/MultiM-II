@@ -1,7 +1,8 @@
-﻿Public Class BootCompistart
+﻿Public NotInheritable Class BootSuite
 
     'TODO: ce formulaire peut facilement être configuré comme écran de démarrage de l'application en accédant à l'onglet "Application"
     '  du Concepteur de projets ("Propriétés" sous le menu "Projet").
+
 
     Private Async Sub DémarrerProgression()
         Dim random As New Random()
@@ -26,20 +27,22 @@
             tempsPasseMs += pause
         End While
 
+
         ' Assurer que la barre arrive bien à 100 %
         Me.Invoke(Sub()
                       ProgressBar1.Value = 100
                   End Sub)
 
         ' Une fois la progression terminée, fermez l'écran de démarrage et ouvrez VDT Edit
-        Compistart.Show()
+        Accueil.Show()
         Me.Close()
     End Sub
 
     Public Shared player As System.Media.SoundPlayer
 
-    Private Sub SplashScreen1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Private Sub BootSuite_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         DémarrerProgression()
     End Sub
+
 
 End Class

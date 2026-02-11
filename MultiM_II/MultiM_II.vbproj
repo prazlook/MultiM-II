@@ -10,14 +10,16 @@
     <AppDesignerFolder>My Project</AppDesignerFolder>
     <ProjectGuid>{2F0B6322-8366-4D0A-A787-C790D61F2FC1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>MultiM_II.Gestionnaire</StartupObject>
     <StartupObject>MultiM_II.centre_acces</StartupObject>
     <RootNamespace>MultiM_II</RootNamespace>
     <AssemblyName>MultiM_II</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -28,13 +30,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>0.2.6.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -107,8 +106,8 @@
     <Reference Include="Interop.ADOX">
       <HintPath>Include\Interop.ADOX.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton.Toolkit, Version=95.25.4.111, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Krypton.Toolkit.95.25.4.111\lib\net48\Krypton.Toolkit.dll</HintPath>
+    <Reference Include="Krypton.Toolkit, Version=100.25.11.328, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Toolkit.100.25.11.328\lib\net472\Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="MicroCom.Runtime, Version=0.11.0.0, Culture=neutral, PublicKeyToken=b30be05a5f7688e9, processorArchitecture=MSIL">
       <HintPath>..\packages\MicroCom.Runtime.0.11.0\lib\netstandard2.0\MicroCom.Runtime.dll</HintPath>
@@ -173,6 +172,7 @@
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
@@ -227,6 +227,7 @@
     <Import Include="System.Windows.Forms.VisualStyles" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\Avalonia\references" />
     <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\Avalonia\resources" />
     <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\Avalonia\Resources.Inputs.cache" />
@@ -242,11 +243,11 @@
     <None Include="Autres\Dossiers inutilisés\obj\x86\Debug\MultiM_II.vbproj.Up2Date" />
     <None Include="Autres\Fichiers inutilisés\app.config" />
     <None Include="Autres\Fichiers inutilisés\packages.config" />
+    <None Include="packages.config" />
     <None Include="Resources\Minitel.ttf" />
     <None Include="Resources\son_demarrage.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Autres\Dossiers inutilisés\obj\x86\Debug\.NETFramework,Version=4.0.AssemblyAttributes.vb" />
     <Compile Include="documentation\Dev_HowItStartedUserControl.Designer.vb">
       <DependentUpon>Dev_HowItStartedUserControl.vb</DependentUpon>
     </Compile>
@@ -254,6 +255,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="documentation\pages\BaseUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="documentation\pages\devSuiteUserControl.Designer.vb">
+      <DependentUpon>devSuiteUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="documentation\pages\devSuiteUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\Aide\aide_compistart.Designer.vb">
@@ -306,10 +313,28 @@
     <Compile Include="Forms\Boîtes de dialogue\Dialog3.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Pages d%27accueil\BootSuiteLite.Designer.vb">
+      <DependentUpon>BootSuiteLite.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pages d%27accueil\BootSuiteLite.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pages d%27accueil\VDTEDITTESTS.Designer.vb">
+      <DependentUpon>VDTEDITTESTS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pages d%27accueil\VDTEDITTESTS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Suite applis\Écrans de démarrage\BootCompistart.Designer.vb">
       <DependentUpon>BootCompistart.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Suite applis\Écrans de démarrage\BootCompistart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Suite applis\Écrans de démarrage\BootSuite.Designer.vb">
+      <DependentUpon>BootSuite.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Suite applis\Écrans de démarrage\BootSuite.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Suite applis\Écrans de démarrage\BootVDTEdit.Designer.vb">
@@ -478,6 +503,12 @@
     <Compile Include="Forms\Fenêtres additionnelles\Générique\Paramètres_console.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Suite applis\Écrans de démarrage\BootArboEdit.Designer.vb">
+      <DependentUpon>BootArboEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Suite applis\Écrans de démarrage\BootArboEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Resources\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -590,6 +621,9 @@
     <EmbeddedResource Include="documentation\Dev_HowItStartedUserControl.resx">
       <DependentUpon>Dev_HowItStartedUserControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="documentation\pages\devSuiteUserControl.resx">
+      <DependentUpon>devSuiteUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Aide\aide_compistart.resx">
       <DependentUpon>aide_compistart.vb</DependentUpon>
     </EmbeddedResource>
@@ -614,8 +648,17 @@
     <EmbeddedResource Include="documentation\Database.resx">
       <DependentUpon>Database.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pages d%27accueil\BootSuiteLite.resx">
+      <DependentUpon>BootSuiteLite.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pages d%27accueil\VDTEDITTESTS.resx">
+      <DependentUpon>VDTEDITTESTS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Suite applis\Écrans de démarrage\BootCompistart.resx">
       <DependentUpon>BootCompistart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Suite applis\Écrans de démarrage\BootSuite.resx">
+      <DependentUpon>BootSuite.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Suite applis\Écrans de démarrage\BootVDTEdit.resx">
       <DependentUpon>BootVDTEdit.vb</DependentUpon>
@@ -699,6 +742,9 @@
     <EmbeddedResource Include="Forms\Fenêtres additionnelles\Générique\Paramètres_console.resx">
       <DependentUpon>Paramètres_console.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Suite applis\Écrans de démarrage\BootArboEdit.resx">
+      <DependentUpon>BootArboEdit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -740,9 +786,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My</CustomToolNamespace>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\son_demarrage.wav" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -846,6 +889,7 @@
     <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\TempPE\My Project.Resources.Designer.vb-DESKTOP-7BATFOD.dll" />
     <Content Include="Autres\Dossiers inutilisés\obj\x86\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
     <Content Include="Autres\Fichiers inutilisés\icon.ico" />
+    <None Include="Resources\son_demarrage.wav" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Autres\Dossiers inutilisés\bin\" />

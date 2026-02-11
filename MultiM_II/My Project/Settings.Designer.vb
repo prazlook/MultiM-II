@@ -53,28 +53,6 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property Release() As Object
-            Get
-                Return CType(Me("Release"),Object)
-            End Get
-            Set
-                Me("Release") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property ConnectedUser() As Object
-            Get
-                Return CType(Me("ConnectedUser"),Object)
-            End Get
-            Set
-                Me("ConnectedUser") = value
-            End Set
-        End Property
     End Class
 End Namespace
 

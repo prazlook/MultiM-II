@@ -1,5 +1,5 @@
 ﻿<Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Public Class Fenêtre4
+Partial Public Class VDTPics
     Inherits System.Windows.Forms.Form
 
     Public WithEvents kryptonTrackBar1 As ComponentFactory.Krypton.Toolkit.KryptonTrackBar
@@ -98,7 +98,7 @@ Partial Public Class Fenêtre4
     End Sub
 
     Public Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fenêtre4))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VDTPics))
         Me.kryptonTrackBar1 = New ComponentFactory.Krypton.Toolkit.KryptonTrackBar()
         Me.kryptonTrackBar2 = New ComponentFactory.Krypton.Toolkit.KryptonTrackBar()
         Me.kryptonTrackBar3 = New ComponentFactory.Krypton.Toolkit.KryptonTrackBar()
@@ -725,7 +725,7 @@ Partial Public Class Fenêtre4
         Me.LabelY.TabIndex = 48
         Me.LabelY.Text = "Label12"
         '
-        'Fenêtre4
+        'VDTPics
         '
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.BackColor = System.Drawing.SystemColors.Control
@@ -781,7 +781,7 @@ Partial Public Class Fenêtre4
         Me.Controls.Add(Me.label8)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Fenêtre4"
+        Me.Name = "VDTPics"
         Me.Text = "VDT Pics (En développement)"
         CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
